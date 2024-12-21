@@ -1,0 +1,97 @@
+Data types in SQL:
+
+String data types:
+char(n) -----> it is used to store fixed length string data ('n' defines the length/size), we can store upto 'n' length characters
+Ex: Given size char(10)  and if I try to store "active"  =====>  "active    "
+
+varchar(n) ----> it is used to store variable length string data, we can store upto 'n' length characters
+Ex: Given size varchar(10) and if I try to store "active"  =====>  "active"
+
+text ---> it is used for larger amount of data
+
+nchar(n) & nvarchar(n)  ----> These data types used for international languages, that string data should be start with 'N'.
+
+
+Numeric data types:
+bit ----> It is a data type to store 0 or 1
+
+int ----> it is used to store whole numbers (2^-63 to 2^63-1 / 64 bits)
+tinyint & smallint ----> these data types are used for storing smaller values
+bigint ---> it is used when storing data is more than int capacity
+
+decimal(p, s) ---> it is used to store decimal point numeric data. p defines precision and s defines scale
+Ex: given decimal(5, 2) ---> it allows 128.53, 153.62
+
+money ----> this data type is used to store currency data
+
+
+Date and time data types:
+datetime  ---> it is used to store date and timeformat data (yyyy-mm-dd HH:MM:SS:SSS)
+
+date ---> it is used to store data
+
+time ---> used to store time
+
+---------------------------------------------------------------------
+
+Table creation in SQL:
+CREATE TABLE table_name (
+	col1_name  data_type  column_constraints (optional),
+	col2_name  data_type  column_constraints (if any),
+	.....
+	....
+	table constraints (optional)
+)
+
+Example:
+CREATE TABLE students (
+	stu_id int,
+	full_name varchar(15),
+	age int,
+	email varchar(20)
+);
+
+
+Table altering in SQL:
+-- Adding new column
+ALETR TABLE table_name 
+ADD column_name  data_type  constraints (optional)
+
+Ex:
+ALTER TABLE students
+ADD contact char(10);
+
+-- Modifying the existing column (can change data type or constraints)
+ALETR TABLE table_name
+ALTER COLUMN column_name new_data_type new_constraints (if any)
+
+Ex:
+ALTER TABLE students
+ALTER COLUMN contact varchar(10);
+
+-- Rename an existing column
+ALETR TABLE table_name
+RENAME old_name TO new_name;
+
+For SQL server:
+EXEC sp_rename 'table.old_name',  'new_name', 'COLUMN';
+
+EX:
+EXEC sp_rename 'students.contact',  'mobile', 'COLUMN';
+
+
+-- drop or delete the existing column
+ALETR TABLE table_name
+DROP COLUMN col_name
+
+
+
+
+
+
+
+
+
+
+
+

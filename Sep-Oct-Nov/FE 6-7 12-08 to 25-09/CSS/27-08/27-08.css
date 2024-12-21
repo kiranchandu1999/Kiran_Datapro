@@ -1,0 +1,33 @@
+#btn1 {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+}
+
+#btn1:hover {
+    background-color: #0473aa;
+}
+
+a {
+    color: black;
+}
+
+a:visited {
+    color: yellow;
+}
+
+a:active {
+    color: darkorange;
+}
+
+.div1 p:first-child {
+    background-color: yellow;
+}
+
+#para4::first-letter {
+    background-color: yellow;
+}
+
+#para4::selection {
+    background-color: yellow;
+}

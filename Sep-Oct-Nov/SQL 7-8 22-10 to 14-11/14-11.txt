@@ -1,0 +1,68 @@
+- SELECT TOP
+The SELECT TOP clause is used to specify the number of records to return.
+
+syntax:
+SELECT TOP number column_name(s)
+FROM table_name
+WHERE condition;
+
+Ex:
+SELECT TOP 2 * FROM students WHERE age > 20;
+
+
+- EXISTS
+The EXISTS operator is used to test for the existence of any record in a subquery.
+
+syntax:
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);
+
+Ex:
+SELECT full_name, email FROM students WHERE EXISTS (SELECT teach_name FROM teachers WHERE students.teacher_id = teachers.teach_id);
+
+Result: From above query we get name and emails of students who belongs to any teacher in the teacher table
+
+
+- ANY & ALL operators
+The ANY and ALL operators allow you to perform a comparison between a single column value and a range of other values.
+
+syntax:
+SELECT column_name(s)
+FROM table_name
+WHERE column_name operator ANY/ALL
+  (SELECT column_name
+  FROM table_name
+  WHERE condition);
+
+Ex:
+SELECT full_name FROM students WHERE teacher_id = ANY(SELECT teach_id FROM teachers);
+
+SELECT full_name FROM students WHERE teacher_id = ALL(SELECT teach_id FROM teachers);
+
+
+- Stored Procedure
+A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.
+
+syntax:
+CREATE PROCEDURE procedure_name
+AS
+sql_statement;
+
+EXEC procedure_name;
+
+Ex:
+CREATE PROCEDURE students_under_teachers AS 
+SELECT full_name, email FROM students WHERE EXISTS (SELECT teach_name FROM teachers WHERE students.teacher_id = teachers.teach_id);
+
+EXEC students_under_teachers;
+
+--- Stored procedure with dynamic column comparisons
+
+Ex:
+CREATE PROCEDURE city_based_students @city_name varchar(10) AS
+SELECT full_name, city FROM students WHERE city = @city_name;
+
+
+EXEC city_based_students @city_name = 'kakinada';

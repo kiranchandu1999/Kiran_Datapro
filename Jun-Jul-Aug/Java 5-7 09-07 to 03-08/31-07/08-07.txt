@@ -1,0 +1,16 @@
+2. Character stream
+- this stream contains a collection of characters.
+- All character streams are derived from two abstract classes - Reader and   Writer.
+
+
+Reader:
+ it is an abstract class which is used to take input from external source.
+so that it has subchild called InputStreamReader class is used to take input and FileReader class is sub class for this InputStreamReader class.
+
+FileReader fr = new FileReader(file path);
+
+Writer:
+- it is an abstract class which is used to pass stream of data to an external source.
+- it has subchild called OutputStreamWriter class is used for output stream and FileWriter class is sub class for this OutputStreamWriter class.
+
+FileWriter fw = new FileWriter(file path);

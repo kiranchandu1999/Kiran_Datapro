@@ -1,0 +1,17 @@
+* To get the tables present in current schema use following command
+- select table_name from user_tables;
+-------------------------------------------------------
+* Database mainly deals with 4 operations :
+C (create) => to add new record / row to db, should use insert command (DML)
+syntax -> INSERT INTO table_name (col_1, col_2, ....) values (val_1, val_2, ....);
+
+R (read) => to read / get the data from db, use select command (DQL)
+syntax -> SELECT * FROM table_name; (to get all columns data)
+	SELECT col1_name, col_2,...... FROM table_name; (to get mentioned columns data)
+
+U (update) => to update existing data in the db, use update command (DML)
+syntax -> UPDATE table_name SET col_1 = val_1, col_2 = val_2 .... WHERE col_name (pk) = val;
+
+D (delete) => to delete existing record/s from db, use delete command (DML)
+syn => DELETE FROM table_name WHERE col_name = val;
+

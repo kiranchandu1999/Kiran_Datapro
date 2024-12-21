@@ -1,0 +1,642 @@
+Programming language -> it is used to communicate with the virtual machine / PC
+EX :-  C, Java, Python, etc.
+
+Java -> it is used to develop web applications
+Java is invented in 1995 by James Gosling
+
+To run the java in our system we should have
+JDK -> Java Development Kit
+
+Features:
+Platform Independent   (WORA -> Write Once Run Anywhere)
+Supports Multi threading
+Object Oriented
+Secured
+
+To run the java program through command line we need to use following commands
+javac <File name>  => compiles the code present inside this file and converts into byte code
+java <class name>  =>  executes the byte code
+
+
+Java program execution flow
+Java program  ------> compile  ------->  Byte code   ------> execute  ----->  Output
+
+
+
+JDK -> Java Development Kit   (JRE   +   Java Compiler, dev tools)
+JRE -> Java Runtime Environment  (JVM  +   some packages / libraries)
+JVM -> Java Virtual Machine
+
+class loaders
+1. Bootstrap class loader   ->    this loads the inbuilt classes which are present in rt.jar
+2. Extension  "    "              ->      this loads extensions added to your application
+3. Application   "     "          ->      it loads application classes
+
+JIT ->  Just Intime Compiler  ->   Byte code to machine code
+
+Memory Allocation  ->  
+1. Class Area   ->   it stores class definition
+2. Heap     ->     it stores the objects
+3. Stack     ->     method calling and object reference address
+
+
+
+Data types in java
+
+I .  Primitive
+byte  ->   1 byte     (-128 to 127) (-2^7 to 2^7 - 1)
+short   ->  2 bytes   (-32768 to 32767) (-2^15 to 2^15 - 1)
+int     ->    4 bytes    (-2^31  to  2^31 - 1)
+long  ->    8 bytes    (-2^63 to 2^63 - 1)
+
+float   ->   4 bytes
+double  ->  8 bytes
+
+char   ->   'a'   '$'  2bytes
+
+boolean    -> it depends on platform
+
+
+II .  Non Primitive
+Strings    ->   "Uday"      "a"
+Arrays     ->   [ ]
+Objects    ->  { }
+
+
+
+
+
+Operators in Java
+to do operations we need to have operators
+( operand  operator  operand )
+1. Arithmetic
+addition -> '+'
+subtraction -> '-'
+multiplication -> '*'
+division -> '/'   => to get quoefficient   ------>  11/5  => 2
+modulus -> '%' => to get reminder     ------->  11%5  => 1
+
+2. Relational / comparision  (returns true / false)
+<     --->  less than     
+>     --->   greater than
+<=    ---->  less or equal      
+>=    ---->  greater or equal
+==    ---->   equal to    (if we assigned a = 5 then a == 5 means true)
+!=      --->   not equal to
+
+3. Assignment Ops
+=     --->   assigning right side value to left side variable  (Ex:   int a = 5;)
++=   --->   (if a = a + 5;  ------->   a += 5)
+-=   --->     (int acct = 100;    ---->   acct = acct - 80;  ---->  acct -= 80;
+*=   --->     int acct = 100;   ------>   acct = acct * 5;     ----->   acct *= 5;
+/=   --->      a /= 2;
+%=   --->   a %= 4;
+
+4. Logical Ops  (return true or false)
+AND (&&)   ---->   cond1 && cond 2  =>  if any 1 condition is false then result will be false otherwise true
+OR ( || )       ---->  cond1 || cond2  =>  if any 1 condition is true then result will be true
+
+A	B	AND	OR
+F	F	F	F
+T	F	F	T
+F	T	F	T
+T	T	T	T
+
+
+5. Unary Ops
+Increment (++)  --->  will increment by 1
+Decrement (--)   ---->  will decrement by 1
+int a = 5;
+# postfix
+System.out.println(a++); // it will print 5 and then increment it by 1
+System.out.println(a--); // it will print 5 and then decrement it by 1
+# prefix
+System.out.println(++a); // it will increment it by 1 and print 6
+
+6. Shift Ops (used on binary numbers)
+# right shift (>>)
+5 >> 1  => 2
+5  ---> 101 ------- right shift by 1 ---------  |1|0|1| --> |0|1|0| => 2
+
+#left shift (<<)
+3 << 1  => 6
+3  ---> 011 ------- left shift by 1 ---------  |0|1|1| --> |1|1|0| => 6
+
+7. Bitwise Ops (binary numbers)
+AND (&)  
+5 & 3  => 1 
+5 --> 101  --------- 3  --->  011
+101
+011
+------
+001 ---> 1 (decimal) 
+------
+
+OR ( | )
+5 | 3  => 7 
+5 --> 101  --------- 3  --->  011
+101
+011
+------
+111 ----> 7 
+------
+
+8. Ternary Operatory (shortcut for if else)
+condition ? true output : false output;
+
+Control statements
+to control the execution flow of the program
+3 types
+1. Decision making
+- if statement
+-- simple if statement
+syntax : 
+if (condition) {
+     // body
+}
+-- if-else statement
+if (condition) {
+     // body
+}
+else{
+     // else body
+}
+-- nested if
+if (condition){
+	if(condition){
+	}
+}
+-- if-else-if statement
+
+
+- switch statements
+it is similar to if-else-if ladder
+syntax:
+switch (expression/variable) {
+  case value1:
+	// some statement
+	break;
+  case value2:
+	// some statement
+	break;
+  case value3:
+	// some statement
+	break;
+  default:
+	// some statement
+}
+
+2. Looping statements
+loop -> to run any task repeatedly
+- for loop
+if no of iterations to be done is given then we should use for loop
+syntax:
+for(initialization; condition; increment/decrement;){
+// statements to be done
+}
+
+
+- while loop
+it is used when number of iterations are not specified, it is condition based loop
+syntax:
+while (condition) {
+	// statements
+	// increment or decrement
+}
+
+- do while loop
+it is similar to while loop but it will execute once even though given condition is false
+syntax:
+do {
+// statements
+// inc / dec
+} while(condition);
+
+- for-each loop
+It is called as enhanced for loop, it is being used from java 8.
+syntax:
+for (data_type  variable_name : array_name) {
+          //  statements
+}
+
+3. Jump statements
+- break
+to exit the loop from the current iteration
+
+- continue
+to skip the current iteration
+
+OOPs (Object Oriented Programming)
+OOPs is basically used to replicate real world entities into virtual entities
+Entity: Its having some states (properties) and behaviours (methods)
+Logical entity: its a blue print to make physical entities (CLASS)
+Physical entity: its real time entity built based on blue print (OBJECT)
+
+class : its a blueprint to instanciate new objects
+syntax for defining class
+access_modifier(optional) class class_name {
+      // states (variables)
+      // behaviours (methods)
+}
+
+object: physical entity built on class (instance of a class)
+object_reference_type   object_name = new class_name();
+ 
+
+Method:
+it is a group of statements to be executed.
+To achieve code reusability
+
+syntax:
+Method definition
+access_modifier (optional)  method_return_type  method_name (parameter1, param2, ...) {
+	// statements
+	
+	return output;
+}
+
+Method Invocation:
+method_name (argument1, arg2, ...);
+
+Constructor: 
+It is a part of class. It is used to initialize the object of that class. It is similar to a method.
+Two types -> No Args Constructor and Parameterized constructor
+
+To create constructor inside the class, constructor name and class name should be same, constructor should not have return type
+
+class ABC {
+   // constructor
+   ABC () {
+       // constructor body
+   }
+}
+
+Note : By default JVM will provide no args constructor to our class
+
+Contsructor get invoked while object creation, one class can have multiple constructors and respective constructor will be invoked based on object creation.
+
+Static : It is a keyword used to define class variables / methods that are belongs to class not to object.
+
+this : It is a keyword that refers to the current class. 
+this() : It is used to invoke the default constructor within the class
+
+Pillars of Object Oriented Programming (OOPs)
+1. Inheritance
+     -- Aquiring properties from Parent class to Child class by using "extends" keyword
+     -- It is also known as " Has a" relationship
+     
+Types of Inheritance :
+i. Single Level
+      -- One child class aquiring properties from one parent
+      syntax:
+	class child extends parent { }
+
+ii. Multi Level
+     -- Sub child class aquiring properties from child class which is aquiring properties from parent
+     syntax:
+	class parent { }
+	class child1 extends parent { }
+	class child2 extends child1 { }
+
+iii. Hierarchical Inheritance
+    -- multiple child classes aquiring properties from one parent
+   syntax:
+	class parent { }
+	class child1 extends parent { }
+	class child2 extends parent { }
+
+iv. Multiple Inheritance ( It is not supported in java by using classes, it is achieved by interfaces only )
+   -- one child class aquiring properties from multiple parent interfaces
+
+
+2. Encapsulation
+    -- Grouping all variables and methods inside a class
+
+3. Abstraction
+  -- Data hiding 
+  -- by using abstract keyword along with class declaration
+  -- If we want to hide the implementation details of a method then need to use abstract class
+  -- abstract methods are declared with abstract keyword
+  -- abstract methods should be present inside abstract class only
+  -- abstraction in java can be achieved by using abstract class (0 - 100% ) or interface (100%)
+  -- abstract class can contain abstract and non abstract methods
+
+   -- interface in java
+      -- interface interface_name {
+                // variables  (public, static and final)
+                // abstract methods (public and abstract)
+         }
+from java versions above 8, we can include default and static methods inside interface for method implementation.
+ 
+4. Polymorphism
+    -- It is achieved by two ways
+    -- Method Overriding (Run time polymorphism)
+	-- a method having same name can be defined in multiple classes
+    -- Method Overloading (Compile time " )
+	-- by changing no of parameters
+	-- by changing parameters data type
+
+Super keyword : It refers immediate parent class object reference
+super -> for parent object ref
+super() -> for parent constructor
+
+Initialization block : 
+It is a block which contains initialization statements to be done while creating object of that class.
+order of calling ---->   super() >> initialization block >> constructor
+
+final keyword: 
+i. with variables --> we cannot reinitialize the variable
+ii. with methods --> we cannot override those final methods
+iii. with classes --> we cannot extend those classes
+
+Upcasting :
+If child object is assigned to a parent class reference. It is done implicitly
+
+Downcasting :
+If parent object is converted into child then it is called down casting. should be done manually.
+
+
+- Access modifiers
+private ---> it is accessible inside class only
+default  ---> it is accessible in a package
+protected ----> it is accessible in package and sub classes in other packages also
+public   ----->  It is accessible in all packages
+
+Object class in java:
+It is the parent class for all classes present inside java, it has some methods like toString(), hashCode(), equals(), etc.
+Every class in java implicitly extends this Object class with thye help of JVM.
+
+
+Array :
+It is a collection of similar data type elements. all these elements will be stored in consecutive memory locations.
+syntax:
+data_type [ ]   variable_name  =  new   data_type [ size];  // declaration and instantiation of array
+Example ----->   int [ ]  arr1  =  new   int [ 5 ];
+ 
+array follows index based addressing. arrays follows 0th based indexing. like 1st element get stored inside 0th index and 2nd element will store inside 1st index and so on.
+// initialization of array
+arr1[ 0 ] = 10;
+
+Passing array to a method :
+method_return_type   method_name ( data_type_of_array [ ]  variable_name) {
+	// method body and return
+}
+
+Parameters passed to any method follows two types of approaches:
+1) Pass By Value  ( primitive data type elements)
+2) Pass By Reference ( non - primitive elements )
+
+Anonymous elements: The elements without any variable name
+
+Strings: It is a non-primitive data type. It is used to represent the group of characters within the double quotes.
+methods inside String class:
+length()  ----> returns length of string object
+charAt(index)  -----> returns character present at given index
+concat(String) ------> returns joined string
+contains(String) -----> returns true if given string present inside the original string or else returns false
+indexOf(String, fromPos) -----> returns the index number of first character of passed string or else returns -1
+lastIndexOf(String, fromPos)  -----> returns the index of first character of passed string at last occurance
+endsWith(String)  ----> returns true if original string ends with passed string or else false
+substring (from, to)  -----> returns extracted string from original string
+toLowerCase(), toUpperCase()  -----> returns new string after converting original string into either lower or upper
+replace(old_char, new_char)  -------> returns new string after replacing the old char with new character.
+split (String)  ----->  returns String array after splitting the original string with passed string value
+toCharArray()  ----> returns char array
+Note: Strings are immutable
+
+StringBuffer / StringBuilder :
+These are mutable so that string can be modified.
+SetCharAt(index, char)   -----> changes the character at given index
+append(String)  -----> appends the given string at the end
+deleteCharAt(index) ----> deletes character at given index
+delete (start, end)  ------> removes characters from start to end
+reverse()  ------> reverses the original string 
+
+StringJoiner class:
+It is used to join the different strings with some delimeter and along with prefix and suffix.
+"java"  "python"   "c"   "javascript"
+["java" ,"python" ,  "c" ,  "javascript"]
+StringJoiner sj = new StringJoiner(delimeter, prefix, suffix);
+add(string)  ----> adds the given string to the string joiner
+
+Math class :
+static methods
+abs(number)   ----> returns absolute value
+min(num1, num2) -----> returns min value of two numbers
+max(num1, num2) ----> returns max of two numbers
+round(double) ----->  returns after rounding it
+pow(base, power)  ------> returns base raise to power value
+random()  ------> returns random number from 0.0 to 1.0
+all trignometric operations like sin(number), cos(number) etc
+
+Wrapper class:
+It is a class wrapped around primitive data types. These are mostly used in collection framework.
+int ----> Integer
+float ----> Float
+double ----> Double
+char -----> Character
+byte ----> Byte
+short ----> Short
+long -----> Long
+boolean -----> Boolean
+
+boxing ---> converting primitive to wrapper class object
+un boxing ----> wrapper class object to primitive
+
+Recursion:
+It is a process in which a method calls itselft continuosly.
+
+Enumeration:
+it is similar to class but it is used to store constants.
+syntax:
+enum  enum_name {
+     // constants
+}
+example:
+enum RoomType {
+     Delux, Super-Delux, Suit
+}
+
+Exception:
+It's an error but it can be handled by the developer.
+
+exception is handled by using try catch block
+
+try ---> it should have code from which exception will ocuur
+catch ----> solution for the exception should be written inside catch
+finally ----> it's block and it contains some code that needs to be executed compulsory.
+throw ----> it is used to throw custom exception
+throws ----> it is used to pass the exception to the caller method
+
+Exception propagation  ---> passing exception to its caller method
+unchecked exception propagated automatically
+for checked exceptions need to use throws to propagate
+
+try {
+   // code that will throw exception
+}
+catch (Exception_type) {
+   // code for solution for this exception
+}
+
+types of Exceptions:
+1. Checked / Compiletime exceptions
+     - IO exception
+     - class not found exception
+     - SQL exception
+     - Runtime exception
+2. Un checked / Runtime exceptions
+     - Arithmetic Exception
+     - ArrayIndexOutOfBound Exception
+     - NumberFormat Exception
+     - NullPointer Exception
+
+
+Multithreading:
+Thread is a small task inside a process.
+Basically whole program will run through main thread.
+By creating our custom threads we can achieve multithreading in java.
+
+Threads can be created by using 2 ways:
+1. By extending Thread class.
+
+syntax:
+class  class_name  extends Thread {
+         public void run() {
+                // body to execute on our thread
+          }
+}
+
+class_name  object = new class_name();
+object.start(); -----> it will create thread and run our run method inside the class.
+
+2. By implementing Runnable interface.
+
+syntax:
+class   class_name  implements  Runnable {
+        public void run() {
+	// body to execute on our thread
+        }
+}
+
+class_name ob1 = new class_name();
+
+// now create thread class object and pass above object reference
+Thread th1 = new Thread(ob1);
+th1.start();
+
+Methods in thread class:
+currentThread()   ---> returns current thread where our task is running
+getName()    ----> returns name of the current thread
+setName(String name) --> sets the name for given thread
+getPriority()   ----> returns priority of given thread; default is 5;
+setPriority(int val) ---> sets the priority of current thread; (1 - 5)
+isAlive()   ----> returns thread is alive or not
+start()  ---> it will run our run method inside thread class
+sleep(millis)  ----> thread going to sleep for given milli secs
+
+Synchronization:
+This is the process by which java ensures that a shared resource is accessed only by one thread at a time.
+
+by using synchronized keyword we can make method as synchronized.
+synchronized public void print(){
+      // method body / resource
+}
+
+Collection framework:
+It provides different data structures along with logic and it provides algorithms (such as sorting).
+
+collection framework interfaces and classes availabe in java.util package
+
+Collection
+       - List (interface)
+               - ArrayList
+               - LinkedList
+               - Stack
+       - Queue (interface)
+               - LinkedList
+               - PriorityQueue
+       - Set  (interface)
+             - SortedSet  (interface)
+                      - TreeSet
+             - HashSet
+                       - LinkedHashSet
+
+Methods in Collection interface:
+add() -----> to add one element
+addAll()  ----> to add list of elements
+clear()   ----> removes all values 
+isEmpty() ----> returns true if no data is present
+remove()  ----> it removes the existing element
+
+To store key value pairs
+Map (interface)
+      - HashMap
+      - LinkedHashMap
+      - Hashtable
+
+
+Functional Interface:
+It is a interface having only one abstract method
+
+Lambda functions:
+These are used to create objects for functional interface.
+syntax:
+(parameters) -> {
+ // method logic
+}
+
+
+I/O streams:
+A stream is a sequence of data. and these are composed with bytes.
+I/O streams are used to process input and output data.
+
+Streams 
+   - Input streams ( process input data)
+   - Output streams (process output data)
+
+Streams
+- byte streams
+- char streams
+
+Byte streams:
+- Output
+ - FileOutputStream
+      to write the data into existing files
+      FileOutputStream fout = new FileOutputStream(file path);
+- Input
+ - FileInputStream
+      to read the data from existing files
+       FileInputStream fout = new FileInputStream(file path);
+
+Char stream:
+- output
+    - Writer
+         -- FileWriter
+- input
+   - Reader
+         -- FileReader
+
+Functional streams:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

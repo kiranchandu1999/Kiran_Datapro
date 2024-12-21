@@ -1,0 +1,13 @@
+Array:
+It's a data structure which holds the data of similar type.
+it follows 0th based indexing.
+It is also an object and it stores elements in consecutive memory locations.
+to read and write data into an array we need to use array_name[index].
+
+syntax:
+data_type[ ]   variable_name  =  new    data_type[size];
+  ex:----> int[ ]  arr1  =  new  int[10];
+
+array initialization with values:
+int[ ]   arr1   =  {5, 10, 12, 8, 4, 16};
+arr1[3]  -----> 8

@@ -1,0 +1,44 @@
+-- HAVING clause
+
+Ex:
+  SELECT city FROM students GROUP BY city HAVING MAX(age) = 22;
+
+
+-- SQL clauses follows some order
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+
+
+Operators in SQL
+1. Mathematical operators
++, -, *, /, %
+
+Ex:
+ SELECT * FROM students WHERE age + 3 < 25;
+
+ SELECT * FROM students WHERE stu_id % 2 = 0;
+
+
+2. Relational Operators
+>, <, >=, <=, =, <>
+
+Ex:
+  SELECT * FROM students WHERE age < 22;
+
+3. Logical operators
+AND -----> If 1 condition false returns false 
+OR  ------> If 1 condition is true returns true
+NOT  -----> opposite to equal
+
+Ex:
+  SELECT * FROM students WHERE age > 21 AND teacher_id = 1;
+
+  SELECT * FROM students WHERE age > 21 OR teacher_id = 1;
+
+  SELECT * FROM students WHERE NOT teacher_id = 1;
+
+  SELECT * FROM students WHERE NOT (age > 21 OR teacher_id = 1);

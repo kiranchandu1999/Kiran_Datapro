@@ -1,0 +1,70 @@
+FrontEnd + BackEnd + Database ====> software application
+
+Java fullstack  ---> HTML, CSS, JS,   Java + SpringBoot  (SQL / MongoDB)
+
+Python fullstack   ---> HTML, CSS, JS,  Python + Django/flask  (SQL / MongoDB)
+
+MERN / MEAN  ---> HTML, CSS, JS,  JS + ExpressJs  (MongoDB)
+
+
+Database: It is a storage space where data gets stored. (local / cloud)
+
+Database language: To communicate with the database, mainly we have 2 types of languages SQL and NoSQL
+
+SQL: Structured Query Language
+
+Database operations: CRUD (Create, Read, Update and Delete)
+
+Database Management System (DBMS): MySQL, MSSQL server, Postgre SQL, Oracle SQL..
+
+Every software system has 2 things for interaction (GUI, CLI)
+
+Installation process:
+1. Download any sql server and install it.
+2. Download GUI or CLI applications and install them as well.
+3. Now connect to the server thorugh GUI or CLI
+
+
+Terminologies:
+1. Table ----> group of similiar data
+2. Column ----> particular field / property in a table
+3. Row/Record ----> it stored on particular record corresponding to all fields
+
+
+SQL queries types:
+1. DDL (Data Definition Language):
+- These queries are related to structure of the database.
+# CREATE --> used to create database and to create tables
+
+-- CREATE DATABASE database_name
+
+# ALTER
+# TRUNCATE
+# DROP
+# RENAME
+
+2. DML (Data Manipulation Language):
+- These queries are related to data manipulation
+# INSERT
+# UPDATE
+# DELETE
+
+3. DQL (Data Query Language):
+- These queries are used to fetch / read the data.
+# SELECT
+
+4. TCL (Transaction Control Language):
+- These queries are used to control the data transactions
+# COMMIT
+# ROLLBACK
+# SAVEPOINT
+
+5. DCL (Data Control Language):
+- These queries are permissions related.
+# GRANT
+# REVOKE
+
+
+
+
+

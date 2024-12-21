@@ -1,0 +1,61 @@
+Removing a field from document:
+syntax:
+db.collection.updateOne({filter}, {$unset: {filedname1: 1, fieldname2: 1, ..}})
+- after executing this query, specified fields will get deleted in the first matched document.
+
+syntax:
+db.collection.updateMany({filter}, {$unset: {filedname1: 1, fieldname2: 1, ..}})
+- after executing this query, specified fields will get deleted in the all matched documents.
+
+
+Renaming the fileds in a document:
+syntax:
+db.collection.updateOne({filter}, {$rename: {old_fieldname: 'new_fieldname'}})
+- after executing the above query, specified old filed name will be replaced with specified new field name in the first matched document.
+
+syntax:
+db.collection.updateMany({filter}, {$rename: {old_fieldname: 'new_fieldname'}})
+- after executing the above query, specified old filed name will be replaced with specified new field name in the all matched documents.
+
+
+Updating values in arrays or embedded documents:
+these operators are used to update data inside embedded documents.
+
+syntax:
+db.collection.updateOne({filter}, {
+  $set: {arrayField.$.innerfiled: 'value'}
+})
+
+note: 
+- filetering object should contains the particular inner object where we want to change the value inside array field.
+- '$' is called positional operator and it will be used as a index for that array.
+
+
+
+Adding and Removing elements to an array field in a document:
+$push:
+- this operator is used to add new element to the specified array field.
+
+syntax:
+- db.collection.updateOne({filter}, {$push: {arrayField: value}})
+
+$pop:
+- this operator is used to remove last element from the array field in a document.
+
+syntax:
+- db.collection.updateOne({filter}, {$pop: {arrayField: value}})
+
+
+$each:
+- while inserting multiple elements to an array field in a document, those elements will be added as a single element into that field, so to prevent this abnormal behaviour need to use $each, so that every element will be added individually.
+
+syntax:
+- db.collection.updateOne({filter}, {$push: {arrayField: {$each: [val1, val2, ...]}}})
+
+
+Delete operations in mongodb:
+- db.collection.deleteOne({filter}):
+  this function is used to delete a particular document from collection. if we pass filtering object then deletion will be based on that matched data.  
+
+- db.collection.deleteMany({filter}):
+   this is used to delete all matched documents from a collection. if filtering object is abscent then it may delete all existing documents present inside that collection.

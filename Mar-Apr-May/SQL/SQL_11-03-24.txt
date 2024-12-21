@@ -1,0 +1,30 @@
+Connecting to server and creating new user
+------------------------------------------------------------
+* While installing oracle sql software in our machine it asks for password and this password will work for admin user / schema (system, sys)
+* By using this admin user and password we can connect to the sql server
+* On successful connection we should create new user for new schema / db by using following sql query / command
+CREATE USER user_name IDENTIFIED BY password;
+* After creation of new user we need to give permissions for that user by using following command
+GRANT connect, resource, dba TO user_name;
+* After successful granting permissions to new user then we can connect to the user by following command
+connect user_name
+Enter password: password
+connect user_name/password;
+* To show the current user we can use command => show user;
+---------------------------------------------
+-- Creating tables
+CREATE TABLE table_name (
+col_1 data_type constraint/s (optional),
+col_2 data_type constraints,
+age number(3) check (age >= 18),
+name varchar2(12) default 'name'
+..............
+col_n data_type constraints);
+-------------------------------------------------
+-- Constraints (major 6 types)
+1. UNIQUE -> to maintain uniqueness in a column of a table (no dupliactes allowed)
+2. NOT NULL -> the column data shouldn't empty / null
+3. PRIMARY KEY -> (unique & not null) it is used for identification / data searching and a table can have only one primary key (PK)
+4. FOREIGN KEY -> this key is used to join multiple tables, foreign key in current table should be a primary key in some other table, so that we can join both the tables.
+5. CHECK -> check (age >= 18)
+6. DEFAULT -> if doesn't insert value for particular column then it will take default value whatever we mentioned while creating table

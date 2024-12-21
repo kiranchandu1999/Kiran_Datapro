@@ -1,0 +1,51 @@
+Numeric functions:
+- ABS(numeric value) --> absolute value
+Ex:
+SELECT ABS(age) AS abs_age FROM students;
+
+- CEILING(numeric value)
+Ex:
+SELECT CEILING(25.75) AS CeilValue;
+
+- FLOOR(numeric value)
+Ex:
+SELECT FLOOR(25.75) AS FloorValue;
+
+ROUND(number, decimals, operation) ---> to round off the numeric value
+Ex:
+SELECT ROUND(235.416689, 3, 0) AS RoundValue;
+
+Note: operation value default is 0 if any other number provide then it truncates the remaining decimal digits
+
+TRUNC() ----> it always returns prev base value (previous base value)
+Ex:
+SELECT TRUNC(-2.3) AS trunc_value;  ---> -2
+
+FLOOR()  ----> it returns prev base value (previous smaller base value)
+Ex:
+SELECT TRUNC(-2.3) AS trunc_value;  ---> -3
+
+
+Date functions:
+- CURRENT_TIMESTAMP
+SELECT CURRENT_TIMESTAMP;
+
+- DATEADD(interval, number, date)
+Ex:
+SELECT DATEADD(year, 1, '2017/08/25') AS DateAdd;
+
+- DATEDIFF(interval, date1, date2)
+Ex:
+SELECT DATEDIFF(month, '2017/08/25', '2011/08/25') AS DateDiff;
+
+
+Null functions:
+- ISNULL(expression, value)
+The ISNULL() function returns a specified value if the expression is NULL.
+Ex:
+SELECT full_name, ISNULL(teacher_id, 0) AS teach_id FROM students;
+
+- NULLIF(expr1, expr2)
+The NULLIF() function returns NULL if two expressions are equal, otherwise it returns the first expression.
+Ex:
+SELECT NULLIF('2017-08-25', '2017-08-25');

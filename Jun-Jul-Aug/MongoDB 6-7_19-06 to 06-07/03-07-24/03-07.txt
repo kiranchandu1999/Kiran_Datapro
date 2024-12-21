@@ -1,0 +1,48 @@
+7. $addFields:
+ -- this operator is used to add new fields within any stage.
+
+syntax:
+{$addFields : {newField1 : <expression>, newField2 : <expression>, ..}}
+
+8. $push:
+ -- this operator is used to merge mutiple arrays to an single array for every     group in group stage.
+ -- it merges all document's arrays as a single array but it will be looks like a multi dimensional array (array inside another array).
+
+syntax:
+{mergedArrayName : {$push : "$arrayField"}}
+
+9. $unwind:
+ -- this operator is used to deconstruct the array field in a document.
+ -- suppose one document is having array of size 3 then that document will     be splitted into 3 individual documents.
+
+syntax:
+{ $unwind : "$arrayField" }
+
+
+10. $addToSet :
+ -- this is similar to $push operator but unlike push operator it will ignores duplicate elements any adds only unique elements to merged array.
+
+syntax:
+{ mergedArrayField : {$addToSet : "$arrayFieldName"}}
+
+11. $size:
+-- to define length of the arrayField within a document
+
+syntax:
+{ $size : "$arrayField"}
+
+12. $filter:
+   -- this operator is used to filter the array field value. here we need to pass the array field as input need to provide condition. based on that condition it will filters the elements inside the array.
+
+{
+  $filter : {
+        input : "$arrayField",
+        as : "element_name",
+        cond : <expression>
+   }
+}
+
+example:
+db.students.aggregate([
+{$project : {studentName : 1, marks : {$filter : {input : "$marks", as : "item", cond : {$gte : ["$$item.score", 90]}}}}}
+])

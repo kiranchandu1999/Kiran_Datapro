@@ -1,0 +1,34 @@
+Naming convetion:
+1. class -----> PascalCase
+2. method  ----->  camelCase
+3. variable  -----> camelCase
+rules:
+- names can contain alphabets, digits, underscore (_) and dollor ($)
+- shouldn't start with digits
+- shouldn't have spaces
+- shouldn not be same as keywords
+
+Data types:
+- Primitive data types
+1. byte   ---> 1 byte
+2. short  ----> 2 bytes
+3. int   ---> 4 bytes
+4. long  ---> 8 bytes
+5. float   ---> 4 bytes
+6. double  ----> 8 bytes
+7. char  ---> 2 bytes
+8. boolean  ---> 1 bit
+
+- Non primitive
+String
+Arrays
+Objects
+
+Literals:
+int ---->  int a = 5;
+long ----> long b = 5L;
+double  ----> double c = 4.5;
+float ----> float d = 4.5F;
+char ----> char ch = 'a';
+String ----> String str = "Hello";
+boolean ---> boolean bool = true / false;

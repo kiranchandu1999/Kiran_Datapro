@@ -1,0 +1,39 @@
+Cursor methods:
+1. count() :
+     it is used to display count of queried data.
+
+2. limit(number) :
+     it is used to limiting the diplaying data from query.
+
+3. skip(number):
+     this method is used to skip the starting documents.
+
+4. sort(object{}):
+     this method is used to diplay sorted data either ascending or      descending. object will take field name as key and 1 or -1 as value.
+     note:  1 for ascending and -1 for descending.
+
+
+Ordered and unordered insertion of data:
+- basically inserting of documents by default follows insertion order.
+- by default ordered key is true, so that while inserting multiple documents if any error occured then it stops insertion into db.
+- so if we make ordered key value as false then it will ignores those error documents and inserts remaining ones.
+
+syntax: db.collection.insertMany([{}, {}], {ordered: false});
+
+
+Elements operators:
+These operators are used to display data according to field properties like field existnace, field value size etc.
+1. exists:
+     - it is used to display data based particluar field existence.
+     - it takes true or false, if we pass true in the query it will show data which       is having that field vice versa.
+ex: db.students.find({city: {$exists: false}, ph: {$exists: true}});
+
+2. type:
+    - it is used to display data based on filed type like string, number etc.
+    - it takes field type as a value for $type key.
+ex: db.students.find({ph: {$type: 'string'}});
+
+3. size:
+    - it is used to display the data based on array size of a particular field.
+ex: db.students.find({comments: {$size: 4});
+

@@ -1,0 +1,24 @@
+Loops:
+it is group of statements which needs to be executed continuously.
+
+- for loop
+it is used when there is defined no of iterations to be executed
+syntax:
+for(initialization, condition, updation) {
+	// statements
+}
+
+- while loop
+it is used when we doesn't know the no of iterations
+initialization
+while(condition){
+      // statements
+      // updation
+}
+
+- do while loop
+initialization
+do{
+     // statements
+     // updation
+} while(condition)

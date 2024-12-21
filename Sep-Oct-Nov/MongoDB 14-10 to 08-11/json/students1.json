@@ -1,0 +1,6 @@
+{"_id":{"$oid":"671254df6272003da7a675cf"},"stId":101,"name":"Kavya","email":"kavya@gmail.com","age":20,"marks":[58,69,86,42,92],"city":"vizag","mobile":"65423"}
+{"_id":{"$oid":"671255cd6272003da7a675d0"},"stId":102,"name":"Krishna","email":"krish@gmail.com","age":22,"college":"AUDE","marks":[{"subject":"Hindi","score":86},{"subject":"Maths","score":95},{"subject":"English","score":82}]}
+{"_id":{"$oid":"671255cd6272003da7a675d1"},"stId":103,"name":"Ram","email":"ram@gmail.com","age":22,"marks":[75,82,70]}
+{"_id":{"$oid":"6720d2d13f280de15327649d"},"stId":108,"name":"kishore","email":"kish@gmail.com","age":22,"mobile":12345,"marks":[{"subject":"Maths","score":85},{"subject":"Hindi","score":80}]}
+{"_id":{"$oid":"6720d2d13f280de15327649e"},"stId":109,"name":"Raju","email":"raju@gmail.com","marks":[{"subject":"Maths","score":80},{"subject":"Social","score":85},{"subject":"English","score":90}],"college":"KIET"}
+{"_id":{"$oid":"6720d3763f280de1532764a1"},"stId":112,"name":"rupa","email":"rupa@gmail.com","age":19,"college":"SNVP","marks":[{"subject":"English","score":87},{"subject":"Science","score":72}]}

@@ -1,0 +1,16 @@
+SOFTWARE APPLICATIONS TYPES:
+WEB application
+Android applications
+IOS applications
+
+
+Application --------> FRONTEND  +  BACKEND  +   DATABASE
+
+FRONTEND --->  HTML (Hyper Text Markup Language) + CSS (Cascading Style Sheet) + JS (Javascript) + ReactJs (Framework)
+
+BACKEND  --->  Python + Python Frameworks
+
+DATABASE ---> SQL / NoSQL
+
+
+

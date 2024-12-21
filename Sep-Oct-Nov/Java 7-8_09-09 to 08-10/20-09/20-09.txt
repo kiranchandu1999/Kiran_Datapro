@@ -1,0 +1,46 @@
+OOPs - Object Oriented Programming
+Class:
+It is a blueprint which can have variables and methods.
+synatx:
+class  class_name {
+    // variables
+    // methods
+}
+
+method:
+It is group of statements which will take some input and process it then it will give output accordingly.
+when we call method it will start execution.
+syntax:
+method_return_type   method_name (parameters if any) {
+    // method body
+}
+
+Object:
+It is a physical entity which is created based on particular class.
+syntax:
+Object_ref_type  object_name = new class_name();
+
+Variables types:
+1. Instance variables 
+   - variables declared within the class
+2. Local variables
+   - variables declared within the method
+3. Static variables
+   - variables with static keyword
+
+Constructor:
+It is similar to method with no return type.
+Name of the constructor should be same as class name
+It will be called while creating objects of this class
+By default JVM will create no paramters constructor for every class
+If we create any constructor explicitly, JVM won't create default constructor
+
+this keyword:
+- it refers to the current object itself
+- it is used to call current object variables and methods as well.
+- this() is used to call the constructor of current object.
+
+static keyword:
+- using static keyword we can make variables, methods as static.
+- if any variable or method is static it is related to class not object related.
+- to call static variable or method use class name instead of object name.

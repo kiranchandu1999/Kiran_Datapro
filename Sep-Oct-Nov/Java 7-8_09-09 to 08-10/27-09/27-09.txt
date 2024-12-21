@@ -1,0 +1,81 @@
+Wrapper class:
+It's a class which is built based on primitive data types. so that these classes are oftenly used with collection api (stack, queue, etc).
+byte ---->   Byte
+short --->   Short
+int     ---->   Integer
+long   --->   Long
+float    --->  Float
+double  ----> Double
+char    ---->   Character
+boolean   ---->  Boolean
+
+boxing:  converting primitive to wrapper class object
+ex: Interger a1 = Integer.valueOf(10);
+
+un-boxing: converting wrapper class object to primitive
+ex: int a2 = a1.intValue();
+
+note:
+we can do boxing and unboxing automatically. those are called as
+auto-boxing and auto un-boxing
+
+String:
+It is a class in java which is used to store sequence of characters.
+we can create strings in following ways:
+1. using string literal
+syntax:  String s1 = " ";
+- these kind of string objects will be stored inside string constant pool which is present inside heap area.
+
+2. using new keyword
+syntax: String s2 = new String(" ");
+- these kind of string objects will be stored in direct heap area not inside string constant pool.
+
+methods:
+1. charAt(index)   --->  to get character at given index.
+2. length()     ---->  to get the string size;
+3. startsWith(String)   ---> to check starting with given string
+
+
+StringBuffer: (Synchronized)
+StringBuffer is a class which is used in place of strings why because if we are trying to change or modify any string we can't. because strings are immutable (can't modify). so in that case we can use string buffer instead of string.
+
+methods:
+- setCharAt(index, char) ---> to set character at particular index.
+
+
+StringBuilder: (Non Synchronized)
+it is also same like string buffer class but it is non synchronized. works faster than string buffer.
+
+
+StringJoiner:
+it is a class which is used to join multiple strings with defined delimeter, prefix and suffix to get the final output.
+syntax:
+StringJoiner sj = new StringJoiner(delimeter, prefix, suffix);
+sj.add("string1");
+sj.add("string2");
+
+"["java"]" + "python"   ----> "[java]python"   ( normal string exec)
+
+"[java]" + "python"   ----> "[java, python]"   ( using string joiner)
+ 
+
+Math class:
+It is a class which contains methods related to mathematical operations.
+
+methods: (static)
+- abs(number)  ---> it will return positive number as output
+- min(num1, num2) ---> it will return minimum of both
+- max(num1, num2)  ---> will return maximum of both params
+- round(double)   ---> return after rounding it.
+- pow(base, power)  --> return base to the power value
+- random()  ---> it will generate 0 to 1 in decimal points.
+
+
+Arrays class:
+It is a class which contains methods for different operations on array like searching, sorting, etc.
+
+methods: (static)
+- binarySearch(array, value) ----> it will search given value in that array
+- sort(array) --> to sort the array
+- fill(array, value) --> fill with given value
+- copyOf(arr, length) --> copies array of given length

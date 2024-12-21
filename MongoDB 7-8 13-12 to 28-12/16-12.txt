@@ -1,0 +1,51 @@
+Database: It is a workspace where data get stored.
+
+Communication with database:
+GUI : Graphical User interface
+CLI : Command Line Interface
+
+Types of Database based on storage structure:
+
+Relational Database (tables): SQL (Structured Query Language)
+
+Non-relational database (objects): MongoDB
+
+
+Software that is used to manage the database is called database management system (DBMS)
+
+RDBMS : MySQL, MsSQL server, PostgreSQL
+
+Non-RDBMS : MongoDB server
+
+
+MongoDB:
+It is a language (NoSQL) and software to manage the database.
+It is a non RDBMS, will insert the data in the form of documents (JSON) and that data will be stored in (BSON).
+
+JSON ex:
+{
+"name": "sai devisri",
+"email": "asddfafdf",
+"age": 20
+}
+
+Terminologies:
+- Database:
+   It is memory space where data gets stored. One database can have multiple collections.
+- Collection:
+   It is group of multiple documents. Table refers the collection in SQL.
+- Document:
+   It is a object (JSON) where data will be stored in mongodb. Rows/Records replicate this documents in SQL.
+- Fields:
+   It is a key in document data in mongodb database. Columns refer to fields in SQL.
+
+Features:
+1. Schema-less database:
+     it doesn't follows any pre-defined structure to store data. so it's easy to manipulate individual documents.
+2. High Scalability:
+     In mongodb data will be shared across multiple servers so that horizontal scalling is easy when amount of data gets increased on any server.
+3. Fast response:
+     Query response is faster than sql database. because here no need to  join any tables to get final result.
+4. Indexing:
+     here we can create index on any field of one document so that searching  will be fast.
+

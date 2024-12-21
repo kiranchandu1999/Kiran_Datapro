@@ -1,0 +1,41 @@
+2. Logical operators:
+ - These are used for conditional based results.
+i. $and  ---> returns when all conditions true
+  ex: db.students.find({$and: [{age: 20}, {college: 'SGPA'}]})
+         db.students.find({age: 20, college: 'SGPA'})
+
+ii. $or ---> returns when either condition is true
+   ex: db.students.find({$or: [{age: 25}, {college: 'SGPA'}]})
+
+iii. $not  --> returns data which are unmatched with condition.
+    ex: db.students.find({age: {$not: {$eq: 20}}})
+
+iv.  $nor  --> returns when all conditions are false.
+     ex: ex: db.students.find({$nor: [{age: 25}, {college: 'SGPA'}]})
+
+
+Cursor methods:
+1. count() :
+     it is used to display count of queried data.
+
+Ex:
+db.students.find({"age" : {$in : [20, 22]}}).count()
+
+2. limit(number) :
+     it is used to limiting the diplaying data from query.
+
+Ex:
+db.students.find({"age" : {$in : [20, 22]}}).limit(2)
+
+3. skip(number):
+     this method is used to skip the starting documents.
+
+Ex:
+db.students.find({"age" : {$in : [20, 22]}}).skip(2)
+
+4. sort(object{}):
+     this method is used to diplay sorted data either ascending or descending. object will take field name as key and 1 or -1 as value.
+     note:  1 for ascending and -1 for descending.
+
+Ex:
+db.students.find({"age" : {$in : [20, 22]}}).skip(2)

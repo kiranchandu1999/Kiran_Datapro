@@ -1,0 +1,64 @@
+Views:
+view is a kind of virtual table.
+syntax:
+CREATE VIEW view_name AS select statement;
+
+Ex:
+GO
+CREATE VIEW students_view_1 AS SELECT stu_id, full_name, email, teacher_id FROM students;
+
+GO
+CREATE VIEW stud_teach_view AS SELECT s.stu_id, s.full_name, s.email, t.teach_name FROM students s JOIN teachers t ON s.teacher_id = t.teach_id;
+
+1.Normal views :
+i. Simple view ---> depends on single base table
+ii. Complex view ----> depends on multiple base tables using joins, group by etc.
+
+2. Materialized view:
+A view created from multiple tables in local DB and remote DB.
+
+3. Inline view:
+It is similar to sub queries. This view can be created by using select statement in FROM clause of another query.
+
+note: we can do all DML operations on views in SQL.
+
+syntax to delete view:
+DROP VIEW view_name;
+
+Ex:
+DROP VIEW students_view_1;
+
+
+Indexes:
+Indexing is a mechanism through which we can create indexes to avail fast searching of data from tables;
+By dafault admin will create indexes for columns which are having primary key and unique contraints.
+
+Cradinality  ----> total no of distinct rows / total rows;
+high cardinality --> 0.5 to 1
+low cardinality --> 0 - 0.5
+
+syntax:
+CREATE INDEX index_name on table_name (col_name);
+
+CREATE bitmap index index_name on table_name (col_name);
+
+CREATE index index_name on table_name (fun(col_name));
+
+Ex:
+CREATE INDEX stu_id_idx ON students(stu_id);
+
+Index types:
+1. B-Tree index (Balance tree index) - default
+     -- Hight cardinality
+2. Bitmap index
+     -- Low cardinality
+3. Function based index
+
+Logical types in index:
+i. unique or non unique index
+ii. Composite index  (creating index for multiple columns combinely)
+
+DROP INDEX table_name.index_name;
+
+Ex:
+DROP INDEX students.stu_id_idx;

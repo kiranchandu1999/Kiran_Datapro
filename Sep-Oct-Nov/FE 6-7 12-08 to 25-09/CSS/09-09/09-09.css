@@ -1,0 +1,79 @@
+.flex-container {
+    display: flex;
+    background-color: aqua;
+    padding: 5px;
+    justify-content: space-around;
+    /* align-items: end; */
+    height: 100px;
+}
+
+.flex-container > div {
+    background-color: darkcyan;
+    border: 1px solid black;
+    padding: 3px;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    width: 100px;
+}
+
+.flex-item3 {
+    align-self: center;
+    flex-basis: 200px;
+}
+
+.grid-container {
+    margin: 40px 0px;
+    background-color: chocolate;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100px 150px 120px;
+    /* grid-template-rows: 100px 120px 200px; */
+    column-gap: 5px;
+    row-gap: 10px;
+    /* justify-content: space-evenly; */
+    /* align-content: space-evenly; */
+    /* height: 500px; */
+}
+
+.item {
+    background-color: brown;
+    color: white;
+    border: 1px solid black;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.item1 {
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1 / 4;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-delay: 1s;
+}
+
+.item1:hover {
+    background-color: rgb(73, 6, 6);
+    cursor: pointer;
+}
+
+.item5 {
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.box {
+    background-color: red;
+    margin: 50px 0px;
+    width: 100px;
+    height: 100px;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.box:hover {
+    width: 300px;
+}
+

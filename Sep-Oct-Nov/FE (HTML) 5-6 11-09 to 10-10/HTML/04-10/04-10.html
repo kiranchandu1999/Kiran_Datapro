@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-10</title>
+</head>
+<body>
+    <!-- html forms -->
+     <h2>Student details</h2>
+    <form>
+    <fieldset>
+        <legend>Registration Form:</legend>
+        <div>
+            <label for="fname">First name:</label><br>
+            <!-- <input id="fname" type="text" name="fname" disabled value="John"> -->
+            <input id="fname" type="text" name="fname" autofocus>
+        </div>
+        
+        <div>
+            <label>Last name:</label><br>
+            <input type="text" name="lname" size="30" required autocomplete="off">
+        </div>
+
+        <div>
+            <label>Email:</label><br>
+            <input type="email" name="email" placeholder="Enter your valid email">
+        </div>
+
+        <div>
+            <label>Password:</label><br>
+            <input type="password">
+        </div>
+
+        <div>
+            <label for="">College:</label><br>
+            <input type="text" list="college-list">
+            <datalist id="college-list">
+                <option value="DIET">
+                <option value="KIET">
+                <option value="SNVR">
+                <option value="WNIS">
+                <option value="MNVR">
+            </datalist>
+        </div>
+
+        <div>
+            <label for="">PIN</label><br>
+            <input type="text" maxlength="6">
+        </div>
+
+        <div>
+            <label>Date of birth:</label><br>
+            <input type="date" min="1999-01-01">
+        </div>
+
+        <div>
+            <label for="">Telphone:</label><br>
+            <input type="text" pattern="[0-9]{4}-[0-9]{6}">
+        </div>
+
+        <div>
+            <label>Gender:</label><br>
+            <input id="maleIn" type="radio" name="gender" value="male">
+            <label for="maleIn">Male</label>
+
+            <input id="femaleIn" type="radio" name="gender" value="female">
+            <label for="femaleIn">Female</label>
+
+            <input id="othersIn" type="radio" name="gender" value="others">
+            <label for="othersIn">Others</label>
+        </div>
+
+        <div>
+            <label for="">Country:</label><br>
+            <select name="country">
+                <option value="">Select country...</option>
+                <option value="Australia">Australia</option>
+                <option value="Brezil">Brezil</option>
+                <option value="India" selected>India</option>
+                <option value="China">China</option>
+                <option value="Pakistan">Pakistan</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Upload resume:</label><br>
+            <input type="file" multiple>
+        </div>
+
+        <div>
+            <label for="">Rate your html skills:</label><br>
+            <input type="range" min="1" max="5">
+        </div>
+
+        <div>
+            <label for="">Your favorite color:</label><br>
+            <input type="color">
+        </div>
+
+        <div>
+            <label for="">Address:</label><br>
+            <textarea rows="6" cols="40"></textarea>
+        </div>
+
+        <div>
+            <input type="checkbox">
+            <label>I hereby declare that above info is correct.</label>
+        </div>
+        
+        <input type="submit">
+        <input type="reset">
+
+    </fieldset>
+    </form>
+</body>
+</html>

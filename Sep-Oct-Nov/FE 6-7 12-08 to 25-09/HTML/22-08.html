@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22-08</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="first name" value="John" readonly autofocus>
+        </div>
+        
+        <div>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="last name" value="Doe" disabled>
+        </div>
+
+        <div>
+            <label for="dob">Date Of Birth:</label><br>
+            <input type="date" id="dob">
+        </div>
+
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email">
+        </div>
+
+        <div>
+            <label for="pass">Password:</label><br>
+            <input type="password" id="pass">
+        </div>
+
+        <div>
+            <label for="gender">Gender:</label><br>
+
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="others" name="gender">
+            <label for="others">Others</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="check">
+            <label for="check">I'm 18 years old</label>
+        </div>
+
+        <div>
+            <label for="favcolor">Your favorite color:</label><br>
+            <input type="color" id="favcolor">
+        </div>
+
+        <div>
+            <label for="cv">Share your resume:</label><br>
+            <input type="file" id="cv">
+        </div>
+
+        <div>
+            <label for="">HTML coding level:</label><br>
+            <input type="range" min="1" max="10">
+        </div>
+
+        <div>
+            <label for="cnt">Telephone:</label><br>
+            <input type="tel" id="cnt" pattern="[0-9]{4}-[0-9]{6}">
+        </div>
+
+        <div>
+            <label for="">Country:</label><br>
+            <select name="country">
+                <option value="#">Select any counrty...</option>
+                <option value="India">Ind</option>
+                <option value="China">China</option>
+                <option value="Srilanka">Srilanka</option>
+                <option value="England">England</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="college">College Name:</label><br>
+            <input type="text" id="college" list="colleges">
+            <datalist id="colleges">
+                <option value="ABC">
+                <option value="GTY">
+                <option value="DIET">
+            </datalist>
+        </div>
+
+        <div>
+            <label for="adr">Address:</label><br>
+            <textarea name="address" id="adr" rows="5" cols="20"></textarea>
+        </div>
+        
+        <div>
+            <input type="reset">
+            <input type="submit">
+        </div>
+        <!-- <div>
+            <button>Reset</button>
+            <button>Submit</button>
+        </div> -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </form>
+</body>
+</html>

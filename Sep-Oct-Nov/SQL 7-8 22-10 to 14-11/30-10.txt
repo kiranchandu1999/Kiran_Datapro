@@ -1,0 +1,56 @@
+-- Updating records using where clause
+By using where clause we can update only selected records instead of updating all records unnecessarly. 
+
+UPDATE table_name SET col1 = val1, col2 = val2,....
+WHERE existing_col_name = existing_col_val;
+
+Ex:
+UPDATE students SET email = 'krishna@gmail.com' WHERE stu_id = 106;
+
+
+-- Deleting existing records from existing table in a particular database
+By using this command we can delete a single or multiple records/rows from the existing table.
+
+DELETE FROM table_name; (without where clause)
+
+Note: If we ignore where condition, it will delete all the records
+
+DELETE FROM table_name WHERE col_name = col_value;
+
+Ex:
+DELETE FROM students WHERE stu_id = 102;
+
+Note: These DML commands can be rollbacked to the previous state, but DDL commands cannot be rollbacked.
+      To rollback any DML query before executing that query need to specify BEGIN TRANSACTION, then only we can rollback.
+
+Ex:
+BEGIN TRANSACTION
+DELETE FROM students WHERE stu_id = 102;
+
+ROLLBACK TRANSACTION;
+
+
+-- DQL (Data Query Language)
+This language contains only one command called 'SELECT', it is used to fetch the data from existing tables.
+
+syntax:
+SELECT  col1_name, col2_name, col3_name,...  FROM  table_name;
+
+Note: To fetch all columns data then need to use "*" instead of specific column names. to get only specific records/rows then need to use where clause.
+
+Ex:
+SELECT stu_id, full_name, email FROM students;
+(or)
+SELECT stu_id, full_name, email FROM students WHERE stu_id = 106;
+
+
+
+-- CLAUES in SQL:
+- FROM
+- This clause is used to fetch the data from any particular table in database.
+- FROM  table_name
+
+- WHERE
+- This clause is used to fetch only selected or matched records for given condition.
+- WHERE  condition
+

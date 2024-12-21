@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31-07</title>
+</head>
+<body>
+    <!-- form elements -->
+    <form >
+        <div>
+            <label for="fname">FirstName:</label><br>
+            <input type="text" id="fname" required autofocus><br>
+        </div>
+        
+        <div>
+            <label for="lname">LastName:</label><br>
+            <input type="text" id="lname" readonly value="Kumar"><br>
+        </div>
+
+        <div>
+            <label>Gender:</label><br>
+
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+
+            <input type="radio" id="others" name="gender">
+            <label for="others">Others</label>
+        </div>
+
+        <div>
+            <label>Skills:</label><br>
+
+            <input type="checkbox" id="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="js">
+            <label for="js">JavaScript</label>
+        </div>
+
+        <div>
+            <label for="state">State:</label><br>
+            <select name="state" id="state">
+                <option value="">Select state</option>
+                <option value="AP">Andhra Pradesh</option>
+                <option value="TG">Telangana</option>
+                <option value="MH">Maharashtra</option>
+                <option value="TN">Tamilnadu</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="dob">Date Of Birth:</label>
+            <input type="date" name="dob" id="dob" max="2001-12-31">
+        </div>
+
+        <div>
+            <label for="city">City:</label><br>
+            <input type="text" list="cities">
+            <datalist id="cities">
+                <option value="Vizag">
+                <option value="Kakinada">
+                <option value="Guntur">
+            </datalist>
+        </div>
+
+        <div>
+            <label for="address">Address:</label><br>
+            <textarea name="" id="address" rows="6" cols="25"></textarea>
+        </div>
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+
+    <video controls>
+        <source src="" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="" type="audio/mp3">
+    </audio>
+</body>
+</html>

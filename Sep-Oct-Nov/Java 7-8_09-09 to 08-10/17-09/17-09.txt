@@ -1,0 +1,141 @@
+Naming convetion:
+1. class -----> PascalCase
+2. method  ----->  camelCase
+3. variable  -----> camelCase
+rules:
+- names can contain alphabets, digits, underscore (_) and dollor ($)
+- shouldn't start with digits
+- shouldn't have spaces
+- shouldn not be same as keywords
+
+Data types:
+- Primitive data types
+1. byte   ---> 1 byte
+2. short  ----> 2 bytes
+3. int   ---> 4 bytes
+4. long  ---> 8 bytes
+5. float   ---> 4 bytes
+6. double  ----> 8 bytes
+7. char  ---> 2 bytes
+8. boolean  ---> 1 bit
+
+- Non primitive
+String
+Arrays
+Objects
+
+Literals:
+int ---->  int a = 5;
+long ----> long b = 5L;
+double  ----> double c = 4.5;
+float ----> float d = 4.5F;
+char ----> char ch = 'a';
+String ----> String str = "Hello";
+boolean ---> boolean bool = true / false;
+
+Variable:
+It is a container that stores the data
+syntax:
+data_type   variable_name  =  value;
+
+Operators:
+operand  operator  operand
+Arithmetic operators: ( value )
++, -, *, /, %
+
+Relational: (boolean)
+<, >, <=, >=, ==, !=
+
+Logical ops: (boolean)
+&&, ||
+
+Assignment ops:
+=, +=, -=, *=, /=, %=
+a = a + 5;  ----> a += 5
+
+Bitwise operators:
+&, |, ^
+5 & 3 ----> 101 & 011  ---->   001 --> 1
+
+Shift operators:
+left shift ( << )
+right shift ( >> )
+5 >> 1  ----> 101 >> 1 --->  010 (2)
+
+Unary operators:
+oparand unary_op
+increment (++)
+- pre-increment ----> ++a
+- post-increment  ----> a++
+decrement (--)
+- pre-decrement ----> --a
+- post-decrement  -----> a--
+
+control statements:
+- if statements
+syntax:
+if(condition) {
+    // statements
+}
+
+- if else
+syntax:
+if(condition) {
+    // statements
+} else{
+    // else statements
+}
+
+- if else if ladder
+if(cond1) {
+ // 
+}
+else if(cond2) {
+
+}
+else if(cond3) {
+
+}
+else {
+}
+
+- switch statement
+it is similar to if else if ladder
+syntax:
+switch(variable) {
+      case val1:
+            // statements
+      case val2:
+            // statements
+      case val3:
+           // statements
+}
+
+break:
+it is used to break the flow of execution within the block
+
+Loops:
+for loop:
+if we know the no of iterations then we can use this loop
+syntax:
+for(initialization; condition; updation){
+     // loop body
+}
+
+while loop:
+if we doesn't know the no of iterations the use this loop
+syntax:
+initialization
+while(condition) {
+     // while loop body
+}
+
+do while loop:
+it is similar to while loop but it will execute first then checks the condition.
+syntax:
+do{
+  // loop body
+} while(condition);
+
+continue statement:
+it is used to skip current flow execution and forward to next iteration.

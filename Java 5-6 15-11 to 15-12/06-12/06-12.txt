@@ -1,0 +1,12 @@
+2. Polymorphism
+ - many methods with same name with different functionality.
+ - we can achieve polymorphism by following ways
+   i. by passing different no of parameters
+   ii. by passing different data type paramters
+
+types:
+i. Compile-time polymorphism (Method overloading)
+  - overloading methods with same name within the class.
+
+ii. Runtime polymorphism (Method overriding)
+  - writing the method which is present in parent class into child class with same method signature then it is called method overriding

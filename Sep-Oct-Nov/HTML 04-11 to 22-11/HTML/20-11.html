@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-11</title>
+</head>
+<body>
+    <!-- html form -->
+    <form>
+        <fieldset>
+        <legend>Student Registration Form:</legend>
+        <!-- first name -->
+        <div>
+            <label>First Name:</label><br>
+            <input type="text" placeholder="Enter First Name" autofocus>
+        </div>
+
+        <!-- last name -->
+        <div>
+            <label>Last Name:</label><br>
+            <input type="text" readonly disabled>
+        </div>
+
+        <!-- email -->
+        <div>
+            <label>Email address:</label><br>
+            <input type="email" required>
+        </div>
+
+        <!-- password -->
+        <div>
+            <label>Email password:</label><br>
+            <input type="password" maxlength="15">
+        </div>
+
+        <!-- gender         -->
+        <div>
+            <label>Gender:</label><br>
+            
+            <input type="radio" name="gender" id="male_id" value="male">
+            <label for="male_id">Male</label>
+
+            <input type="radio" name="gender" id="female_id" value="female">
+            <label for="female_id">Female</label>
+
+            <input type="radio" name="gender" id="others_id" value="others">
+            <label for="others_id">Others</label>
+        </div>
+
+        <!-- skill set -->
+        <div>
+            <label>Skills:</label><br>
+
+            <input type="checkbox">
+            <label for="">Java</label>
+
+            <input type="checkbox">
+            <label for="">HTML</label>
+
+            <input type="checkbox">
+            <label for="">CSS</label>
+
+            <input type="checkbox">
+            <label for="">Javascript</label>
+        </div>
+
+        <!-- date of birth -->
+        <div>
+            <label for="">Date of Birth:</label><br>
+            <input type="date">
+        </div>
+
+        <!-- pick favourite color -->
+        <div>
+            <label for="">Pick you favourite color:</label><br>
+            <input type="color">
+        </div>
+
+        <!-- upload your resume -->
+        <div>
+            <label for="">attach your resume:</label><br>
+            <input type="file" multiple>
+        </div>
+
+        <!-- Enter your age -->
+        <div>
+            <label for="">Enter age:</label>
+            <input type="number">
+        </div>
+
+        <div>
+            <label for="">programming skill range:</label><br>
+            <input type="range" min="1" max="5">
+        </div>
+
+        <div>
+            <label for="">Select city:</label>
+            <select name="city">
+                <option value="hyd">Hyderabad</option>
+                <option value="vizag">Vizag</option>
+                <option value="guntur">Guntur</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="kolkata">Kolkata</option>
+                <option selected>select....</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Select your college:</label><br>
+            <input type="text" list="clg_list">
+            <datalist id="clg_list">
+                <option value="SGPA">
+                <option value="BCRA">
+                <option value="MNCR">
+                <option value="REOT">
+                <option value="CSRH">
+            </datalist>
+        </div>
+
+        <div>
+            <label for="">Enter your address:</label><br>
+            <textarea name="" id="" rows="10" cols="30"></textarea>
+        </div>
+
+        <div>
+            <label for="">Enter ZIP code:</label>
+            <input type="text" size="4">
+        </div>
+
+        <br>
+        <div>
+            <input type="reset">
+            <input type="submit">
+        </div>
+        </fieldset>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+Loops:
+for loop:
+if we know the no of iterations then we can use this loop
+syntax:
+for(initialization; condition; updation){
+     // loop body
+}
+
+while loop:
+if we doesn't know the no of iterations the use this loop
+syntax:
+initialization
+while(condition) {
+     // while loop body
+}
+
+do while loop:
+it is similar to while loop but it will execute first then checks the condition.
+syntax:
+do{
+  // loop body
+} while(condition);
+
+continue statement:
+it is used to skip current flow execution and forward to next iteration.
+
+

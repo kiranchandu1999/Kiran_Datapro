@@ -1,0 +1,39 @@
+Variable:
+It is a container that stores the data
+syntax:
+data_type   variable_name  =  value;
+
+Operators:
+operand  operator  operand
+Arithmetic operators: ( value )
++, -, *, /, %
+
+Relational: (boolean)
+<, >, <=, >=, ==, !=
+
+Logical ops: (boolean)
+&&, ||
+
+Assignment ops:
+=, +=, -=, *=, /=, %=
+a = a + 5;  ----> a += 5
+
+Bitwise operators:
+&, |, ^
+5 & 3 ----> 101 & 011  ---->   001 --> 1
+
+Shift operators:
+left shift ( << )
+right shift ( >> )
+5 >> 1  ----> 101 >> 1 --->  010 (2)
+
+Unary operators:
+oparand unary_op
+increment (++)
+- pre-increment ----> ++a
+- post-increment  ----> a++
+decrement (--)
+- pre-decrement ----> --a
+- post-decrement  -----> a--
+
+

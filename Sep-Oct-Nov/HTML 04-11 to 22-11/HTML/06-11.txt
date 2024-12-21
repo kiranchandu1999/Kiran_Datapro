@@ -1,0 +1,15 @@
+HTML - Hyper Text Markup Language
+
+- It is supported by web browsers
+- HTML contains html elements
+- Every html element defined with tags (opening tag and closing tag)
+- Opening tag --->   < >
+- Closing tag --->   </ >
+- HTML element ---->  opening tag - content - closing tag
+- HTML file will be created using .html extension
+
+- HTML document follows hierarchical structure
+- Root level element is "html"
+- This html element contains two child elements called "head" and "body"
+- Head element contains meta data (data which is required to develop html document but it is not visible on the browser window)
+- Body element contains the all visible data of the document

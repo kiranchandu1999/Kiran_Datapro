@@ -1,0 +1,48 @@
+control statements:
+- if statements
+syntax:
+if(condition) {
+    // statements
+}
+
+- if else
+syntax:
+if(condition) {
+    // statements
+} else{
+    // else statements
+}
+
+- if else if ladder
+if(cond1) {
+ // 
+}
+else if(cond2) {
+
+}
+else if(cond3) {
+
+}
+else {
+}
+
+- switch statement
+it is similar to if else if ladder
+syntax:
+switch(variable) {
+      case val1:
+            // statements
+      case val2:
+            // statements
+      case val3:
+           // statements
+}
+
+break:
+it is used to break the flow of execution within the block
+
+
+
+
+
+

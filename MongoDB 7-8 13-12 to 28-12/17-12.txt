@@ -1,0 +1,14 @@
+
+How to use MongoDB:
+1. can use mongodb locally (need to install mongodb server)
+2. can use cloud based mongodb (just create mongodb atlas account and connect to it).
+
+Installation process:
+- download MongoDB community server and set the environment variable path
+- Search environment variables and go to system variables and click on path then click on edit at bottom.
+- Then paste the copied mongodb bin folder path link here
+- check whether installed or not by using command -->  mongod --version
+- to use CLI need to install mongodb shell
+- after that just type mongosh in cmd for connecting to shell and start queries.
+- for importing and exporting data (array of objects) we can install 
+

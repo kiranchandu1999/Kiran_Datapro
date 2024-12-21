@@ -1,0 +1,10 @@
+MERN  ----> MongoDB  +  ExpressJs  + ReactJs  + NodeJs
+
+Fullstack --->  Frontend  +  Backend  +  Database
+
+Frontend --->  HTML, CSS, Javascript (ReactJs)
+
+Backend --->  ExpressJs  + NodeJs
+
+Database ---->  MongoDB
+

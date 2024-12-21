@@ -1,0 +1,51 @@
+Date class:
+It is a class which is used to define date and time.
+syntax:
+Date  object_name  =  new Date();
+whenever we create date object it will take system date and stores it in the form of long data type.
+
+DateFormat class:
+it is an abstract class through which we  can format our date object.
+it has following methods to create object
+- getDateInstance()
+- getDateInstance(style)
+- getTimeInstance()
+- getTimeInstance(style)
+
+style --> DEFAULT, SHORT, MEDIUM, FULL
+
+
+SimpleDateFormat class:
+it is a class through which we can get date in defined format.
+SimpleDateFormat  sdf   =  new SimpleDateFormat(style);
+
+y --> year
+M --> month
+W  --> week
+d --> day
+H  --->  24 hrs format
+h  ---> 12 hrs format (AM, PM)
+m  ---> minutes
+s  ---> seconds
+
+
+Updates in interface from java 8:
+interfaces supports method implemention by 2 ways
+- using default keyword
+
+- using static keyword
+
+interface  Parent {
+     // abtsract method
+     void showPassword();
+
+     // default methods
+     default  void print(){
+            // method body
+      }
+
+     // static method
+     static  void  display(){
+            // method body
+     }
+}

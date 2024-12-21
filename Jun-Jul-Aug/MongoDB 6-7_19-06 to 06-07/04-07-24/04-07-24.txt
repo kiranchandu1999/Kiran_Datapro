@@ -1,0 +1,39 @@
+$lookup:
+-- it is a operator which is used to do the left join between 2 collections in a same database.
+
+syntax:
+{
+  $lookup : {
+       from : <foreign collection>
+       localField : <local collection field>
+       foreignField: <fieldname in foreign collection>
+       as : <newArrayFieldname>
+   }
+}
+
+$max, $min operators in update:
+-- these operators are used to update documents based on specified values.
+-- if we used $max with some value then, if current field value is less than the specified value then it will update to specified value or else it remains same.
+
+
+string operators in mongodb:
+1.$concat:
+ -- this operator is used to join mutiple strings and give result as a combined string.
+
+syntax:
+{
+   $concat: [<expression1>, <expression2>, ..]
+}
+
+2. $toUpper:
+  -- for converting to uppercase
+
+3. $toLower:
+  -- for converting to lowercase
+
+
+to create new collection from the resultant data:
+syntax:
+db.collection.aggregate([{stage 1}, ...., {$out : "newCollectionName"}])
+note:
+ - $out operator should be last stage in aggragation pipelines

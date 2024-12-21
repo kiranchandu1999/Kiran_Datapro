@@ -1,0 +1,35 @@
+Abstraction:
+abstraction is a mechanism which is used for data hiding.
+it hides the method implementation details and it shows only definition.
+implementation ways:
+1. abstract class
+2. interface
+
+1. abstract class: (not 100% abstraction)
+rules:
+- a method implementation can be hidden by making method as abstract.
+- if any abstract method presents in any class then that class also should be abstract.
+- abstract methods implementation should be done in child class by method overrding.
+- we can't create object for abstract classes.
+- In abstract class we can have abstract and non abstract methods as well.
+
+2. interface: (100% abstraction)
+- interface is similar to class only.
+- it is created by using interface keyword intead of class keyword
+- we can't create objects for interfaces
+- abstract methods implementation should be done in child class by method overriding.
+- for method overriding in child class we need to use implements keyword instead of extends keyword for inheritance.
+- by default methods in interface are public and abstract.
+- by default variables are public, static and final.
+
+final keyword:
+- final variable values can't be override.
+- final method can't be overriden.
+- final class can't be inherited.
+
+Access modifiers:
+1. private  ----> accessible within the class
+2. default   -----> accessible within the package
+3. protected  ----> accessible in the package but only subclass in other packages
+4. public  -----> accessible everywhere
+

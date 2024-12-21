@@ -1,0 +1,49 @@
+/* * {
+   margin: 0; 
+   color: red;
+}
+
+h2 {
+    color: blueviolet;
+}
+
+#head-1{
+    color:chocolate;
+}
+
+.heading-1 {
+    background-color: aqua;
+} */
+
+/* div p{
+    color: red;
+} */
+
+/* div>p{
+    color: red;
+} */
+
+div+p{
+    color: green;
+}
+
+button {
+    background-color: rgba(40, 73, 164, 0.872);
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(34, 34, 194);
+}
+
+button:active {
+    background-color: blueviolet;
+}
+
+/* #p4::first-line {
+    color: red;
+} */
+
+p[name="para"]{
+    color: red;
+}

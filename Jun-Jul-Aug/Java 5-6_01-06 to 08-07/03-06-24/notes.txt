@@ -1,0 +1,43 @@
+Variables:
+variable is a type of container that stores the data.
+syntax:
+data_type   variable_name  =  value;
+int a = 5;
+
+Operators:
+Arithmetic opeartors:
++, -, *, /, %
+
+Relational :
+<, >, <=, >=, ==, !=
+
+Logical :
+&&, ||
+
+Bitwise:
+&, |, ^
+5 & 3  ---> 101 & 011 ---->  001  --> 1
+
+Assignment operators:
+=, +=, -=, *=, /= 
+a = a + 5;  ----> a += 5;
+
+Control statements:
+- if
+syntax:
+if (condition) {
+      // statements
+}
+
+- if else
+syntax:
+if (condition) {
+      // statements
+}
+else {
+     // statements
+}
+
+- if else if ladder
+
+- switch

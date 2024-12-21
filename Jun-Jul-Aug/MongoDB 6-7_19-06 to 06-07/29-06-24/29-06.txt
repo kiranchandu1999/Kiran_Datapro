@@ -1,0 +1,27 @@
+Adding and Removing elements to an array field in a document:
+$push:
+- this operator is used to add new element to the specified array field.
+
+syntax:
+- db.collection.updateOne({filter}, {$push: {arrayField: value}})
+
+$pop:
+- this operator is used to remove last element from the array field in a document.
+
+syntax:
+- db.collection.updateOne({filter}, {$pop: {arrayField: value}})
+
+
+$each:
+- while inserting multiple elements to an array field in a document, those elements will be added as a single element into that field, so to prevent this abnormal behaviour need to use $each, so that every element will be added individually.
+
+syntax:
+- db.collection.updateOne({filter}, {$push: {arrayField: {$each: [val1, val2, ...]}}})
+
+
+Delete operations in mongodb:
+- db.collection.deleteOne({filter}):
+  this function is used to delete a particular document from collection. if we pass filtering object then deletion will be based on that matched data.  
+
+- db.collection.deleteMany({filter}):
+   this is used to delete all matched documents from a collection. if filtering object is abscent then it may delete all existing documents present inside that collection.

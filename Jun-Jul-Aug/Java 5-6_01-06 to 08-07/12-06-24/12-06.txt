@@ -1,0 +1,15 @@
+Polymorphism:
+- Basically polymorphism can be achieved in 2 ways,
+1. Compile-time polymorphism (Method overloading)
+  -- multiple methods with same name within the class
+  -- either no of parameters or data type should be different
+
+2. Runtime polymorphism (Method Overriding)
+  -- If we over write any method of parent class in child class then it is called       method overriding
+  -- we can follow same signature of method inside parent class to override       in child class.
+
+Super keyword:
+it is used to refer the immediate parent object from child child class.
+by using super() we can call parent class constructor
+
+

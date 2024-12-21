@@ -1,0 +1,12 @@
+Fullstack --> Frontend + Backend + Database
+
+Frontend --> HTML + CSS + JS
+Backend --> Python (python fullstack)  or Java (java fullstack)
+Database --> to store the data
+
+Frontend
+Example: Car (skeleton part, styling, engine)
+HTML -->  skeleton (to add elements) - Hyper Text Markup Language
+CSS --> styling to the html document - Cascading Style Sheet
+JS --> to add the interaction - Javascript
+

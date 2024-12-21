@@ -1,0 +1,351 @@
+DDL
+-CREATE
+-ALTER
+-RENAME
+-DROP
+-TRUNCATE
+
+DML
+-INSERT
+-UPDATE
+-DELETE
+
+DQL (Data Query Language)
+Queries that are used to read the data from database
+- SELECT
+
+TCL (Transactional Control Language)
+- Transaction is nothing but a operation done on database (creating, inserting, updating, deleting)
+- COMMIT (saving the operation / transaction upto the point)
+- ROLLBACK (to do undo operation / revert back to the previous transaction or to a particular save point)
+- SAVEPOINT (mark point / check point, can create save point)
+
+Note: DDL commands are auto committed, but in DML autocomit is false
+
+DCL (Date Control Language)
+- GRANT (to give permissions)
+- REVOKE (to disable the existing permissions)
+
+Data types in SQL
+
+String :
+CHAR(size) -> it is used to define fixed length characters
+VARCHAR(size) -> it is used to define variable length of characters
+VARCHAR2(size) -> it is used in new versions of oracle sql
+
+Numeric:
+NUMBER(size) -> it is used to represent whole numbers
+NUMBER(precision, scale) -> NUMBER(1, 3) -> used to represent float numbers
+
+Date: (DD-MMM-YY)
+DATE -> to represent date
+
+Object datatype:
+BLOB : Binary Long Object
+CLOB  : Character Long Object
+
+
+// Creating tables 
+CREATE TABLE table_name (
+col_1   data_type   constraints(optional),
+col_2   data_type   constraints (optional),
+....
+....
+);
+
+Example:
+
+Create table students (
+roll_no  number(5) primary key,
+name  varchar2(20) not null,
+age  number(2),
+mobile  number(10) not null
+)
+
+// Altering tables
+ - adding constraints (without constraint name)
+ALTER TABLE table_name
+ADD primary key ( col_name) ;
+
+ - add constraint with name
+ALTER TABLE table_name
+ADD CONSTRAINT constraint_name primary key ( col_name);
+
+- drop constraints
+ALTER TABLE table_name
+DROP constraint / constraint name
+
+- add column
+ALTER TABLE table_name
+ADD col_name   data_type  constraints (if any)
+
+- drop column
+ALTER TABLE table_name
+DROP COLUMN  col_name
+
+- change column data type
+ALTER TABLE table_name
+MODIFY  col_name  new_data_type
+Note: To modify the column data type / data type size decrease, that column data should be empty
+
+- rename the exsiting column
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
+
+// Renaming table
+RENAME old_table_name to new_table_name;
+
+// truncate table
+It removes the data only
+TRUNCATE TABLE table_name;
+
+// drop table
+It removes data and structure
+DROP TABLE table_name;
+
+// DML commands
+// inserting data into table
+INSERT INTO table_name (col_1, col_2, ....) values (val_1, val_2,.....);
+if we are trying to insert all column values in the same order then we can skip column names
+INSERT INTO table_name values (val_1, val_2,.....);
+
+// updating existing data (note : should use where clause)
+UPDATE table_name SET col_1 = new_val_1, col_2 = new_val_2, .... where col_name = value;
+
+// deleting existing data / row
+DELET FROM table_name where col_name = value;
+
+// Reading data from database by using select command
+SELECT  *  from  table_name; (* indicates that select all columns)
+SELECT col_1, col_2, .. from table_name;
+
+
+// Clauses in SQL
+- FROM ----> It is used to fetch data from particular table
+
+- WHERE -----> It is used to specify some condition based on that data will be fetched.
+
+- DISTINCT -----> It is used to select unique values from that particular column
+
+- ORDER BY -----> It is used to sort the output data either ascending / descending
+
+- GROUP BY -----> It is used to grouping the records based on particular column
+
+
+Operators in SQL
+1. Mathematical operators
++, -, *, /, %
+
+2. Relational Operators
+>, <, >=, <=, =, <>
+
+3. Logical operators
+AND -----> If 1 condition false returns false 
+OR  ------> If 1 condition is true returns true
+NOT  -----> opposite to equal
+
+IN  ---------> to compare multiple values with particular column name in where clause
+where stu_id  IN ( val_1, val_2, ...);
+
+BETWEEN --------> It is used to define some range of values to compare with particular column
+where stu_id  BETWEEN  101 AND 103;
+
+LIKE -----------> It is used to compare string patterns using wildcards
+
+Wildcards:
+% ----> it defines zero or more characters
+_   -----> it defines exactly one character
+[ ]   -----> it defines any character inside the brackets
+-    ------> it is used to define range inside square brackets
+
+Alias ( AS ) ----> it is used to define our custom name for any column.
+select  actual_col_name  as   custom_col_name   from  table_name;
+
+FOREIGN KEY syntax:
+FOREIGN KEY ( foreign_col_name ) REFERENCES  primary_table_name (primary_col_name);
+
+Order of clauses in a sql query:
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+LIMIT (mysql) / FETCH FIRST (oracle) / TOP (mssql)  (oracle above 12 version)
+note : where rownum <= number  (older versions)
+
+Aggregate functions:
+Functions which are used to do some aggregate operations on data present inside tables. 
+These functions are used with group by clause. these all functions returns only single row.
+MIN() - returns smallest value within the selected column
+MAX() - returns biggest value within the column
+COUNT() - returns the number of rows in a set
+SUM() - returns the total sum of a numerical column
+AVG() - returns the average value of a numerical column
+
+
+String functions:
+upper(string) ---> converts into uppercase
+lower(string) ----> converts into lower case
+initcap(string) ---> initial letter capitalize
+length(string)  ----> length of string
+reverse(string) ----> it reverses the original string
+substr(string, from_pos, substring-length)  ----> it returns given length of substring starting from given pos
+note:----> if from_pos is positive then it starts from starting and if it's negative starts from ending
+instr(main_string, serach_string, from_pos, no_of_occurance)  ---> returns position of given string
+lpad(string, length, content_to_be_add) / rpad()  ------>  adds given content on either left or right side
+ltrim() / rtrim(string, content)  -------> if content is there it removes content either left or right, else removes space
+replace(string, old_string, new_string) ---> replace old with new string
+
+Null functions:
+NVL (arg1, arg2) 
+	if arg1 is null --> arg2
+	if arg1 is not null ---> arg1
+NVL2 (arg1, arg2, arg3)
+	if arg1 is null --> arg3
+	if arg1 is not null ---> arg2
+NULLIF(arg1, arg2)
+	if arg1 = arg2 ---> null
+	if arg1 != arg2 ---> arg1
+COALESCE(arg1, arg2, ......arg n)
+	- it will return first not null value.
+
+Numeric functions:
+round() ---> to round off the numeric value
+trunc() ----> it always returns prev base value (previous base value)
+ceil()  ------> it returns top value
+floor ----> it returns prev base value (previous smaller base value)
+mod()  ------> it returns reminder
+
+Date functions:
+to_date (string, fromat) ----> returns the string into date fromat
+to_char (date, format) ----> returns the date into string format
+months_between(date1, date2) ---> returns months between two dates
+add_months(date, no_of_months0 ---> returns new date after adding given months
+
+SQL - Joins:
+Joins are used to join multiple tables and fetch the data accordingly.
+Equi joins ----> joining is happened based on equal values of given columns of two tables
+types of joins:
+1. Inner join / join
+	returns matched data from both tables
+2. Left / Left outer join
+	returns matched data from both tables and all the data from left table.
+3. Right / Right outer join
+	returns matched data from both tables and all the data from right table.
+4. Full / Full outer join
+	returns matched and unmatched data from both tables.
+5. Cross join / Cartesian product
+	returns product of records / rows in both tables
+
+Joins can be implemented in two ways:
+- Implicit method
+	select col_names_from_tables from table1, table2 where table1.col = table2.col;
+- Ansi method (recommended / mostly used)
+	select col_names_from_tables from table1 inner join table2 on table1.col = table2.col;
+
+
+Non-Equi joins  ---> joining is happened based on equal values of given columns of two tables
+
+Sub query:
+It is a query under a main query
+Types:
+Single row sub query
+  -- query from which we get only one row as output
+Multi row sub query
+  -- query from which we get multiple rows as output
+Multi column sub query
+Co-related sub query
+  -- query written on same table on which main query is written
+
+Set operators:
+Union:
+   -- it will merge and removes duplicates from both the tables
+Union all:
+   -- it will merge both the tables and shows result along with duplicates
+Intersect:
+   -- it will shows the common data from both tables
+Minus:
+   -- it will result difference data among the tables
+   -- table_1 minus tabe_2 ------> extra data in table_1
+   -- table_2 minus tabe_1 ------> extra data in table_2
+
+Analytical functions:
+1. Rank()
+  -- rank() over(partition by col  order by rank_col asc/desc)
+2. Dense_Rank()
+  -- dense_rank() over(partition by col  order by rank_col asc/desc)
+3. Row_number()
+4. Lead()
+  -- lead(col_name) over(order by col)
+5. Lag()
+  -- lag(col_name) over(order by col)
+note: all these functions should be used with over()
+
+Views:
+view is a kind of virtual table.
+syntax:
+CREATE VIEW view_name as select statement;
+
+1.Normal views :
+i. Simple view ---> depends on single base table
+ii. Complex view ----> depends on multiple base tables using joins, group by etc.
+
+2. Materialized view:
+A view created from multiple tables in local DB and remote DB.
+
+3. Inline view:
+It is similar to sub queries. This view can be created by using select statement in FROM clause of another query.
+
+note: we can do all DML operations on views in SQL.
+
+syntax to delete view:
+DROP view view_name;
+
+Indexes:
+Indexing is a mechanism through which we can create indexes to avail fast searching of data from tables;
+By dafault admin will create indexes for columns which are having primary key and unique contraints.
+
+Cradinality  ----> total no of distinct rows / total rows;
+high cardinality --> 0.5 to 1
+low cardinality --> 0 - 0.5
+
+Index types:
+1. B-Tree index (Balance tree index) - default
+     -- Hight cardinality
+2. Bitmap index
+     -- Low cardinality
+3. Function based index
+
+Logical types in index:
+i. unique or non unique index
+ii. Composite index  (creating index for multiple columns combinely)
+
+syntax:
+CREATE index index_name on table_name (col_name);
+
+CREATE bitmap index index_name on table_name (col_name);
+
+CREATE index index_name on table_name (fun(col_name));
+
+
+ANY, ALL  operators:
+ANY ----> returns true if any on of the values match with condition
+ALL -----> returns true if all values passed the condition
+
+syntax:
+select * from table where id < any(val1, val2, val3,...);
+select * from table where id > all(val1, val2, val3,...);
+
+case opeartor:
+it is similar to if else block in programming language.
+syntax:
+CASE
+          WHEN condition1 THEN result1
+          WHEN condition2 THEN result2
+          WHEN conditionN THEN resultN
+          ELSE result
+END;
+
+

@@ -1,0 +1,26 @@
+4. Encapsulation
+- It is a process of encapsulating all variables and methods which are inter related within a block. and we call it as class.
+- we can restrict data accessibility for other classes and methods.
+
+Access modifiers:
+1. private  ----> accessible within the class
+2. default   -----> accessible within the package
+3. protected  ----> accessible within the package and subclasses of other packages
+4. public  -----> accessible everywhere
+
+super keyword:
+it is used to access the immediate parent class properties.
+- can access parent class variables
+- can access parent class methods
+- can call parent class constructor
+
+final keyword:
+- final variable can't be reinitialized
+- final method can't be overriden
+- final class can't be extended
+
+instance block:
+it will be called while instance creation. calling order as follows
+- super()
+- instance block
+- constructor

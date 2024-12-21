@@ -1,0 +1,30 @@
+h2{
+    /* rgb, hex code, hsl */
+    color: red;
+    /* color: rgb(186, 125, 100); */
+    /* color: #bacc0b; */
+    /* color: hsl(240, 100%, 50%); */
+
+    /* box model: content << padding << border << margin */
+    /* border: 1px solid black;
+    padding: 20px;
+    margin: 100px; */
+
+    /* background-color: yellowgreen; */
+    height: 600px;
+    width: 600px;
+    /* border: 1px solid black; */
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 50%;
+
+
+    /* background-image: url("/images/flower_pot.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: right; */
+    background: url("/images/flower_pot.jpg") no-repeat scroll right;
+}

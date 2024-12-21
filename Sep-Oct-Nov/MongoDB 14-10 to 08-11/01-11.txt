@@ -1,0 +1,36 @@
+$all:
+This operator selects the documents which is having a field value as an array and that contains all the specified values.
+
+syntax:   db.collection.find({arrayField: {$all: [val1, val2, ...]}})
+ex:  db.students.find({marks: {$all: [78, 82, 88]}})
+
+$elemMatch:
+This operator selects the documents which is having a array field and that contains atleast one element that matches the query as specified.
+
+syntax:  db.collection.find({arrayField : {$elemMatch: {<query1>, <query2>, ....}}})
+ex:   db.students.find({marks: {$elemMatch: {subject: 'maths', score: {$gt: 90}}}})
+
+
+Updating documents in MongoDB:
+To update existing document data we'll use update functions.
+1. updateOne()
+- this function is used to update only one matched document.
+
+syntax:
+db.collection.updateOne({filter}, {
+    $set: {field1 : value1, field2 : value2, ...}
+})
+
+note: if we skip the filter object it will update first document in this collection otherwise it updates first matched document.
+db.students.updateOne({}, {$set: {city: 'vizag'}})
+
+2. updateMany()
+- this function is used to update all matched documents based on filter object.
+
+syntax:
+db.collection.updateMany({filter}, {
+    $set: {field1 : value1, field2 : value2, ...}
+})
+
+note: if we skip the filter object it will update all documents in this collection otherwise it updates only matched documents.
+db.students.updateMany({}, {$set: {city: 'vizag'}})

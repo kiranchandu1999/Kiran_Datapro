@@ -1,0 +1,32 @@
+OOPs:
+1. Encapsulation
+   - It is a process of encapsulating all variables and methods which are inter related within a block. and we call it as class.
+  - we can restrict data accessibility for other classes and methods.
+
+Access modifiers:
+1. private
+2. default
+3. protected
+4. public
+
+2. Inheritance
+ - Acquiring properties from parent class to child class.
+ - by using extends keyword we can aquire properties of parent class
+types of inheritance:
+i. Single level inheritance
+    --  from one parent to one child
+ii. Multi level
+    -- from grand_parent to parent, parent to child
+iii. Heirarchical
+    -- from one parent to multiple child classes
+iv. Multiple (it is not possible by classes in java)
+    -- from multiple parent classes to one child class
+
+3. Polymorphism
+  - it means many forms (related to methods)
+  - we can have multiple methods with same names
+- polymorphism can be achieved by following 2 ways:
+  i. by passing different no of parameters
+  ii. by passing different data types of parameters 
+
+4. Abstraction

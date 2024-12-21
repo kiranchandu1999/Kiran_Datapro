@@ -1,0 +1,31 @@
+.head2 {
+    color: red;
+}
+
+#heading2 {
+    color: green;
+}
+
+/* .para {
+    color: blueviolet;
+} */
+
+/* div p {
+    color: blueviolet;
+} */
+
+.div1>p {
+    color: blueviolet;
+}
+
+/* .div1+h4 {
+    color: blue;
+} */
+
+.div1~h4 {
+    color: blue;
+}
+
+/* * {
+    margin: 0;
+} */

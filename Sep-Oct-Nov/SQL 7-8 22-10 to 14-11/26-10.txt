@@ -1,0 +1,81 @@
+-- renaming the existing table
+ALTER TABLE table_name
+RENAME TO new_name
+
+SQL server:
+EXEC sp_rename 'old_table_name', 'new_table_name';
+
+Ex:
+EXEC sp_rename 'students', 'students_table';
+
+
+-- drop the existing table
+DROP TABLE table_name;
+
+Ex:
+DROP TABLE students;
+
+-- to drop the existing database
+DROP DATABASE database_name
+
+Ex:
+DROP DATABASE college_db;
+
+
+-- truncating the existing table
+TRUNCATE TABLE table_name
+
+Ex:
+TRUNCATE TABLE students;
+
+
+--- DROP VS TRUNCATE:
+DROP:
+- It deletes table structure and its containing data
+- It clears the table space complications from memory
+- It is slow as there are so many complications compared to the TRUNCATE command.
+
+TUNCATE:
+- It deletes all the data and preserves the structure of the table
+- This query does not free the table space from memory
+- It is fast as compared to the DROP command as there are fewer complications.
+
+
+---- Constraints in SQL:
+- SQL constraints are used to specify some rules for the data in a table.
+- Constraints are used to limit the type of data that can got into the table. this ensures the accuracy and reliability of the data in the table.
+- Constraints can be column level or table level.
+The following are the constraints used in SQL:
+
+1. NOT NULL - Ensures that column cannot have a null value
+
+Ex:
+full_name  varchar(20)  NOT NULL  (or)  full_name  varchar(20) CONSTRAINT constraint_name  NOT NULL
+
+2. UNIQUE - It ensures that all values in a column should be unique
+
+Ex:
+email_id  varchar(15)  UNIQUE  (or)  email_id  varchar(15)  CONSTRAINT constraint_name  UNIQUE
+
+3. PRIMARY KEY - It is combination of NOT NULL and UNIQUE. It is useful to identify the particular record/row in a table. 
+		 One table can have only one primary key column
+
+Ex:
+stu_id  int  PRIMARY KEY  (or)   stu_id  int  CONSTRAINT constraint_name  PRIMARY KEY
+
+4. FOREIGN KEY - It is a primary key in child table and it acts as a foreign key in parent table. 
+		 so this contraint is useful for establishing the connection between multiple tables.
+
+Ex:
+dept_id  int  FOREIGN KEY  REFERENCES  reference_table (ref_column)  (or) dept_id  int CONSTRAINT constraint_name FOREIGN KEY  REFERENCES  reference_table
+
+5. CHECK - Ensures that the values in a column satisfies a specific condition.
+
+Ex:
+student_age  int  CHECK (student_age > 18)
+
+6. DEFAULT - Sets a default value for a column if no value is specified
+
+Ex:
+stu_mobile  char(10)  DEFAULT '12345'
+

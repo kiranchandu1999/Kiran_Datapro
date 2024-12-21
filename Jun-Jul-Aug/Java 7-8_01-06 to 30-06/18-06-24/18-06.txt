@@ -1,0 +1,19 @@
+Wrapper class:
+It's a class which is built based on primitive data types. These are oftenly used in collection framework (stack, queue,..).
+byte  --  Byte
+short -- Short
+int   -- Integer
+long   -- Long
+float   -- Float
+double   -- Double
+char   -- Character
+boolean   --  Boolean
+
+boxing:
+converting primitive to wrapper class object
+
+un-boxing:
+converting wrapper class object to primitive
+
+passing by value vs passing by reference:
+while calling a method we will pass arguments and if we pass primitive data type args then those will be passed by value and if we pass objects as args then those will passed by reference. 

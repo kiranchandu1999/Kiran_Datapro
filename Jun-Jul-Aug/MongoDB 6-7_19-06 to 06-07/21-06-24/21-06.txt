@@ -1,0 +1,49 @@
+CRUD:
+Create:--->
+1. Creating database:
+we have some default dbs already exists in our mongodb server.
+- show dbs
+   --> to know the existing dbs which contains data in it.
+- db
+   --> it will show the current working db.
+- use database_name
+   --> it will switch to that db if it is exists or else it will create new db and switched to it.
+
+2. creating collections:
+we can create collection by following 2 ways
+- db.createCollection("collection_name")
+   --> creates new collection in working db.
+
+- db.collection_name.insertOne/Many() 
+   --> it creates new collection if not exists and then adds the data to it.
+
+- show collections
+  --> it will give all existing collections inside working db.
+
+3. Inserting documents into collections:
+ we can insert data in the form of documents to our collection.
+- db.collection_name.insertOne(object)
+   ---> it will insert only one document at a time.
+
+- db.collection_name.insertMany(object[ ])
+   ---> it will add multiple objects at a time.
+
+Read:--->
+4. Reading documents / data from collection:
+- db.collection_name.find():
+  --> to get all documents inside given collection.
+
+- db.collection_name.findOne():
+   ---> to get only first document from given collection.
+
+- db.collection_name.find(object) or findOne(object) 
+   ---> to get filtered data from collection.
+
+- db.collection_name.find(filtering_object, project)
+  ---> to get selected fields inside project object.
+  projection object: { filed_1: 1, field_2 : 1, _id : 0, ...}
+  put 1 as value for fields you want to diplay
+  put 0 as value for fields dont want to display
+note: cannot use 1 and 0 in same projection object except _id field.
+
+   

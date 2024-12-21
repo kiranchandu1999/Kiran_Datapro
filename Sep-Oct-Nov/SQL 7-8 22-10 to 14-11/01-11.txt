@@ -1,0 +1,28 @@
+-- DISTINCT - It is used to get the unique column values from a table. we can apply distinct on single column not multiple.
+
+Ex:
+SELECT DISTINCT city from students;
+
+
+-- GROUP BY - It is used to group the records based on particular column value. can apply group by on single or multiple columns
+	   But we can select only those columns on which the group by is applied, it is mainly used to do aggregate functions.
+
+SELECT col_x FROM table_name GROUP BY col_x;
+
+Ex:
+SELECT city FROM students GROUP BY city; (on single column)
+SELECT city, age FROM students GROUP BY city, age; (on multiple columns)
+
+
+-- HAVING - It is used to filter the fetched records based on some particular condition. It is similar to WHERE clause, 
+	    but it is used only with GROUP BY clause.
+
+
+-- ORDER BY - It is used to sort the records based on particular column value either ascending or descending.
+	     we can apply order by on single or multiple columns, if first column value matches then it orders according to 2nd column value.
+
+SELECT col1, col2, ...  FROM table_name  ORDER BY  col_name;
+
+Ex:
+SELECT * FROM students ORDER BY city; (on single column)
+SELECT * FROM students ORDER BY city, full_name;  (on multiple columns)

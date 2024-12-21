@@ -1,0 +1,69 @@
+When to use quotes and when not:
+- for fields: if we are using spaces, special characters and    keywords as field     names then need to use quotes for field name.
+- for values: if value is in string format then need to use quotes      and if it is a number then no need.
+
+
+Case sensitivity:
+- for db names it follows case sensitivity
+  show dbs --->  data vs Data 
+- for collection also it follows case sensitivity
+  db.data.insertOne({})  vs db.Data.insertOne({})
+
+data importing and exporting:
+# importing:
+- when json file having objects individually
+  mongoimport <json-file-path> -d  <db-name>  -c  <collection-    name>
+- when json file has data in array of objects
+   mongoimport <json-file-path> -d  <db-name>  -c  <collection-       name>  --jsonArray
+
+# exporting:
+   mongoexport -d <db-name> -c <collection-name> -o    <destination-path>
+
+Note: 
+- for this we need to have database-tools be installed.
+- we need to execute above commands directly on cmd not in    mongo shell.
+
+
+Operators in MongoDB:
+1. Comparison operators:
+ - These are used for comparison on field values in a document.
+i. Equal  ($eq)  ---> it returns when given value matched
+   ex: db.students.find({age : {$eq : 20}})
+
+ii. Not Equal ($ne) ---> it returns when given value not matched
+   ex: db.students.find({age : {$ne : 20}})
+
+iii. Greaterthan ($gt)  ---> returns when filed value GT given      value
+    ex: db.students.find({age : {$gt : 22}}) 
+
+iv. GreaterthanorEqualto ($gte) --> return value GTE given val
+    ex:  db.students.find({age : {$gte : 20}})
+
+v. Lessthan ($lt) --> returns value LT given value
+  ex: db.students.find({age : {$lt : 20}})
+
+vi. LessthanOrEqualto ($lte)  --> returns value LTE given val
+   ex: db.students.find({age : {$lte : 23}})
+
+vii. In ($in) ---> for euqating with multiple values
+    ex: db.students.find({college: {$in: ['SGPA', 'WDFA']}})
+
+viii. Not in ($nin) --> returns when value not present in given     values.
+    ex: db.students.find({college: {$nin: ['SGPA', 'WDFA']}})
+
+
+2. Logical operators:
+ - These are used for conditional based results.
+i. $and  ---> returns when all conditions true
+  ex: db.students.find({$and: [{age: 20}, {college: 'SGPA'}]})
+         db.students.find({age: 20, college: 'SGPA'})
+
+ii. $or ---> returns when either condition is true
+   ex: db.students.find({$or: [{age: 25}, {college: 'SGPA'}]})
+
+iii. $not  --> returns data which are unmatched with condition.
+    ex: db.students.find({age: {$not: {$eq: 20}}})
+
+iv.  $nor  --> returns when all conditions are false.
+     ex: ex: db.students.find({$nor: [{age: 25}, {college: 'SGPA'}]})
+

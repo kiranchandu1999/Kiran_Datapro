@@ -1,0 +1,58 @@
+button {
+    background-color: rgb(43, 43, 149);
+    color: white;
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-delay: 1s;
+}
+
+button:hover {
+    background-color: rgb(167, 34, 25);
+}
+
+@keyframes anim1 {
+    0% {
+        background-color: red;
+        width: 50px;
+    }
+    25% {
+        background-color: rgb(255, 51, 0);
+        width: 150px;
+    }
+    50% {
+        background-color: rgb(255, 89, 0);
+        width: 200px;
+    }
+    100% {
+        background-color: rgb(255, 242, 0);
+        width: 300px;
+    }
+}
+
+.div1 {
+    margin: 0 150px;
+    background-color: brown;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transition: all 5s;
+    transition-timing-function: linear;
+    animation-name: anim1;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+.div1:hover {
+    /* width: 200px; */
+    /* transform: rotate(-45deg);
+    scale: 0.5; */
+    /* translate: -100px -20px; */
+    /* translate: 100px 0 100px; */
+    /* transform: translate(100px, 100px); */
+    /* transform: translate3d(100px, 0, 100px); */
+    /* transform: skewY(45deg); */
+    width: 100px;
+}
+

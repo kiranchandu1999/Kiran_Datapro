@@ -1,0 +1,57 @@
+Sub query:
+It is also SQL query and used under a main query, sub queries can be implemented under SELECT, FROM and WHERE clauses.
+
+- subquery with FROM clause:
+  -- This query written after FROM clause
+Ex:
+SELECT stu_id, full_name, email FROM students;
+
+SELECT full_name FROM (SELECT stu_id, full_name, email FROM students) As res1;
+
+
+- subquery with WHERE clause:
+  -- This query written after WHERE clause
+Ex:
+SELECT teach_id FROM teachers WHERE teach_salary <= 25000;  ---->  results teacher ids
+
+SELECT * FROM students WHERE teacher_id IN (SELECT teach_id FROM teachers WHERE teach_salary <= 25000);  ---> results student details under above teacher ids
+
+
+Subqueries Types:
+Single row sub query
+  -- query from which we get only one row as output
+Multi row sub query
+  -- query from which we get multiple rows as output
+Multi column sub query
+  -- query results data of multiple coulmns as output
+Co-related sub query
+  -- query written on same table on which main query is written
+
+Ex:
+SELECT e.name AS employee_name, m.name AS manager_name FROM employees e JOIN (SELECT id, name FROM employees) As m ON e.manager_id = m.id;
+
+
+Set operators:
+Union:
+   -- it will merge and removes duplicates from both the tables
+Ex:
+SELECT * FROM students WHERE stu_id % 2 = 0
+UNION
+SELECT * FROM students WHERE stu_id % 2 != 0;
+
+Union all:
+   -- it will merge both the tables and shows result along with duplicates
+
+Intersect:
+   -- it will shows the common data from both tables
+Ex:
+SELECT * FROM students WHERE age = 22 OR stu_id % 2 = 0
+INTERSECT
+SELECT * FROM students WHERE stu_id % 2 = 0;
+
+Minus:
+   -- it will result difference data among the tables
+   -- table_1 minus tabe_2 ------> extra data in table_1
+   -- table_2 minus tabe_1 ------> extra data in table_2
+
+Note: No of columns and order of columns from both query results should be same.

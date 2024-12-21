@@ -1,0 +1,59 @@
+Functional interface:
+If any interface having only one abstract method then it is called functional interface. it may have any number of default and static methods.
+
+@Functional Interface
+interface interface_name{
+     // only one abstract method
+     void run();
+
+     // it can have default and static methods
+     default void display(){
+     }
+}
+
+Nested classes:
+When one class is declared inside another class then it is called nested class.
+
+types:
+1. static member class
+   -- if inner class declared with static keyword then it's called static     member class.
+ex:
+class outer_class{
+    // static member class
+    static class  inner_class{
+           // methods
+    }
+
+    // methods
+}
+
+2. non static member class (inner class)
+   -- when we create non static class inside another class.
+ex:
+class outer_class{
+    // non static member class
+    class  inner_class{
+           // methods
+    }
+
+    // methods
+}
+
+3. method local inner class
+  - if any class presents inside a method then it's called local inner class.
+ex:
+class Outer{
+    public void print(){
+           class LocalClass{
+                  // methods
+            }
+
+            // object creation
+            // inner class methods execution
+   }
+}
+
+
+4. anonymous inner class
+- it is a class which doesn't have any name.
+

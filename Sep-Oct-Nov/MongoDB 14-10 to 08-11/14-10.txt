@@ -1,0 +1,20 @@
+Database: It is a workspace where data get stored.
+
+Communication with database:
+GUI : Graphical User interface
+CLI : Command Line Interface
+
+Types of Database based on storage structure:
+
+Relational Database (tables): SQL (Structured Query Language)
+
+Non-relational database (objects): MongoDB
+
+
+Software that is used to manage the database is called database management system (DBMS)
+
+RDBMS : MySQL, MsSQL server, PostgreSQL
+
+Non-RDBMS : MongoDB server
+
+

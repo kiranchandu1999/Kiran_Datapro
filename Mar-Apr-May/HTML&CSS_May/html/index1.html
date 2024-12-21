@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" href="../images/logo.webp">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .para {
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 id="head1" class="para">Registration Form</h1>
+    <button>change to red</button>
+    <h2>Heading 2</h2>
+    <h3>Heading</h3>
+    <h4>Heading</h4>
+    <h5>Heading</h5>
+    <h6>Heading 6</h6>
+    <p>     Lorem, ipsum dolor sit amet consectetur 
+            adipisicing elit. Eius dolorem consectetur, sit voluptate maxime recusandae quibusdam. Alias ipsaest, reiciendis, blanditiis excepturi nostrum officia quam, velit minus ea perferendis. Itaque?</p>
+    
+    <pre>
+        Lorem, ipsum dolor sit amet 
+        consectetur 
+            adipisicing elit.               Eius dolorem consectetur, sit voluptate maxime recusandae quibusdam. Al
+    </pre>
+
+    <!-- formatting tags available in html -->
+    <p>This is a <b>bold</b> element</p>
+    <p>This is a <strong>bold</strong> element</p>
+    <p>This is a <i>italic</i> element</p>
+    <p>This is <em>italic</em> word</p>
+    <p>This is <mark>mark</mark> element</p>
+    <p>This is a <small>small element</small></p>
+    <p>H<sub>2</sub>O</p>
+    <p>a<sup>2</sup>+b<sup>2</sup></p>
+    <p>Deprecated word : <del>name</del><ins>name1</ins></p>
+
+    <!-- Quoations -->
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, a. Excepturi atque non vero! Facere magnam sapiente dolorem enim repudiandae?</p>
+
+    <!-- block quote -->
+    <blockquote>This is a block quotation Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos inventore eligendi atque ducimus ea nulla tenetur natus quod? Suscipit consequatur earum sed obcaecati consequuntur odio porro corporis nisi quaerat quas!</blockquote>
+
+    <!-- simple quote -->
+    <q title="simple quote">This is simple quotation</q>
+
+    <!-- abbrevations -->
+    <p><abbr title="Indian Premier league">IPL</abbr> season 2024 is going on</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quidem natus minima reiciendis illo aut voluptatum autem consectetur vero, exercitationem eos possimus dolore quis ipsa ratione veritatis unde at incidunt.</p>
+    <address>
+        The Principal,<br>
+        Some College,<br>
+        Visakhaptnam.
+    </address>
+    <h3>Heading 3</h3>
+
+    <p>The Java was developed by <cite>James Gosling</cite></p>
+
+    <bdo dir="ltr">This is bdo element</bdo>
+    <br>
+    <hr>
+
+
+    <!-- html links -->
+    <!-- links in html are denoted with anchor tags -->
+    <!-- attributes
+    href -> reference link where want to go
+    absolute -> always it starts with http or https
+    relative  -> user defined links or html documents
+
+    target -> 
+    _self => default - opens document in current tab
+    _blank => opens in new tab
+    _parent => opens on parent frame
+    _top => opens on top of current tab -->
+    <a href="https://www/google.com/" target="_parent">click here</a>
+
+    <!-- inline ->  it takes place as it required
+    inline-block -> it takes place as it required
+    block ->  -->
+
+    <!-- email -->
+    <a href="mailto:google.com">send mail</a>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident a praesentium ducimus necessitatibus, quis animi eligendi dignissimos ea quaerat ab doloribus tenetur iste velit! Sunt non iusto ullam et dolore?</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident a praesentium ducimus necessitatibus, quis animi eligendi dignissimos ea quaerat ab doloribus tenetur iste velit! Sunt non iusto ullam et dolore?</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident a praesentium ducimus necessitatibus, quis animi eligendi dignissimos ea quaerat ab doloribus tenetur iste velit! Sunt non iusto ullam et dolore?</p>
+    <p style="background-image: url(../images/flower_pot.jpg);">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident a praesentium ducimus necessitatibus, quis animi eligendi dignissimos ea quaerat ab doloribus tenetur iste velit! Sunt non iusto ullam et dolore?</p>
+    <p id="contactInfo">Contact</p>
+
+
+    <!-- html images -->
+    <!-- <img src="../images/flower_pot.jpg" alt="Flower pot"> -->
+
+    <!-- src -> for relative or absolute path
+    alt -> for alternative for image if if doesn't load from server -->
+
+    <!-- <a href="https://www.google.com">
+        <img src="../images/laptop_img.jpg" alt="">
+    </a> -->
+
+    <img src="../images/work_table_bg.png" alt="" style="width: 100%;" usemap="#image-map">
+
+    <map name="image-map">
+        <area shape="" coords="10 10 100 100" href="../images/laptop_img.jpg" alt="laptop">
+    </map>
+
+    <!-- shapes
+    rect -> (x1, y1, x2, y2);
+    circle -> (x, y, radius);
+    poly -> (n coordinates) -->
+
+    <!-- html tables -->
+    <br>
+    <table style="width: 100%;">
+        <thead>
+            <tr>
+                <th colspan="2" style="width: 50%;">Name</th>
+                <th>Telugu</th>
+                <th>English</th>
+                <th>Hindi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Kiran</td>
+                <td rowspan="2">Kiran</td>
+                <td>15</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>65</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Rajesh</td>
+                <td>Rajesh</td>
+                <td>80</td>
+                <td>90</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Sunil</td>
+                <td>Sunil</td>
+                <td>75</td>
+                <td>85</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <table>
+        <caption>table 2</caption>
+        <colgroup>
+            <col span="2">
+            <col span="1" style="background-color: yellow;">
+        </colgroup>
+        <tr>
+            <th>H1</th>
+            <td>ksdfsa</td>
+            <td>jkbsdf</td>
+        </tr>
+        <tr>
+            <th>H2</th>
+            <td>sdfad</td>
+            <td>adfa</td>
+        </tr>
+        <tr>
+            <th>H3</th>
+            <td>sdfad</td>
+            <td>adfa</td>
+        </tr>
+    </table>
+
+    <!-- html list -->
+    <!-- un ordered list => there is no order among the list items-->
+    <!-- list items will be displayed in 4 formats disc, circle, squqre -->
+    <ul>
+        <li>Book</li>
+        <li>Pen</li>
+        <li>Laptop</li>
+        <li>Bag</li>
+        <li>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>
+                    <ul>
+                        <li>item 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- ordered list -->
+    <ol>
+        <li>Book</li>
+        <li>Pen</li>
+        <li>Laptop</li>
+        <li>
+            <ol>
+                <li>item 1</li>
+            </ol>
+        </li>
+    </ol>
+    <!-- description list -->
+    <dl>
+        <dt>Pen</dt>
+        <dd>Pen is used to write something</dd>
+        <dt>Laptop</dt>
+        <dd>Electronic machine</dd>
+    </dl>
+
+    <!-- Block and Inline elements -->
+    <!-- Block level -->
+    <h4>Hello <p>World</p></h4>
+    <!-- h1 - h6, p, pre, address, ul, ol, li, dl, dt, dd, table, tr, div -->
+
+    <!-- Inline level -->
+    <p>Hello <sub>Datapro</sub></p>
+    <!-- a, bdo, q, small, strong, i, b, sup, sub, em, abbr, img, span -->
+
+    <!-- html div (division)-->
+    <!-- div element is used as a container for other html elements -->
+    <div>
+    <h5 >Post 1</h5>
+    <p>Description</p>
+    <img src="../images/study_lamp.jpg" alt="" width="60">
+    </div>
+
+    <div>
+        <div>
+            <h4>Pen</h4>
+            <p>To write something</p>
+        </div>
+    
+        <div>
+            <h4>Book</h4>
+            <p>To read something</p>
+        </div>
+    </div>
+
+    <!-- mostly used html attributes class, id -->
+
+    <p class="para cl1" id="pi1">para 1</p>
+    <p class="para" id="pi1">para 2</p>
+    <p class="para cl1">para 3</p>
+    
+
+    <!-- html iframe elements -->
+    <!-- it is used to display another html document -->
+    <iframe src="./index2.html" name="flipkart_tab" title="flipkart frame" width="380" height="500"></iframe>
+    <br>
+    <a href="https://www.flipkart.com" target="flipkart_tab">flipkart</a>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- semantic tags in html document -->
+    <header></header>
+    <nav></nav>
+    <main>
+        <section>
+            <article></article>
+        </section>
+        <aside></aside>
+    </main>
+    <footer></footer>
+
+
+    <!-- Rules to create proper html document -->
+    <!--
+        document should be enclosed by html tages (open & close)
+        meta data should be declared inside head element
+        main body content should be in body element
+        need to prefer to use semantic tags
+        every element should have closing tag if it has.
+        use lower case only for defining the html tags
+        attribute values should be in quotes "" and also mention in open tag
+        always specify alt attribute for img tags
+        prefer to give space between different html elements
+        use semantic tags while creating tables
+        never skip title for html document
+        always use comments to describe anything in our document
+    -->
+
+    <!-- HTML entities -->
+    <!-- &entity_name
+    &#entity_number -->
+    <p>5 &#163; 10 == true</p>
+
+    <!-- HTML FORMS -->
+    <form>
+        <!-- form elements -->
+    </form>
+
+    <!-- form attributes -->
+    <!-- 
+    action -> to where form data should be passed
+    target -> to specify the location of response, _blank, self, top, iframe name
+    method -> to specify http methods like GET, POST, PUT (default is GET)
+    autocomplete (boolean) -> to autocomplete the data inside input element -->
+
+    <!-- form elements -->
+    <!-- input element => it is used to get / read the data from user-->
+    <!-- input element attributes -->
+    <!-- 
+    type
+    placeholder
+    name
+    value
+    readonly
+    disabled
+    size
+    maxlength
+    min & max
+    multiple
+    required
+    pattern
+    autofocus
+    -->
+    <!-- <input type="text" placeholder="Enter your name" name="FullName" size="30" required pattern="[a-f]{3}" autofocus> -->
+
+    <!-- types of inputs -->
+    <!-- 
+        text -> to write something in string format (default)
+        button -> we can create button either using input tag or button tag
+        radio -> single selected element (Gender)
+        checkbox -> multi selected element (terms & condition)
+        email -> to read emails from user
+        password -> to read password
+        submit -> to submit the form upon clicking it (button)
+        reset -> to reset the form
+        date -> date picker
+        color -> color picker
+        image -> to diplay images
+        file -> to pass files from browser/computer
+        range
+        month
+        week
+     -->
+     <input id="male_radio" type="radio" value="male" name="Gender">
+     <label for="male_radio">Male</label>
+     <input id="female_radio" type="radio" value="female" name="Gender">
+     <label for="female_radio">Female</label>
+     <!-- <button>click here</button> -->
+     <br>
+     <br>
+     <input type="range" min="1" max="5">
+     <br>
+
+     <!-- Form elements in HTML -->
+     <!--
+        input
+        label 
+        select with option
+        text area
+        button
+        fieldset with legend
+        datalist with option
+
+
+      -->
+
+      <select name="country" id="">
+        <option value="">Select Country</option>
+        <option value="INDIA">IND</option>
+        <option value="SRILANKA">SLK</option>
+        <option value="NEPAL">NPL</option>
+        <option value="ENGLAND">ENG</option>
+      </select>
+      <br>
+
+      <textarea name="address" id="add" cols="30" rows="5"></textarea>
+      <button>click here</button>
+     <br>
+     <br>
+    
+     <fieldset style="width: 60%;">
+        <legend>Contact Info :</legend>
+        <label for="">Mobile</label><br>
+        <input type="text"><br>
+        <label for="">email</label><br>
+        <input type="email" name="" id=""><br>
+        <label for="">address</label><br>
+        <textarea name="" id="" cols="30" rows="4"></textarea>
+     </fieldset>
+     <br>
+     <br>
+
+     <input type="text" list="birds">
+     <datalist id="birds">
+        <option value="Eagle">
+        <option value="Sparrow">
+        <option value="Peacock">
+        <option value="Parrot">
+     </datalist>
+
+
+     <!-- html media tags -->
+     <!-- audio tag 
+        supported types
+        mp3, OGG, WAV
+    -->
+     <!-- video 
+        supported formats
+        mp4, webm, ogg
+    -->
+
+     <audio controls autoplay muted>
+        <source src="" type="audio/mp3">
+        This is audio tag
+     </audio>
+
+     <video controls autoplay muted width="200" height="">
+        <source src="" type="video/mp4">
+     </video>
+
+     <!-- picture element -->
+     <picture>
+        <source srcset="../images/flower_pot.jpg" media="(min-width:560px)">
+        <source srcset="../images/laptop_img.jpg" media="(min-width:465px)">
+        <img src="../images/work_table_bg.png" alt="work">
+     </picture>
+     <br>
+     <br>
+     <br>
+</body>
+</html>

@@ -1,0 +1,35 @@
+MongoDB:
+It is a language (NoSQL) and software to manage the database.
+It is a non RDBMS, the data will be stored in the form of documents (JSON).
+
+Terminologies:
+- Database:
+   It is memory space where data gets stored. One database can have       multiple collections.
+- Collection:
+   It is group of multiple records. Table refers the collection in SQL.
+- Document:
+   It is a object (JSON) where data will be stored in mongodb. Rows/    Records replicate this documents in SQL.
+- Fields:
+   It is a key in document data in mongodb database. Columns refer to fields    in SQL.
+
+Features:
+1. Schema-less database:
+     it doesn't follows any pre-defined structure to store data. so it's easy to        manipulate individual documents.
+2. High Scalability:
+     In mongodb data will be shared across multiple servers so that      horizontal scalling is easy when amount of data gets increased on any           server.
+3. Fast response:
+     Query response is faster than sql database. because here no need to       join any tables to get final result.
+4. Indexing:
+     here we can create index on any field of one document so that searching      will be fast.
+
+How to use MongoDB:
+1. can use mongodb locally (need to install mongodb server)
+2. can use cloud based mongodb (just create mongodb atlas account and connect to it).
+
+Installation process:
+- download MongoDB community server and set environment variable path
+- check whether installed or not by using command -->  mongod --version
+- to use CLI need to install mongodb shell
+- after that just type mongosh in cmd for connecting to shell and start queries.
+- for importing and exporting data (array of objects) we can install 
+

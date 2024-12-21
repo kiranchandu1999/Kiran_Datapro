@@ -1,0 +1,7 @@
+Constructor:
+It is similar to method but it doesn't have any return type.
+it is called automatically while creating objects.
+Constructor name should be same as class name.
+
+this keyword:
+it is used to refer the current class object.

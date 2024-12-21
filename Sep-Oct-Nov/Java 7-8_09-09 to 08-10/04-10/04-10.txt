@@ -1,0 +1,32 @@
+Exception propagation:
+Exception propagation is a mechanism in which exceptions will be thrown to its calling method.
+- propagation is automatic in unchecked exceptions.
+- but in checked exceptions we need to throw exception to its  calling method explicitly.
+- for throwing exceptions manually we need to use " throws" keyword in the   method definition.
+
+syntax:
+public void method1(params) throws <exception_name> {
+               // method body
+}
+
+throw keyword:
+it is a keyword which is used to throw any exception intentionally.
+
+syntax:
+throw  < object of any exception >
+
+Custom or User defined excpetions:
+-- we can create custom exceptions by extending the Exception class. so that we can use these custom exceptions like we are using inbuilt exceptions.
+
+syntax:
+class  customExceptionName  extends  Exception{
+          // need to call parent constructor
+}
+
+
+finally keyword:
+-- it is a keyword which is used to do some mandatory operations before terminating our program. so if any exception occured and that didn't handled properly then our program will terminate abnormally. in that case all opened resources remains opened so it may lead some issues in future for reusing them. so to prevent that we can write those resource closing statements insisde finally. it will execute all the statements even in exception case also.
+
+finally{
+  // statements
+}

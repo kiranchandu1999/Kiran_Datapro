@@ -1,0 +1,15 @@
+String:
+It is a class in java which is used to store sequence of characters.
+we can create strings in following ways:
+1. using string literal
+syntax:  String s1 = " ";
+- these kind of string objects will be stored inside string constant pool which is present inside heap area.
+
+2. using new keyword
+syntax: String s2 = new String(" ");
+- these kind of string objects will be stored in direct heap area not inside string constant pool.
+
+methods:
+1. charAt(index)   --->  to get character at given index.
+2. length()     ---->  to get the string size;
+3. startsWith(String)   ---> to check starting with given string

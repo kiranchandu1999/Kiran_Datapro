@@ -1,0 +1,75 @@
+-- Creating tables with constraints
+--- Column level constraints
+CREATE TABLE students2(
+	stu_id int CONSTRAINT stu_id_pk PRIMARY KEY,
+	full_name varchar(15) NOT NULL,
+	age int,
+	email varchar(20) CONSTRAINT stu_email_uq UNIQUE
+)
+
+--- Table level constraints
+CREATE TABLE students3(
+	stu_id int,
+	full_name varchar(15) NOT NULL,
+	age int,
+	email varchar(20) UNIQUE,
+	PRIMARY KEY (stu_id)
+)
+
+
+-- Adding constraints using ALTER command
+
+ALTER TABLE table_name
+ADD CONSTRAINT constraint_name constraint (column)
+
+Ex:
+ALTER TABLE students
+ADD CONSTRAINT constraint_name UNIQUE (email);
+(or)
+ALTER TABLE students
+ADD UNIQUE (email);
+
+
+-- Dropping constraints using ALTER
+
+ALTER TABLE table_name
+ADD CONSTRAINT constraint_name;
+
+Ex:
+ALTER TABLE students2
+DROP CONSTRAINT stu_email_uq;
+
+-- Adding foreign key column to the existing table
+ALTER TABLE table_name
+ADD col_name data_type REFERENCES ref_table (ref_col);
+
+Ex:
+ALTER TABLE students
+ADD teacher_id int REFERENCES teachers (teach_id);
+
+------------------------------
+DML commands:
+
+-- INSERT command
+
+INSERT INTO table_name (col1, col2, col3, ...) values (val1, val2, val3, ...);
+
+Ex:
+INSERT INTO students (stu_id, full_name, age, email) values (101, 'Rakesh', 22, 'rakesh@gmail.com');
+
+INSERT INTO students values (101, 'Rakesh', 22, 'rakesh@gmail.com', 001);
+
+
+Note: The order of columns and their corresponding values should be same. It is not mandatory to add all column values. 
+      If we are adding all column values then no need to specify the column names explicitly but order should be same as in table.
+
+
+
+-- UPDATE command
+
+UPDATE table_name SET col_1 = val1, col2 = val2, .....
+
+Ex:
+UPDATE students SET teacher_id = 1;
+
+

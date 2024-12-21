@@ -1,0 +1,69 @@
+SQL - Joins:
+Joins are used to join multiple tables and fetch the data accordingly.
+Equi joins ----> joining is happened based on equal values of given columns of two tables
+
+types of joins:
+1. Inner join / join
+	returns matched data from both tables
+Ex:
+SELECT * FROM students JOIN teachers ON students.teacher_id = teachers.teach_id;
+
+SELECT students.full_name, teachers.teach_name FROM students JOIN teachers ON students.teacher_id = teachers.teach_id;
+
+SELECT s.full_name, t.teach_name FROM students AS s JOIN teachers AS t ON s.teacher_id = t.teach_id;
+
+SELECT s.full_name, t.teach_name FROM students s JOIN teachers t ON s.teacher_id = t.teach_id;
+
+
+2. Left / Left outer join
+	returns matched data from both tables and all the data from left table.
+
+Ex: students table as left table and teachers as right table
+SELECT * FROM students LEFT JOIN teachers ON students.teacher_id = teachers.teach_id;
+
+SELECT students.full_name, teachers.teach_name FROM students LEFT JOIN teachers ON students.teacher_id = teachers.teach_id;
+
+SELECT s.full_name, t.teach_name FROM students AS s LEFT JOIN teachers AS t ON s.teacher_id = t.teach_id;
+
+
+3. Right / Right outer join
+	returns matched data from both tables and all the data from right table.
+
+Ex: students table as left table and teachers as right table
+SELECT * FROM students RIGHT JOIN teachers ON students.teacher_id = teachers.teach_id;
+
+SELECT s.full_name, t.teach_name FROM students s RIGHT JOIN teachers t ON s.teacher_id = t.teach_id;
+
+
+4. Full / Full outer join
+	returns matched and unmatched data from both tables.
+
+Ex: It results all matched and un-matched data from both tables (left join + right join)
+SELECT * FROM students FULL JOIN teachers ON students.teacher_id = teachers.teach_id;
+
+SELECT s.full_name, t.teach_name FROM students s FULL JOIN teachers t ON s.teacher_id = t.teach_id;
+
+
+5. Cross join / Cartesian product
+	returns product of records / rows in both tables
+
+Ex: It results the each row in one table corresponds to every row in other table, so it will give product of no of rows in both the tables
+SELECT * FROM students CROSS JOIN teachers;
+
+SELECT s.full_name, t.teach_name FROM students s CROSS JOIN teachers t;
+
+
+Joins can be implemented in two ways:
+- Implicit method
+	select col_names_from_tables from table1, table2 where table1.col = table2.col;
+
+Ex: Inner join in implicit method
+SELECT * FROM students, teachers where students.teacher_id = teachers.teach_id;
+
+SELECT s.full_name, t.teach_name FROM students s, teachers t where s.teacher_id = t.teach_id;
+
+- Ansi method (recommended / mostly used)
+	select col_names_from_tables from table1 inner join table2 on table1.col = table2.col;
+
+
+Non-Equi joins  ---> joining is happened based on non equal values of given columns of two tables

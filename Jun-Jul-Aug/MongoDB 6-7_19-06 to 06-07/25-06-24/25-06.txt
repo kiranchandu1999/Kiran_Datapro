@@ -1,0 +1,17 @@
+Complex expressions:
+$expr:
+  this operator is used to define complex expressions and based on that     exapression we will get data as output.
+
+syntax:
+  db.collection.find({$expr: {operator: [filed, value]}})
+ex: 
+   db.students.find({$expr: {$gt: ['$age', 21]}})
+without $expr:
+    db.students.find({age: {$gt: 21}})
+real use case:
+     db.students.find({$expr: {$gt: [ '$age', {$multiply: [4, 5]}]}})
+
+Embedded documents:
+if any document having a field with value as an array or an object then it's called embedded document. 
+to access embedded documents need to use dot notation.
+syntax: db.collection.find('parent.child': value)

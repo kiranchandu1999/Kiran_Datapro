@@ -1,0 +1,21 @@
+OOPs - Object Oriented Programming
+Class:
+It is a blueprint which can have variables and methods.
+synatx:
+class  class_name {
+    // variables
+    // methods
+}
+
+method:
+It is group of statements which will take some input and process it then it will give output accordingly.
+when we call method it will start execution.
+syntax:
+method_return_type   method_name (parameters if any) {
+    // method body
+}
+
+Object:
+It is a physical entity which is created based on particular class.
+syntax:
+Object_ref_type  object_name = new class_name();

@@ -1,0 +1,73 @@
+IN  ---------> to compare multiple values with particular column name in where clause
+where stu_id  IN ( val_1, val_2, ...);
+
+Ex:
+SELECT * FROM students WHERE teacher_id = 1 OR teacher_id = 2;
+
+SELECT * FROM students WHERE teacher_id IN (1, 2);   // same as above query using IN operator
+
+
+BETWEEN --------> It is used to define some range of values to compare with particular column
+where stu_id  BETWEEN  101 AND 103;
+
+Ex:
+SELECT * FROM students WHERE teacher_id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+SELECT * FROM students WHERE teacher_id BETWEEN 1 AND 10; // efficient way of fetching data using between operator
+
+
+LIKE -----------> It is used to compare string patterns using wildcards
+
+Wildcards:
+% ----> it defines zero or more characters
+Ex: students whose name is ending with 'a'
+SELECT * FROM students WHERE full_name LIKE '%a';
+
+Ex: students whose name is starting with 's'
+SELECT * FROM students WHERE full_name LIKE 's%';
+
+
+_   -----> it defines exactly one character
+
+Ex: students whose name's 2nd letter is 'a'
+SELECT * FROM students WHERE full_name LIKE '_a%';
+
+
+[ ]   -----> it defines any character inside the brackets
+
+Ex: students name starting with 's' and 'k'
+SELECT * FROM students WHERE full_name LIKE 's%' OR full_name LIKE 'k%';
+
+SELECT * FROM students WHERE full_name LIKE '[sk]%';  // same as above query in efficient way
+
+
+-    ------> it is used to define range inside square brackets
+
+Ex:
+SELECT * FROM students WHERE full_name LIKE '[klmnopr]%';
+
+SELECT * FROM students WHERE full_name LIKE '[k-r]%';
+
+
+Alias ( AS ) ----> it is used to define our custom name for any column.
+select  actual_col_name  as   custom_col_name   from  table_name;
+
+Ex:
+SELECT stu_id, full_name, age AS stu_age FROM students;
+
+
+Aggregate functions:
+Functions which are used to do some aggregate operations on data present inside tables. 
+These functions are used with group by clause. these all functions returns only single row.
+MIN() - returns smallest value within the selected column
+MAX() - returns biggest value within the column
+COUNT() - returns the number of rows in a set
+SUM() - returns the total sum of a numerical column
+AVG() - returns the average value of a numerical column
+
+
+SELECT city, COUNT(*) FROM students GROUP BY city;
+
+SELECT city, MAX(age) FROM students GROUP BY city;
+
+SELECT city, SUM(age) AS sum_of_age FROM students GROUP BY city;

@@ -1,0 +1,38 @@
+Indexes in mongodb:
+- Index is used for fast data retrieving. by default mongodb creates index and inserts as a field with name of "_id" and index name for this will be "_id_".
+- we can create multiple indexes for every collection.
+- but we should create indexes for fields which are mostly used for data searching operations.
+- indexes should be created for fields which are more likely unique or rare compare to other fields.
+
+To show the existing indexs:
+syntax:
+  db.collection.getIndexes();
+
+To create a new index for any field in a collection:
+syntax:
+   db.collection.createIndex({fieldName: 1 or -1})
+
+note:
+   if specify 1 then indexes will be stored in ascending order else will stored in descending order.
+
+we can find the execution statistics with the following query:
+db.students.find({city: "kakinada"}).explain("executionStats")
+
+To drop any existing index:
+syntax:
+  db.collection.dropIndex("index_name")
+
+
+To drop collection from database:
+syntax:
+   db.collection.drop();
+
+To drop database:
+syntax:
+    db.dropDatabase();
+
+
+
+mongoimport --db dummyDB --collection fruits --file sample1.json
+
+mongoexport --db collegeDB --collection students --out students1.json
