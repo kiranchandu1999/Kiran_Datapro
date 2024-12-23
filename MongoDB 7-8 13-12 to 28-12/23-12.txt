@@ -1,0 +1,43 @@
+Ordered and unordered insertion of data:
+- basically inserting of documents by default follows insertion order.
+- by default ordered key is true, so that while inserting multiple documents if any error occured then it stops insertion into db.
+- so if we make ordered key value as false then it will ignores those error documents and inserts remaining ones.
+
+syntax: db.collection.insertMany([{}, {}], {ordered: false});
+
+
+Elements operators:
+These operators are used to display data according to field properties like field existnace, field value size etc.
+1. exists:
+     - it is used to display data based particluar field existence.
+     - it takes true or false, if we pass true in the query it will show data which is having that field vice versa.
+ex: db.students.find({college: {$exists: false}, ph: {$exists: true}});
+
+2. type:
+    - it is used to display data based on filed type like string, number etc.
+    - it takes field type as a value for $type key.
+ex: db.students.find({ph: {$type: 'string'}});
+
+3. size:
+    - it is used to display the data based on array size of a particular field.
+ex: db.students.find({comments: {$size: 4});
+
+
+Complex expressions:
+$expr:
+  this operator is used to define complex expressions and based on that exapression we will get data as output.
+
+syntax:
+  db.collection.find({$expr: {operator: [filed, value]}})
+ex: 
+   db.students.find({$expr: {$gt: ['$age', 21]}})
+without $expr:
+    db.students.find({age: {$gt: 21}})
+real use case:
+     db.students.find({$expr: {$gt: [ '$age', {$multiply: [4, 5]}]}})
+
+Embedded documents:
+if any document having a field with value as an array or an object then it's called embedded document. 
+to access embedded documents need to use dot notation.
+syntax: db.collection.find('parent.child': value)
+

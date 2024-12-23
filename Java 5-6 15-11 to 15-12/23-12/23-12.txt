@@ -1,0 +1,54 @@
+single exception handling using single catch block:
+try{
+  // statements
+}
+catch(NumberFormatException ne){
+    // handling statements
+}
+
+note: 
+- this catch block is only capable to handle specified exceptions.
+- if the code present inside try block throws multiple exceptions then we can handle them using multiple catch blocks.
+- we cannot create multiple try blocks at a time.
+
+Types of exceptions:
+1. Checked exceptions (Compiletime exceptions)
+  - these exceptions will be occured at compile time only. we need to handle these exceptions at compile time itself.
+
+2. Unchecked exceptions (Runtime exceptions)
+  - these type of exceptions will be occured at runtime only. and it is not compulsory to handle these exceptions.
+
+Exception class Hierarchy:
+                                                    Object
+                                                          |
+                                                  Throwable
+                                                           |
+                         Exception                                         Error
+                                 |
+                  - FileNotFoundException
+                  - ClassNotFoundException
+                  - IOException
+                  - RuntimeException
+                                  |
+                          - ArrayIndexOutOfBoundException
+                          - NumberFormatException
+                          - NullPointerException
+                          - ArithmeticException
+
+Multiple catch block order:
+- if we are handling multiple catch blocks, first catch block should handle grand subchild exception then next catch block should handle sub child exception and then nect block should handle parent exception and so on.
+
+example:
+catch(NumberFormatException ne){
+            System.out.println(ne);
+ }
+catch(ArithmeticException ae){
+
+}
+catch(RuntimeException re){
+            
+}
+
+
+                         
+
