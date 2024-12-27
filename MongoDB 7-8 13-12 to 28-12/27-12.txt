@@ -1,0 +1,42 @@
+Removing a field from document:
+syntax:
+db.collection.updateOne({filter}, {$unset: {filedname1: 1, fieldname2: 1, ..}})
+- after executing this query, specified fields will get deleted in the first matched document.
+
+Ex: db.students2.updateOne({HTNo: 301}, {$unset: {email: 1}});
+
+
+syntax:
+db.collection.updateMany({filter}, {$unset: {filedname1: 1, fieldname2: 1, ..}})
+- after executing this query, specified fields will get deleted in the all matched documents.
+
+Ex: db.students2.updateMany({}, {$unset: {college: 1}});
+
+
+Renaming the fileds in a document:
+syntax:
+db.collection.updateOne({filter}, {$rename: {old_fieldname: 'new_fieldname'}})
+- after executing the above query, specified old filed name will be replaced with specified new field name in the first matched document.
+
+syntax:
+db.collection.updateMany({filter}, {$rename: {old_fieldname: 'new_fieldname'}})
+- after executing the above query, specified old filed name will be replaced with specified new field name in the all matched documents.
+
+Ex: db.students2.updateMany({}, {$rename: {HTNo: 'stuId', email: 'emailId'}});
+
+
+Updating values in arrays or embedded documents:
+these operators are used to update data inside embedded documents.
+
+syntax:
+db.collection.updateOne({filter}, {
+  $set: {arrayField.$.innerfiled: 'value'}
+})
+
+note: 
+- filetering object should contains the particular inner object where we want to change the value inside array field.
+- '$' is called positional operator and it will be used as a index for that array.
+
+Ex:
+db.students2.updateOne({stuId: 201, marks: {$elemMatch: {subject: 'science'}}}, {$set: {'marks.$.score': 90}});
+

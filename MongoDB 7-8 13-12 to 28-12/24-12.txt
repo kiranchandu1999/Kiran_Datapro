@@ -16,28 +16,8 @@ ex: db.students.find({college: {$exists: false}, ph: {$exists: true}});
 2. type:
     - it is used to display data based on filed type like string, number etc.
     - it takes field type as a value for $type key.
-ex: db.students.find({ph: {$type: 'string'}});
+ex: db.students.find({HTNo: {$type: 'string'}});
 
 3. size:
     - it is used to display the data based on array size of a particular field.
-ex: db.students.find({comments: {$size: 4});
-
-
-Complex expressions:
-$expr:
-  this operator is used to define complex expressions and based on that exapression we will get data as output.
-
-syntax:
-  db.collection.find({$expr: {operator: [filed, value]}})
-ex: 
-   db.students.find({$expr: {$gt: ['$age', 21]}})
-without $expr:
-    db.students.find({age: {$gt: 21}})
-real use case:
-     db.students.find({$expr: {$gt: [ '$age', {$multiply: [4, 5]}]}})
-
-Embedded documents:
-if any document having a field with value as an array or an object then it's called embedded document. 
-to access embedded documents need to use dot notation.
-syntax: db.collection.find('parent.child': value)
-
+ex: db.students.find({marks: {$size: 4});

@@ -15,6 +15,14 @@ it is a keyword which is used to throw any exception intentionally.
 syntax:
 throw  < object of any exception >
 
+finally keyword:
+-- it is a keyword which is used to do some mandatory operations before terminating our program. 
+so if any exception occured and that didn't handled properly then our program will terminate abnormally. in that case all opened resources remains opened so it may lead some issues in future for reusing them. so to prevent that we can write those resource closing statements insisde finally. it will execute all the statements even in exception case also.
+
+finally{
+  // statements
+}
+
 
 Custom or User defined excpetions:
 -- we can create custom exceptions by extending the Exception class. so that we can use these custom exceptions like we are using inbuilt exceptions.
@@ -22,12 +30,4 @@ Custom or User defined excpetions:
 syntax:
 class  customExceptionName  extends  Exception{
           // need to call parent constructor
-}
-
-
-finally keyword:
--- it is a keyword which is used to do some mandatory operations before terminating our program. so if any exception occured and that didn't handled properly then our program will terminate abnormally. in that case all opened resources remains opened so it may lead some issues in future for reusing them. so to prevent that we can write those resource closing statements insisde finally. it will execute all the statements even in exception case also.
-
-finally{
-  // statements
 }
