@@ -5,11 +5,18 @@ $push:
 syntax:
 - db.collection.updateOne({filter}, {$push: {arrayField: value}})
 
+Ex: db.students2.updateOne({stuId: 201}, {$push: {marks: {subject: 'social', score: 80}}});
+
+
 $pop:
 - this operator is used to remove last element from the array field in a document.
 
 syntax:
-- db.collection.updateOne({filter}, {$pop: {arrayField: value}})
+- db.collection.updateOne({filter}, {$pop: {arrayField: -1/1}})
+
+Note: if we pass -1 it will remove first item and if we pass 1 it will remove last item
+
+Ex: db.students2.updateOne({stuId: 201}, {$pop: {marks: -1}});
 
 
 $each:
@@ -18,10 +25,19 @@ $each:
 syntax:
 - db.collection.updateOne({filter}, {$push: {arrayField: {$each: [val1, val2, ...]}}})
 
+Ex:
+db.students2.updateOne({stuId: 201}, {$push: {marks: {$each: [{subject: 'english', score: 85}, {subject: 'maths', score: 95}]}}});
+
+Ex: append multiple values using $each and $sort will sort the array in ascending order
+db.students2.updateOne({stuId: 101}, {$push: {'marks.sci': {$each: [40, 38], $sort: 1}}});
+
 
 Delete operations in mongodb:
 - db.collection.deleteOne({filter}):
-  this function is used to delete a particular document from collection. if we pass filtering object then deletion will be based on that matched data.  
+  this function is used to delete a particular document from collection. if we pass filtering object then deletion will be based on that matched data.
+
+Ex:
+db.students2.deleteOne({name: 'krishna', age: 18});
 
 - db.collection.deleteMany({filter}):
    this is used to delete all matched documents from a collection. if filtering object is abscent then it may delete all existing documents present inside that collection.

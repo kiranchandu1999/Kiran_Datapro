@@ -1,0 +1,26 @@
+Collection framework:
+It provides different data structures along with logic and it provides algorithms (such as sorting).
+
+collection framework interfaces and classes availabe in java.util package
+
+Collection (interface)
+       - List (interface)
+               - ArrayList
+               - LinkedList
+               - Stack  ---> Last In First Out
+       - Queue (interface) ---> First In First Out
+               - LinkedList
+               - PriorityQueue
+       - Set  (interface) -----> doesn't follows elements orders
+             - SortedSet  (interface)
+                      - TreeSet   ----> sorting order
+             - HashSet ---->  no order
+                       - LinkedHashSet  ---> insertion order
+
+Methods in Collection interface:
+add() -----> to add one element
+addAll()  ----> to add list of elements
+clear()   ----> removes all values 
+isEmpty() ----> returns true if no data is present
+remove()  ----> it removes the existing element
+

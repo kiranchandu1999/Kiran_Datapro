@@ -1,0 +1,23 @@
+/* universal selector */
+* {
+    margin: 0px;    
+}
+
+/* tag name selector */
+h2 {
+    color: blue;
+}
+
+/* class name selector */
+.cls1 {
+    color: brown;
+}
+
+/* id name selector */
+#head1 {
+    color: chartreuse;
+}
+
+.div1 h4 {
+    color: goldenrod;
+}
