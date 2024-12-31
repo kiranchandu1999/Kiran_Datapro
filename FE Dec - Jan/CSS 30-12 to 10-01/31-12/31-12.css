@@ -1,0 +1,56 @@
+/* descendant combinator selector */
+/* .outer1 p {
+    color: red;
+} */
+
+/* child combinator selector */
+.outer1>p {
+    color: blue;
+}
+
+/* next sibling combinator selector */
+.outer1+p {
+    color: goldenrod;
+}
+
+/* subsequent sibling combinator selector */
+.outer1~p {
+    color: green;
+}
+
+/* pseudo-class selectors */
+.outer2 {
+    background-color: green;
+    width: 200px;
+    color: white;
+}
+
+.outer2:hover {
+    background-color: red;
+}
+
+.outer3 p {
+    background-color: yellow;
+    width: 100px;
+    display: none;
+}
+
+.outer3:hover p {
+    display: block;
+}
+
+a:link {
+    color: yellow;
+}
+
+a:visited {
+    color: green;
+}
+
+a:active {
+    color: cyan;
+}
+
+h6:first-child {
+    color: darkmagenta;
+}
