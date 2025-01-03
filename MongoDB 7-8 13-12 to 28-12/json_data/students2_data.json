@@ -1,0 +1,120 @@
+{
+    "_id": {
+        "$oid": "6762da9c89b15fce0286b01d"
+    },
+    "name": "Devisri",
+    "age": 20,
+    "marks": {
+        "eng": 86,
+        "hin": 90,
+        "soc": 85,
+        "maths": 95,
+        "sci": [
+            38,
+            40,
+            41,
+            42,
+            45
+        ]
+    },
+    "college": "ANU",
+    "emailId": "sri@gmail.com",
+    "stuId": 101
+}
+{
+    "_id": {
+        "$oid": "676427895ed6d202c386b01d"
+    },
+    "name": "usha",
+    "contact": 2451,
+    "marks": [
+        {
+            "subject": "science",
+            "score": 90
+        },
+        {
+            "subject": "social",
+            "score": 80
+        },
+        {
+            "subject": "english",
+            "score": 85
+        },
+        {
+            "subject": "maths",
+            "score": 95
+        }
+    ],
+    "college": "ANU",
+    "emailId": "ush@gmail.com",
+    "stuId": 201,
+    "address": "xyz"
+}
+{
+    "_id": {
+        "$oid": "676427895ed6d202c386b01e"
+    },
+    "name": "ashok",
+    "age": 22,
+    "marks": [
+        {
+            "subject": "social",
+            "score": 95
+        },
+        {
+            "subject": "english",
+            "score": 92
+        }
+    ],
+    "college": "ANU",
+    "stuId": "202"
+}
+{
+    "_id": {
+        "$oid": "6766c57914a2fa03561b17e8"
+    },
+    "name": "krishna",
+    "age": 20,
+    "college": "ANU",
+    "stuId": 105,
+    "marks": [
+        {
+            "subject": "social",
+            "score": 80
+        }
+    ]
+}
+{
+    "_id": {
+        "$oid": "676ac0a8e0d3afbd2736c898"
+    },
+    "name": "vardhan",
+    "marks": [
+        75,
+        81
+    ],
+    "college": "ANU",
+    "stuId": 301
+}
+{
+    "_id": {
+        "$oid": "676ac0a8e0d3afbd2736c899"
+    },
+    "name": "vennela kumari",
+    "age": 21,
+    "college": "ANU",
+    "stuId": 303
+}
+{
+    "_id": {
+        "$oid": "676ac4a9e0d3afbd2736c89a"
+    },
+    "name": "uday",
+    "marks": [
+        50,
+        80,
+        75
+    ],
+    "college": "ANU",
+    "stuId": 304
+}

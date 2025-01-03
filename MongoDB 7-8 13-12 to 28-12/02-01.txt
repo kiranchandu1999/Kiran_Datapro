@@ -1,0 +1,48 @@
+Indexes in mongodb:
+- Index is used for fast data retrieving. by default mongodb creates index and inserts as a field with name of "_id" and index name for this will be "_id_".
+- we can create multiple indexes for every collection.
+- but we should create indexes for fields which are mostly used for data searching operations.
+- indexes should be created for fields which are more likely unique or rare compare to other fields.
+
+To show the existing indexs:
+syntax:
+  db.collection.getIndexes();
+
+To create a new index for any field in a collection:
+syntax:
+   db.collection.createIndex({fieldName: 1 or -1});
+
+Ex: db.students2.createIndex({stuId: 1});
+
+note:
+   if specify 1 then indexes will be stored in ascending order else will stored in descending order.
+
+
+we can find the execution statistics with the following query:
+Ex: db.students.find({city: "kakinada"}).explain("executionStats")
+Ex: db.students2.find({stuId: 201}).explain('executionStats');
+
+
+To drop any existing index:
+syntax:
+  db.collection.dropIndex("index_name")
+
+Ex: db.students2.dropIndex('stuId_-1');
+
+
+To drop collection from database:
+syntax:
+   db.collection.drop();
+
+
+To drop database:
+syntax:
+    db.dropDatabase();
+
+Note: To use mongoimport and mongoexport, first download & install database tools and then set the path in environment variables
+
+mongoimport --db dummyDB --collection fruits --file sample1.json
+Ex:mongoimport --db collegeDB --collection students_dummy --file students2_data.json
+
+mongoexport --db collegeDB --collection students --out students1.json
+Example: mongoexport --db collegeDB --collection students2 --out students2_data.json
