@@ -1,0 +1,21 @@
+Application --->
+
+Frontend (client)
+
+Backend + Database (Server)
+
+MERN fullstack
+Frontend ----> HTML + CSS + JS + ReactJs(framework)
+
+Backend -----> NodeJs + ExpressJs(framework)
+
+Database ----> MongoDB
+
+
+
+HTML ----> Hyper Text Markup Language, it is supported by web browsers
+
+CSS ----> Cascading style sheet
+
+
+HTML elements  ---->  open_tag + content + close_tag (<> content </>)
