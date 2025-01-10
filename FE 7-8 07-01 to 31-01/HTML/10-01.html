@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-01</title>
+    <link rel="icon" href="/images/d_logo.png">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- html images -->
+
+    <!-- absolute url -->
+    <img src="https://img.freepik.com/free-photo/paintlake-with-mountain-background_188544-9126.jpg" width="200" height="" alt="Nature image">
+
+    <!-- relative urls -->
+    <img src="/images/colorful.jpg" width="200">
+
+    <a href="https://www.w3schools.com/html/" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/77673807?v=4" alt="w3schools.com" width="100">
+    </a>
+
+    <br>
+    <img src="/images/workplace.jpg" alt="workplace" usemap="#my_map">
+
+    <map name="my_map">
+        <area shape="rect" coords="30,43,275,350" href="https://www.w3schools.com/Html/computer.htm" target="_blank">
+        <area shape="rect" coords="290,172,333,250" href="https://www.w3schools.com/Html/phone.htm" target="_blank">
+        <area shape="circle" coords="337,300,44" href="https://www.w3schools.com/Html/coffee.htm" target="_blank">
+    </map>
+
+    <!-- html tables -->
+
+    <table>
+        <tr>
+           <th>Firstname</th>
+           <th>Lastname</th>
+           <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- rowspan and colspan -->
+    <!-- colspan example -->
+    <table>
+        <tr>
+           <th colspan="2">Fullname</th>
+           <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- rowspan and colspan example -->
+    <table>
+        <tr>
+            <td colspan="3">2022</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">FIESTA</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td> 
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
