@@ -1,0 +1,28 @@
+Programming language : It is a language which is written in the form of instructions to the system.
+
+Example: C language, Java, C++, Python, Javascript, etc.
+
+To write Java program in any system, follow below steps:
+
+- Download & install Java software (JDK)
+- Setup the software in our system
+- After successful installation you can check version in cmd (java --version)
+- Now we can run our program in this system
+
+
+JDK (Java Development Kit)
+JDK = JRE + Development tools
+
+JRE (Java Runtime Environment)
+JRE = JVM + libraries
+
+JVM (Java Virtual Machine)
+
+
+Program execution flow:
+
+Java program -----> Compile -----> generates byte code ------> execute -----> output
+
+
+
+

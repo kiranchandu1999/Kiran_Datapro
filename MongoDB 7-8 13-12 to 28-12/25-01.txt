@@ -1,0 +1,77 @@
+7. $addFields:
+ -- this operator is used to add new fields within any stage.
+
+syntax:
+{$addFields : {newField1 : <expression>, newField2 : <expression>, ..}}
+
+Ex: add new field total_marks in each document
+db.students.aggregate([{$addFields: {Total_marks: {$sum: '$marks.score'}}}]);
+
+db.students.aggregate([{$project: {name: 1, city: 1, marks: 1}}, {$addFields: {TotalMarks: {$sum: '$marks.score'}}}]);
+
+
+
+8. $push:
+ -- this operator is used to merge mutiple field values to an single array for every group in group stage.
+ -- it merges all document's field values as a single array if field value is an array it will be looks like a multi dimensional array (array inside another array).
+
+syntax:
+{mergedArrayName : {$push : "$arrayField"}}
+
+Ex:
+db.students.aggregate([{$group : {_id : '$city', names: {$push: '$name'}}}])
+
+db.students.aggregate([{$group : {_id : '$city', names_and_email: {$push: {full_name: '$name', email_id: '$email'}}}}])
+
+db.students.aggregate([{$group: {_id: '$city', stuDetails: {$push: {name: '$name', stuId: '$stId'}}}}]);
+
+
+
+9. $addToSet :
+ -- this is similar to $push operator but unlike push operator it will ignores duplicate elements if exists, adds only unique elements to merged array.
+
+syntax:
+{ mergedArrayField : {$addToSet : "$arrayFieldName"}}
+
+Ex:
+db.students.aggregate([{$group : {_id : '$city', names: {$addToSet: '$name'}}}])
+
+db.students.aggregate([{$group: {_id: '$city', stuNames: {$addToSet: '$name'}}}]);
+
+
+
+10. $unwind:
+ -- this operator is used to deconstruct the array field in a document.
+ -- suppose one document is having array of size 3 then that document will be splitted into 3 individual documents.
+
+syntax:
+{ $unwind : "$arrayField" }
+
+Ex:
+db.students.aggregate([{$unwind: '$marks'}, {$count: 'total'}])
+
+db.students.aggregate([{$match: {stId: 102}}, {$unwind: '$marks'}]);
+
+
+
+
+11. $filter:
+   -- this operator is used to filter the array field value. here we need to pass the array field as input need to provide condition. based on that condition it will filters the elements inside the array.
+
+{
+  $filter : {
+        input : "$arrayField",
+        as : "element_name",
+        cond : <expression>
+   }
+}
+
+example:
+db.students.aggregate([
+{$project : {studentName : 1, marks : {$filter : {input : "$marks", as : "item", cond : {$gte : ["$$item.score", 90]}}}}}
+])
+
+
+Example using ($group, $push, $filter):
+
+db.students.aggregate([{$group: {_id: '$city', students: {$push: {stName: '$name', totalMarks: {$sum: '$marks.score'}}}}}, {$project: {students: {$filter: {input: '$students', as: 'st', cond: {$ne: ['$$st.totalMarks', 0]}}}}}]);
