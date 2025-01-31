@@ -1,0 +1,25 @@
+/* css selector */
+/* h2 {
+    color: green;
+} */
+
+/* simple selectors */
+/* using tag name */
+h2 {
+    color: green;
+}
+
+/* using class name */
+.cls2 {
+    color: yellow;
+}
+
+/* using id */
+#id1 {
+    color:blueviolet;
+}
+
+/* universal selector */
+* {
+    color: orange;
+}
