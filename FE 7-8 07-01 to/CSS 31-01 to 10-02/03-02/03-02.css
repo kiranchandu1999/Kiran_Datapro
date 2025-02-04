@@ -1,0 +1,61 @@
+/* descendant selector */
+.div1 p {
+    color: green;
+}
+
+.div2 .cls1 {
+    color: red;
+}
+
+/* child selector */
+.div1>p {
+    background-color: yellow;
+}
+
+/* sibling selector */
+h3+p {
+    color: blue;
+}
+
+/* general sibling selector */
+a~p {
+    color: blueviolet;
+}
+
+/* pseudo class selector */
+#div3 p {
+    color: blue;
+}
+
+#div3 p:active {
+    color: red;
+}
+
+#div3 p:hover {
+    background-color: yellow;
+}
+
+a:visited {
+    color: green;
+}
+
+.div1:first-child {
+    color: crimson;
+}
+
+/* pseudo element selectors */
+#bigPara::first-line {
+    color: red;
+}
+
+#bigPara::first-letter {
+    color: green;
+}
+
+#bigPara::selection {
+    background-color: yellow;
+}
+
+ul li::marker {
+    color: blue;
+}

@@ -1,0 +1,44 @@
+a[target] {
+    color: black;
+}
+
+/* a[target=_blank] {
+    background-color: yellow;
+} */
+
+a[target~=tab] {
+    background-color: yellow;
+}
+
+#div2>h3 {
+    /* color: red; */
+    /* min = 0 to max = 255 */
+    /* color: rgb(0, 0, 0); */
+    /* color: rgba(255, 0, 0, 0.75); */
+    
+    /* color: #f00000; */
+}
+
+#div3 {
+    width: 500px;
+    height: 400px;
+    /* background-color: green;
+    background-image: url("/dog_image.jpg");
+    background-repeat: no-repeat; */
+    /* background-position: left bottom; */
+    /* background-attachment: fixed; */
+    background-size: contain;
+    background: green url("/dog_image.jpg") no-repeat;
+}
+
+#div4 {
+    width: 200px;
+    height: 200px;
+    /* border-width: 2px;
+    border-color: red;
+    border-style: solid;
+    border-right-width: 5px; */
+    
+    border: 2px solid blue;
+    border-radius: 50%;
+}
