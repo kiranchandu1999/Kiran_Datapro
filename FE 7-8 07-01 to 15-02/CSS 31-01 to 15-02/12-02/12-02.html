@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/12-02.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div style="order: 20; flex-grow: 1; flex-shrink: 0;">1</div>
+        <div style="order: 3; flex-grow: 2; align-self: start;">2</div>
+        <div style="order: 1; flex-grow: 1; align-self: stretch;">3</div> 
+        <div style="order: 10; flex-grow: 3;">4</div>
+    </div>
+
+    <!-- grid -->
+    <br>
+    <br>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+    </div>
+
+    <br>
+    <br>
+    <div class="grid-box">
+        <div style="grid-column-start: 1; grid-column-end: 3;">My Header</div>
+        <div>Links</div>
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et suscipit doloribus commodi. Natus, omnis nulla.</div>
+        <div style="grid-column-start: 1; grid-column-end: 3;">Footer</div>
+    </div>
+</body>
+</html>

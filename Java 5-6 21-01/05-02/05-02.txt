@@ -1,0 +1,20 @@
+class:
+it is a blueprint which contains properties and behaviours.
+syntax:
+class   class_name {
+    // variables and methods
+}
+
+method:
+it is a group of statements that needs to be executed to perform a task.
+so by calling method we can get output as per our requirement
+
+method_return_type  method_name(paramters) {
+      // body
+}
+
+
+object:
+it is a physical entity which is created from a particluar class.
+syntax:
+object_reference_type  object_name = new class_name();

@@ -1,0 +1,41 @@
+Multi dimensional array:
+when an array contains multiple arrays in it then it is called multi-dimensional array.
+
+syntax for 2D:
+data_type[ ][ ]  variable_name  =  new  data_type[ rows ][ cols ];
+ex:  4, 5, 8, 6
+        1, 3, 7, 2
+         9, 4, 5, 1
+int[ ][ ]  arr1  =  new int[3][4];
+
+// data read and write
+arr1[1][2] ---> 7
+
+
+for each loop / enhanced for loop:
+syntax:
+for(data_type  variable_name : array/set) {
+      // loop body
+}
+
+
+Wrapper class:
+It's a class which is built based on primitive data types. so that these classes are oftenly used with collection api (stack, queue, etc).
+byte ---->   Byte
+short --->   Short
+int     ---->   Integer
+long   --->   Long
+float    --->  Float
+double  ----> Double
+char    ---->   Character
+boolean   ---->  Boolean
+
+boxing:  converting primitive to wrapper class object
+ex: Interger a1 = Integer.valueOf(10);
+
+un-boxing: converting wrapper class object to primitive
+ex: int a2 = a1.intValue();
+
+note:
+we can do boxing and unboxing automatically. those are called as
+auto-boxing and auto un-boxing

@@ -1,0 +1,21 @@
+Variables types:
+1. Instance variables 
+   - variables declared within the class
+2. Local variables
+   - variables declared within the method
+3. Static variables
+   - variables with static keyword
+
+
+Constructor:
+It is similar to method with no return type.
+Name of the constructor should be same as class name
+It will be called while creating objects of this class
+By default JVM will create no paramters constructor for every class
+If we create any constructor explicitly, JVM won't create default constructor
+
+
+this keyword:
+- it refers to the current object itself
+- it is used to call current object variables and methods as well.
+- this() is used to call the constructor of current object.

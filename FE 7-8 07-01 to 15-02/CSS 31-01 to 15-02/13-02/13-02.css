@@ -1,0 +1,33 @@
+#div1 {
+    width: 100px;
+    height: 100px;
+    background-color: darkseagreen;
+    transition-property: background-color,width;
+    transition-duration: 2s;
+    /* transition-delay: 2s; */
+    transition-timing-function: ease-in-out;
+}
+
+#div1:hover {
+    background-color: darkslategray;
+    width: 250px;
+}
+
+#div2 {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    transition: transform 1s;
+}
+
+/* #div2:hover {
+    transform: translate(100px, 0px);
+} */
+
+#div2:hover {
+    /* transform: rotate(180deg); */
+    /* transform: scale(1.1, 1.1); */
+    /* transform: skewX(30deg); */
+    transform: skewY(20deg);
+}

@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+#div1, #div2 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+#div2 {
+    /* margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px; */
+
+    /* margin: 10px; */
+    /* margin: 10px 0px; */
+    margin: 10px 0px 20px;
+    /* margin: 10px 20px 30px 40px; */
+
+    /* padding-top: 5px;
+    padding-left: 5px; */
+    
+    padding: 10px;
+}
+
+#div3 {
+    width: 500px;
+    /* height: 100px; */
+    /* background-color: aquamarine; */
+    max-width: 500px;
+    /* min-width: 200px; */
+
+    border: 1px solid red;
+
+    outline: 1px solid blue;
+    outline-offset: 25px;
+
+    text-align: center;
+    text-align-last: center;
+
+    /* direction: rtl;
+    unicode-bidi: bidi-override; */
+    padding: 40px 0px;
+}
+
+span {
+    font-size: 8px;
+    vertical-align: baseline;
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#lnk {
+    color: blue;
+    /* text-decoration: underline; */
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+    text-decoration-color: chocolate;
+    cursor: pointer;
+}
+
+#txt1 {
+    text-transform: capitalize;
+}
+
+#txt2 {
+    text-transform: uppercase;
+}
+
+#txt3 {
+    text-transform: lowercase;
+}
+
+#spc {
+    width: 400px;
+    border: 1px solid blue;
+    text-indent: 20px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    /* word-spacing: 30px; */
+    /* white-space: nowrap; */
+}
+
+h2 {
+    text-shadow: 10px -5px 4px red;
+}

@@ -1,0 +1,22 @@
+static keyword:
+- using static keyword we can make variables, methods as static.
+- if any variable or method is static it is related to class not object related.
+- to call static variable or method use class name instead of object name.
+
+Four pillars of OOPs:
+1. Inheritance
+ - acquiring properties and methods from parent class to child class.
+ - we need to use extends keyword with child class to acquire properties  from parent class
+
+types:
+i. Single level inheritance
+  -- from one parent to one child
+
+ii. Multi level
+  -- from grand parent to parent and then parent to child and so on.
+
+iii. Hierarchical inheritance
+   -- from one parent class to multiple child classes
+
+iv. Multiple inheritance (not possible by classes in java)
+   -- from multiple parents to single child
