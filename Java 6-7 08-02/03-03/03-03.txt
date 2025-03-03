@@ -19,15 +19,3 @@ methods: (static)
 - fill(array, value) --> fill with given value
 - copyOf(arr, length) --> copies array of given length
 
-Functional interface:
-If any interface having only one abstract method then it is called functional interface. it may have any number of default and static methods.
-
-@Functional Interface
-interface interface_name{
-     // only one abstract method
-     void run();
-
-     // it can have default and static methods
-     default void display(){
-     }
-}
