@@ -1,0 +1,33 @@
+Loops:
+it is group of statements which needs to be executed continuously.
+
+- for loop
+it is used when there is defined no of iterations to be executed
+
+syntax:
+for(initialization; condition; updation) {
+	// statements
+}
+
+
+- while loop
+while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition.
+it is used when we doesn't know the no of iterations
+
+syntax:
+initialization
+while(condition){
+      // statements
+      // updation
+}
+
+
+- do while loop
+do while loop is similar to while loop with only difference that it checks for condition after executing the statements
+
+syntax:
+initialization
+do{
+     // statements
+     // updation
+} while(condition)

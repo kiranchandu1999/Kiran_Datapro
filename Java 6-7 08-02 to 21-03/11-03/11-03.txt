@@ -1,0 +1,53 @@
+Exception propagation:
+Exception propagation is a mechanism in which exceptions will be thrown to its calling method.
+- propagation is automatic in unchecked exceptions.
+- but in checked exceptions we need to throw exception to its   parent method explicitly.
+- for throwing exceptions manually we need to use " throws" keyword in the   method definition.
+
+syntax:
+public void method1(params) throws <exception_name> {
+               // method body
+}
+
+throw keyword:
+it is a keyword which is used to throw any exception intentionally.
+
+syntax:
+throw  < object of any exception >
+
+finally keyword:
+-- it is a keyword which is used to do some mandatory operations before terminating our program. 
+so if any exception occured and that didn't handled properly then our program will terminate abnormally. in that case all opened resources remains opened so it may lead some issues in future for reusing them. so to prevent that we can write those resource closing statements insisde finally. it will execute all the statements even in exception case also.
+
+finally{
+  // statements
+}
+
+
+Custom or User defined excpetions:
+-- we can create custom exceptions by extending the Exception class. so that we can use these custom exceptions like we are using inbuilt exceptions.
+
+syntax:
+class  customExceptionName  extends  Exception{
+          // need to call parent constructor
+}
+
+
+
+Multi threading:
+- An independent sequential path of execcution within a program is called thread.
+- By default our program will be executed on the main thread which is created by JVM.
+- when a program contain two or more parts that run concurrently, it is called multi threading.
+- Main thread is a thread where our program will be started first and remaining threads will be created from main thread only.
+
+The following ways we can created threads in Java:
+1. By extending Thread class
+2. By implementing Runnable interface
+
+By extending Thread class:
+class class_name extends Thread {
+           // override run method which is present inside parent class
+           public void run(){
+           }         
+}
+

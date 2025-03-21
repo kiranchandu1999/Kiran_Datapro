@@ -1,0 +1,35 @@
+/* background property */
+
+#div1 {
+    height: 400px;
+    width: 90%;
+    /* background-color: rgb(117, 150, 52); */
+
+    background-image: url("/laptop.jpg");
+    background-repeat: no-repeat;
+    /* background-position: right top; */
+    background-attachment: scroll;
+    /* background-size: cover; */
+    /* background-size: contain; */
+    background-size: auto;
+    /* background: url("/laptop.jpg") no-repeat scroll right top; */
+}
+
+/* border property */
+
+#div2 {
+    height: 100px;
+    width: 100px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+
+    /* border: 1px solid black; */
+    /* border-style: groove; */
+    /* border-top-style: solid;
+    border-right-style: dashed;
+    border-bottom-style: double;
+    border-left-style: groove; */
+
+    border-radius: 50%;
+}

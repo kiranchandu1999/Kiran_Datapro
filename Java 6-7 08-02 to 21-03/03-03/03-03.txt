@@ -1,0 +1,21 @@
+Math class:
+It is a class which contains methods related to mathematical operations.
+
+methods: (static)
+- abs(number)  ---> it will return positive number as output
+- min(num1, num2) ---> it will return minimum of both
+- max(num1, num2)  ---> will return maximum of both params
+- round(double)   ---> return after rounding it.
+- pow(base, power)  --> return base to the power value
+- random()  ---> it will generate 0 to 1 in decimal points.
+
+
+Arrays class:
+It is a class which contains methods for different operations on array like searching, sorting, etc.
+
+methods: (static)
+- binarySearch(array, value) ----> it will search given value in that array
+- sort(array) --> to sort the array
+- fill(array, value) --> fill with given value
+- copyOf(arr, length) --> copies array of given length
+

@@ -1,6 +1,0 @@
-This is first content to be written in the demo file
-This is second content to be written in the demo file
-Java
-HTML
-CSS
-Python

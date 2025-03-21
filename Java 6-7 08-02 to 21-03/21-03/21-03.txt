@@ -1,0 +1,75 @@
+Map Interface:
+Map Interface is present in the java.util package represents a mapping between a key and a value. Java Map interface is not a subtype of the Collection interface.
+Three primary classes implement these interfaces HashMap, TreeMap, and LinkedHashMap.
+
+HashMap:
+It provides the basic implementation of the Map interface of Java.
+It stores the data in (Key, Value) pairs. To access a value one must know its key. This class uses a technique called Hashing.
+
+syntax:
+Map<Generic(key), Generic(value)> map = new HashMap<>();
+
+LinkedHashMap:
+LinkedHashMap is just like HashMap with the additional feature of maintaining an order of elements inserted into it. HashMap provided the advantage of quick insertion, search, and deletion but it never maintained the track and order of insertion which the LinkedHashMap provides where the elements can be accessed in their insertion order.
+
+syntax:
+Map<Generic(key), Generic(value)> map = new LinkedHashMap<>();
+
+
+TreeMap:
+The map is sorted according to the natural ordering of its keys, or by a Comparator provided at map creation time, depending on which constructor is used. This proves to be an efficient way of sorting and storing the key-value pairs.
+
+syntax:
+Map<Generic, Generic> map = new TreeMap<>();
+
+
+Stream API:
+Stream API is used to process collections of objects. A stream in Java is a sequence of objects that supports various methods that can be pipelined to produce the desired result.
+We can create streams from various collection of data resources, as follows
+- list.stream()
+- Arrays.stream(array)
+- Stream.of()
+
+Types of Operations:
+1. Intermediate Operations
+Methods are chained together, It enables the concept of filtering where one method filters data and passes it to another method after processing.
+Intermediate operations transform a stream into another stream.
+
+- map():
+The map method is used to return a stream consisting of the results of applying the given function to the elements of this stream.
+
+-filter():
+The filter method is used to select elements as per the Predicate passed as an argument.
+It filters data and passes to the next stage according to given condition.
+
+-flatMap():
+The flatMap operation in Java Streams is used to flatten a stream of collections into a single stream of elements.
+
+-sorted():
+The sorted method is used to sort the stream.
+
+-distinct():
+Removes duplicate elements. It returns a stream consisting of the distinct elements.
+
+
+2. Terminal Operations
+Terminal Operations are the type of Operations that return the result. These Operations are not processed further just return a final result value.
+
+-forEach():
+The forEach method is used to iterate through every element of the stream.
+
+-collect():
+The collect method is used to return the result of the intermediate operations performed on the stream.
+
+-reduce():
+The reduce method is used to reduce the elements of a stream to a single value.
+
+-count():
+Returns the count of elements in the stream.
+
+-anyMatch():
+Checks if any element of the stream matches a given predicate.
+
+-allMatch():
+Checks if all elements of the stream match a given predicate.
+

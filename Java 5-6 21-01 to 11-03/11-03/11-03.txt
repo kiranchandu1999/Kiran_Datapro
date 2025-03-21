@@ -1,0 +1,27 @@
+Set Interface:
+It is an unordered collection of objects in which duplicate values cannot be stored.
+This is an interface and there are some concrete classes which implements this interface.
+
+HashSet:
+HashSet in Java implements the Set interface of Collections Framework. It is used to store the unique elements and it doesn’t maintain any specific order of elements.
+
+syntax:
+Set<Generic> set = new HashSet<>();
+
+
+LinkedHashSet:
+It combines the functionality of a HashSet with a LinkedList to maintain the insertion order of elements.
+
+syntax:
+Set<Generic> set = new LinkedHashSet<>();
+
+
+TreeSet:
+TreeSet is one of the most important implementations of the SortedSet interface in Java that uses a Tree(red – black tree) for storage. The ordering of the elements is maintained by a set using their natural ordering whether or not an explicit comparator is provided.
+
+syntax:
+Set<Generic> set = new TreeSet<>();
+
+with comparator:
+Set<Generic> set = new TreeSet<>(Comparator c);
+
