@@ -1,0 +1,40 @@
+Array:
+It's a data structure which holds the data of similar type.
+it follows 0th based indexing.
+It is also an object and it stores elements in contiguous memory locations.
+to read and write data into an array we need to use array_name[index].
+
+There are two types of array
+* Single Dimensional Array
+* Multidimensional Array
+
+
+Single Dimensional Array:
+syntax:
+data_type[ ]   variable_name  =  new    data_type[size];
+  ex:----> int[ ]  arr1  =  new  int[10];
+
+array initialization with values:
+int[ ]   arr1   =  {5, 10, 12, 8, 4, 16};
+arr1[3]  -----> 8
+
+
+for each loop / enhanced for loop:
+syntax:
+for(data_type  variable_name : array/set) {
+      // loop body
+}
+
+
+Multi dimensional array:
+when an array contains multiple arrays in it then it is called multi-dimensional array.
+
+syntax for 2D:
+data_type[ ][ ]  variable_name  =  new  data_type[ rows ][ cols ];
+ex:  4, 5, 8, 6
+        1, 3, 7, 2
+         9, 4, 5, 1
+int[ ][ ]  arr1  =  new int[3][4];
+
+// data read and write
+arr1[1][2] ---> 7

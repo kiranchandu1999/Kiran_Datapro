@@ -1,0 +1,43 @@
+Functional interface:
+If any interface having only one abstract method then it is called functional interface. it may have any number of default and static methods.
+
+@Functional Interface
+interface interface_name{
+     // only one abstract method
+     void run();
+
+     // it can have default and static methods
+     default void display(){
+     }
+}
+
+
+Comparable Interface:
+The Comparable interface in Java is used to define the natural ordering of objects for a user-defined class. 
+It is part of the java.lang package and it provides a compareTo() method to compare instances of the class. 
+A class has to implement a Comparable interface to define its natural ordering.
+
+Ex:
+class Pair implements Comparable<Pair> {
+    @Override
+    public int compareTo(Pair o) {
+        // Ascending order
+        return this.v - o.v; 
+    }
+}
+
+Comparator Interface:
+Comparator interface in Java is used to order the objects of user-defined classes. 
+A comparator object is capable of comparing two objects of the same class. Following function compare obj1 with obj2.
+
+when to use:
+when there is a requirement of multiple sorting orders, then we can use this comparator interface.
+
+Ex:
+class CustomSorting implements Comparator<Pair> {
+    @Override
+    public int compare(Pair p1, Pair p2) {
+        // Ascending order
+        return p1.v - p2.v; 
+    }
+}

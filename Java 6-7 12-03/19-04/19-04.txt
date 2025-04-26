@@ -1,0 +1,21 @@
+Wrapper class:
+The wrapper class in Java provides the mechanism to convert primitive into object and object into primitive.
+It is built based on primitive data types. so that these classes are oftenly used with collection api (stack, queue, etc).
+byte ---->   Byte
+short --->   Short
+int     ---->   Integer
+long   --->   Long
+float    --->  Float
+double  ----> Double
+char    ---->   Character
+boolean   ---->  Boolean
+
+boxing:  converting primitive to wrapper class object
+ex: Interger a1 = Integer.valueOf(10);
+
+un-boxing: converting wrapper class object to primitive
+ex: int a2 = a1.intValue();
+
+note:
+we can do boxing and unboxing automatically. those are called as
+auto-boxing and auto un-boxing

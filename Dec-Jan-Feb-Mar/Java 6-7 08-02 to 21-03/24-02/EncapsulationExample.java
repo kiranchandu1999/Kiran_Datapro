@@ -62,5 +62,8 @@ public class EncapsulationExample {
 
         ChildForProtected c1 = new ChildForProtected();
         c1.printName();
+
+        ProtectedAccessModifier p1 = new ProtectedAccessModifier();
+        // System.out.println(p1.name);  // cannot access
     }
 }
