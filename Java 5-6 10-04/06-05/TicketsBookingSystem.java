@@ -47,6 +47,8 @@ class TicketsBookingSystem {
         bApp.bookSeat(0, 3);
         bApp.bookSeat(1, 2);
         bApp.bookSeat(2, 4);
+        // again booking a occupied seat
+        bApp.bookSeat(1, 2);
 
         bApp.showSeatingArrangement();
     }

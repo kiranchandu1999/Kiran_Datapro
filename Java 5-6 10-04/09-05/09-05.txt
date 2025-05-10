@@ -1,0 +1,43 @@
+Wrapper class:
+The wrapper class in Java provides the mechanism to convert primitive into object and object into primitive.
+It is built based on primitive data types. so that these classes are oftenly used with collection api (stack, queue, etc).
+byte ---->   Byte
+short --->   Short
+int     ---->   Integer
+long   --->   Long
+float    --->  Float
+double  ----> Double
+char    ---->   Character
+boolean   ---->  Boolean
+
+boxing:  converting primitive to wrapper class object
+ex: Interger a1 = Integer.valueOf(10);
+
+un-boxing: converting wrapper class object to primitive
+ex: int a2 = a1.intValue();
+
+note:
+we can do boxing and unboxing automatically. those are called as
+auto-boxing and auto un-boxing
+
+
+String:
+It is a class in java which is used to store sequence of characters.
+we can create strings in following ways:
+1. using string literal
+syntax:  String s1 = " ";
+- these kind of string objects will be stored inside string constant pool which is present inside heap area.
+
+2. using new keyword
+syntax: String s2 = new String(" ");
+- these kind of string objects will be stored in direct heap area not inside string constant pool.
+
+methods:
+1. charAt(index)   --->  to get character at given index.
+2. length()     ---->  to get the string size;
+3. startsWith(String)   ---> to check starting with given string
+4. substring(from, to) -> returns substring
+5. toLowerCase()
+6. toUpperCase()
+
+ 
