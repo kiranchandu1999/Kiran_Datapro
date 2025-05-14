@@ -1,55 +1,73 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.Month;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 class LocalDateTimeExample {
     public static void main(String[] args) {
-        // local date class
+        // LocalDate
         LocalDate today = LocalDate.now();
 
         // custom date
-        LocalDate dob = LocalDate.of(2020, 10, 25);
-
-        // expiration date
-        LocalDate expirationDate = today.plusDays(30);
+        LocalDate dob = LocalDate.of(2010, Month.AUGUST, 16);
 
         System.out.println(today);
 
         System.out.println(dob);
 
-        System.out.println(expirationDate);
+        // instance methods
+        // custome formatter
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("d-M-y");
 
-        if(today.isAfter(dob)) {
-            System.out.println("Date of birth is older than today");
+        System.out.println(dob.format(df));
+
+        if(dob.isBefore(today)) {
+            System.out.println("Your DOB is before today");
         }
         else {
-            System.out.println("Not older");
+            System.out.println("Not before today");
         }
 
-        // custom date format
-        DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+        System.out.println("Person age from dob: " + Period.between(today, dob));
 
-        System.out.println(expirationDate.format(df));
+        LocalDate tenDaysBeforeToday = today.minusDays(10);
+        System.out.println(tenDaysBeforeToday);
 
         // LocalTime
         LocalTime presentTime = LocalTime.now();
 
-        // custom time
-        LocalTime time1 = LocalTime.of(11, 45, 56, 258);
-
         System.out.println(presentTime);
 
-        System.out.println(time1);
+        // custom time
+        LocalTime customTime = LocalTime.of(10, 25, 32, 250);
 
-        df = DateTimeFormatter.ofPattern("hh:mm:ss a");
-        System.out.println(presentTime.format(df));
+        System.out.println(customTime);
 
+        System.out.println(presentTime.getHour());
 
+        // LocalDateTime
         LocalDateTime dateTime = LocalDateTime.now();
 
-        df = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss:ss a");
+        System.out.println(dateTime);
+
+        df = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss a");
 
         System.out.println(dateTime.format(df));
+
+        // converting string to date object
+        String joiningDate = "2025-04-10";
+
+        LocalDate convertedDate = LocalDate.parse(joiningDate);
+
+        System.out.println(convertedDate);
+
+        // parsing custom format string
+        String dummyDate = "15-03-2025";
+        df = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate formatedDate = LocalDate.parse(dummyDate, df);
+
+        System.out.println(formatedDate.format(df));
     }
 }

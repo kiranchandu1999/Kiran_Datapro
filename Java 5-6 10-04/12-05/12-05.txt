@@ -24,6 +24,7 @@ H  --->  24 hrs format
 h  ---> 12 hrs format (AM, PM)
 m  ---> minutes
 s  ---> seconds
+a ---> AM or PM
 
 
 Updates in interface from java 8:

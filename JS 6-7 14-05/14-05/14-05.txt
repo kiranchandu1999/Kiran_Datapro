@@ -1,0 +1,27 @@
+Functions:
+A JavaScript function is a block of code designed to perform a particular task.
+this function gets executed when we call it.
+
+syntax:
+function   fun_name (parameter 1, param 2, param 3) {
+	// function body
+}
+
+Funtion can be defined to return a computed value by using "return" keyword, whenever return statement gets
+reached that function will return value to the place where the function was called.
+
+Function expression:
+A function expression in JavaScript defines a function within an expression. It can be either named or anonymous. Unlike function declarations, function expressions are not hoisted, meaning they must be defined before they can be called.
+
+example:
+let variable = function() { // body };
+
+Arrow function:
+Arrow functions, introduced in ES6, provide a concise syntax for writing function expressions in JavaScript. They are also known as lambda functions in some other programming languages.
+
+example:
+let subtract = (num1, num2) => {
+    return num1 - num2;
+}
+
+
