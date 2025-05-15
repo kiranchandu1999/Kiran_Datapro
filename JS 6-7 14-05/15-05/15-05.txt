@@ -1,0 +1,28 @@
+Strings:
+A JavaScript string is zero or more characters written inside quotes.
+
+example:
+let fruit = "Apple";  // using double quotes
+let movie = 'Pushpa';  // using single quotes
+let name = `Mahesh`;  // using template literal (back ticks)
+
+let text = `He's often called "Johnny"`;  // comibination of all of them
+
+Escape character:
+let sentence = "India's national bird is \"Peacock\""
+
+String methods:
+Strings are primitive and immutable: All string methods produce a new string without altering the original string.
+
+length: It is used for defining the string character length
+charAt(index): returns the character at given index
+toUpperCase(): returns the string in capital letters
+to LowerCase(): returns the string in small letters
+concat(string): returns joined resultant string
+trim(): returns final string after removing leading and lagging spaces
+slice(start, end): returns some part of original string
+padStart(length, char): returns padded string with given character
+padEnd(length, char): returns padded string with given character
+
+
+
