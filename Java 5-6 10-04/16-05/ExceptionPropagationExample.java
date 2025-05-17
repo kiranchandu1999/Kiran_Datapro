@@ -1,60 +1,66 @@
-// repository
-class PaymentRepository {
-    String getPaymentDetails(String paymentId) {
-        // handled NumberFormatException
-        try {
-            int id = Integer.parseInt(paymentId);
-            int rem = 100 % id;
-            if(id != 0) {
-                return "Here is payment details for this id: " + id;
-            }
-            else {
-                return "No payment details";
-            }
-        }
-        catch(NumberFormatException e) {
-            System.out.println("Not a valid paymentId: " + e.getMessage());
-        }
-
-        return "No details due to exception";
-    }
-}
-
-// service
-class PaymentService {
-    PaymentRepository repo;
-
-    PaymentService(PaymentRepository repo) {
-        this.repo = repo;
-    }
-
-    String getDetailsFromRepo(String id) {
-        // handled ArithmeticException here
-        try {
-            return repo.getPaymentDetails(id);
-        }
-        catch(ArithmeticException e) {
-            System.out.println("Arithmetic exception");
-        }
-        return "No details";
-    }
-}
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 class ExceptionPropagationExample {
+    // method throwing unchecked exception
+    int getDetailsFromDB(String strId) {
+        // prograting exception to caller method (if not handled here)
+        int id = Integer.parseInt(strId);
+
+        if(id > 0) {
+            // getting data from database
+            int[] data = {5, 8, 15, 20};
+            int sum = 0;
+
+            for(int i=0; i<data.length; i++) {
+                sum += data[i];
+            }
+            return sum;
+        }
+        return 0;
+    }
+
+    // method throwing checked exception
+    String getFile(String id) throws FileNotFoundException {
+        if(id == "") {
+            throw new FileNotFoundException();
+        }
+        return "File";
+    }
+
+    int authorize(String strId) {
+        if(strId != "") {
+            try {
+                return getDetailsFromDB(strId);
+            }
+            catch(Exception e) {
+                System.out.println(e);
+            }
+        }
+        return 0;
+    }
+
     public static void main(String[] args) {
-        // create repository
-        PaymentRepository repo = new PaymentRepository();
-
-        // payment service object
-        PaymentService service = new PaymentService(repo);
-        String details1 = service.getDetailsFromRepo("0");
-        System.out.println(details1);
-
+        Scanner sc = new Scanner(System.in);
+        ExceptionPropagationExample obj = new ExceptionPropagationExample();
+        int res = obj.authorize("155");
+        System.out.println(res);
         // exception case
-        String details2 = service.getDetailsFromRepo("8a");
-        System.out.println(details2);
+        int r2 = obj.authorize("abc");
+        System.out.println(r2);
 
-        String details3 = service.getDetailsFromRepo("64");
-        System.out.println(details3);
+        // propagated exception can be hanled here
+        try {
+            String fileName = obj.getFile("text");
+            System.out.println(fileName);
+        }
+        catch(Exception e) {
+            System.out.println(e);
+        }
+        finally {
+            // to closing the opened resources
+            sc.close();
+        }
+        System.out.println("Program end...");
     }
 }

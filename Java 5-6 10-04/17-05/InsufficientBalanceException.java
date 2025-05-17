@@ -1,6 +1,6 @@
 class InsufficientBalanceException extends Exception {
-    InsufficientBalanceException(String message) {
-        super(message);
+    InsufficientBalanceException(String msg) {
+        super(msg);
     }
 }
 

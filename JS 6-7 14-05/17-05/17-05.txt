@@ -1,0 +1,25 @@
+Objects:
+In real life, objects are things like: houses, cars, people, animals, or any other subjects.
+Every object can have properties and methods
+properties of car like name, brand, speed, model etc
+methods are drive(), reverse(), stop() etc.
+
+Objects are variables too. But objects can contain many values.
+example:
+const car = {name: "Innova", brand: "Toyota", color: "white", maxSpeed: 200};
+
+Types to define objects:
+Using an Object Literal
+example:
+const obj = {key: "value"};
+
+Using the new Keyword
+example:
+const obj = new Object();
+
+Access object values using keys:
+example:
+car.name  (or)  car["name"]
+
+
+

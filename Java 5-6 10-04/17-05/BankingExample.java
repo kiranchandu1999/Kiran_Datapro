@@ -13,11 +13,11 @@ public class BankingExample {
         // check to bank account number
         if(toBank.accNo.equals(toAcc)) {
             // check amount valid or not
-            if(amount < fromBank.balance) {
+            if(amount <= fromBank.balance) {
                 System.out.println("Transaction successful..");
             }
             else {
-                throw new InsufficientBalanceException("Not enough balance...");
+                throw new InsufficientBalanceException("You're trying to transfer Rs: " + amount + " but this account has balance of Rs: " + fromBank.balance);
             }
         }
         else {
@@ -34,10 +34,20 @@ public class BankingExample {
         Bank to = new Bank("SB789", 2000);
 
         try {
-            bs.processTransaction("SB789", to, 5000, from);
+            try{
+                bs.processTransaction("SB787", to, 5000, from);
+            }
+            catch(InsufficientBalanceException | NotValidAccountException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Hello");
+            System.out.println("Hii");
+            System.out.println("How are you");
         }
         catch(Exception e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
+
+        System.out.println("remaining program...");
     }
 }
