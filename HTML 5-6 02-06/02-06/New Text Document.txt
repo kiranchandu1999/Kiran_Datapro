@@ -1,0 +1,11 @@
+FRONTEND
+HTML: To build the structure of the web page
+CSS: To make web page structure clean and beautiful
+JAVASCRIPT: To make responsive to the user actions
+
+
+BACKEND
+
+
+
+DATABASE

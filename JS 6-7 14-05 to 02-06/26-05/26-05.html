@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM object events</title>
+    <!-- internal css -->
+    <style>
+        #div1 {
+            background-color: lightseagreen;
+            width: 100px;
+            height: 100px;
+            margin: 10px 0px;
+            text-align: center;
+        }
+        #clrDiv {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM EVENTS</h1>
+    <div>
+        <ul>
+            <li>Mouse events</li>
+            <li>Keyboard events</li>
+            <li>Form events</li>
+        </ul>
+    </div>
+    <!-- inline event hanndling -->
+    <h3>Inline event handling</h3>
+    <button onclick="console.log('clicked')">click me</button>
+    <button ondblclick="console.log('double clicked')">click me 2 times</button>
+    <!-- onmouseover="console.log('mouse hovered on div1')" -->
+    <div id="div1" onmouseenter="console.log('mouse entered into div1');" onmouseleave="console.log('mouse left from div1');">
+        This is a div
+    </div>
+
+
+    <!-- external event handling from js-->
+    <h3>External event handling</h3>
+    <div id="clrDiv">
+        <button>change color</button>
+    </div>
+
+    <div>
+        <input id="textBox" type="text">
+        <div id="output"></div>
+    </div>
+
+
+    <!-- event handling using EventListeners -->
+    <p></p>
+    <form>
+        <div>
+            <label for="fname">First name: </label>
+            <input id="fname" type="text" />
+        </div>
+        <div>
+            <label for="lname">Last name: </label>
+            <input id="lname" type="text" />
+        </div>
+        <div>
+            <input id="submit" type="submit" />
+        </div>
+    </form>
+
+    <script src="/domEvents.js"></script>
+</body>
+</html>
