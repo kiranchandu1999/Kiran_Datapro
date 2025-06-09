@@ -1,4 +1,4 @@
-Naming convetion:
+Naming convention:
 class and interface --->  PascalCase  (FirstClass --- every word first letter should be capital)
 method ---> camelCase (getName() -- every word first letter should be capital except first word)
 variable ---> camelCase (ex: studentRollNo)
@@ -51,6 +51,6 @@ Unicode system:
 Unicode system in a standard to represent the characters of nearly all written languages like (English, Hindi, Chinese etc).
 They are represented as uxxxx, "xxxx" defines hexa decimal numbers from 0000 to FFFF
 Ex: 
-u0042  represents 'A'
-System.out.println("\u0042");  // prints 'A'
+u0041  represents 'A'
+System.out.println("\u0041");  // prints 'A'
 Note: '\' (back slash) is called as escape character
