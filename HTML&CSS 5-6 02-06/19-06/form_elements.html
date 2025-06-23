@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form elements and Input types</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Enter your Name:</label><br>
+        <input type="text" size="2" list="my_list">
+        <input type="text" name="fName" autofocus><br><br>
+        <datalist id="my_list">
+            <option value="Mr.">
+            <option value="Mrs.">
+        </datalist>
+
+        <label for="">Choose theme color:</label><br>
+        <input type="color"><br><br>
+
+        <label for="">Enter date and time:</label><br>
+        <input type="datetime-local"><br><br>
+
+        <label for="">LinkedIn profile:</label><br>
+        <input type="url"><br><br>
+
+        <label for="">Upload Resume:</label><br>
+        <input type="file" accept="application/pdf"><br><br>
+        
+        <label for="">Enter Zipcode:</label><br>
+        <input type="text" maxlength="6" size="6"><br><br>
+
+        <input type="hidden" name="type" value="new user">
+
+        <input type="submit">
+    </form>
+</body>
+</html>

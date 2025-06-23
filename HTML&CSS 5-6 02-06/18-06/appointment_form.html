@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+</head>
+<body>
+   <h2>Book your appointment</h2>
+
+   <form action="" autocomplete="on">
+        <fieldset>
+            <legend>Personal Details:</legend>
+            <label for="fName">Full Name:</label><br>
+            <input type="text" id="fName" name="full_name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/."><br><br>
+
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="eg. 9876543210"><br><br>
+
+            <label for="app_id">Appointment id (Auto generated):</label><br>
+            <input type="text" id="app_id" value="MC122" readonly><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Appointment Details:</legend>
+            <label for="app_date">Appointment date:</label><br>
+            <input type="date" id="app_date" required min="2025-05-15"><br><br>
+
+            <label for="app_time">Preffered time:</label><br>
+            <input type="time" disabled value="10:00"><br>
+            <small>Preferred time not allowed</small><br><br>
+
+            <label>Checkup type:</label><br>
+            <select name="check_type" id="">
+                <option value="none">--Choose--</option>
+                <option value="body check">Body check</option>
+                <option value="dental check">Dental check</option>
+                <option value="health check">Health check</option>
+            </select><br><br>
+
+            <label>Priority (1-5):</label><br>
+            <input type="range" min="1" max="5"><br><br>
+
+            <label>Upload reports (if any):</label><br>
+            <input type="file" required multiple><br><br>
+
+            <label>Additional Note:</label><br>
+            <textarea name="notes" id="" rows="6" cols="25"></textarea>
+        </fieldset>
+
+        <input type="submit">
+        <input type="reset">
+   </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form action="/register" method="post">
+        <div>
+            <label for="name_id">Name:</label><br>
+            <input type="text" id="name_id" name="fullName">
+        </div>
+        <br>
+        <label for="email_id">Email:</label><br>
+        <input type="email" id="email_id" name="emailId"><br><br>
+
+        <label for="pwd_id">Password:</label><br>
+        <input type="password" id="pwd_id" name="password"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male_id" name="gender" value="Male">
+        <label for="male_id">Male</label>
+        <input type="radio" id="female_id" name="gender" value="Female">
+        <label for="female_id">Female</label>
+        <br><br>
+
+        <label>Skills:</label><br>
+        <input type="checkbox" id="html_id" name="skills" value="HTML">
+        <label for="html_id">HTML</label>
+        <input type="checkbox" id="css_id" name="skills" value="CSS">
+        <label for="css_id">CSS</label>
+        <input type="checkbox" id="js_id" name="skills" value="Javascript">
+        <label for="js_id">Javascript</label>
+        <br>
+        <br>
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+</body>
+</html>
