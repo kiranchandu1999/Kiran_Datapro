@@ -1,0 +1,44 @@
+#p1 {
+    /* Name coloring */
+    color: red;
+}
+
+#p2 {
+    /* color: rgb(255, 255, 0); */
+    color: rgba(255, 0, 0, 1);
+}
+
+#p3 {
+    color: #ff0033;
+    /* color: #f03; */
+}
+
+#p4 {
+    /* hsl - hue (color), saturation(gray shade), lightness */
+    color: hsl(200, 100%, 50%);
+}
+
+#div1 {
+    width: 800px;
+    height: 1000px;
+    /* background-color: yellow; */
+    background-image: url('https://i.pinimg.com/736x/79/fd/d1/79fdd17253b569a417e980a99aecd978.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: contain; */
+    background-size: 100px 150px;
+    /* background-position: right; */
+    /* background-attachment: scroll; */
+    border-width: 2px;
+    border-style:outset;
+    border-color: blue;
+    /* border: 2px solid blue; */
+    border-radius: 15px;
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    border-radius: 200px;
+}
