@@ -1,0 +1,50 @@
+LocaDateTime class:
+It is a class which is used to define date and time. it is coming from java.time package.
+syntax:
+LocalDateTime date = LocalDateTime.now();
+whenever we create date object it will take system date and stores it in the form of long data type.
+
+LocalDate class:
+It is for represent the current date.
+
+LocalTime class:
+It is for representing the current time.
+
+DateTimeFormatter class:
+It is basically used to format the date according to our requirement.
+
+DateTimeFormatter df = DateTimeFormatter.ofPattern("*pattern*");
+
+following letters used to define pattern in above formatter
+y --> year
+M --> month
+W  --> week
+d --> day
+H  --->  24 hrs format
+h  ---> 12 hrs format (AM, PM)
+m  ---> minutes
+s  ---> seconds
+a ---> AM or PM
+
+
+Updates in interface from java 8:
+interfaces supports method implemention by 2 ways
+- using default keyword
+	and 
+- using static keyword
+
+interface  Parent {
+     // abtsract method
+     void showPassword();
+
+     // default methods
+     default  void print(){
+            // method body
+      }
+
+     // static method
+     static  void  display(){
+            // method body
+     }
+}
+

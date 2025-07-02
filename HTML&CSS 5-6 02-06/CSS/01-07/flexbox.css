@@ -1,0 +1,22 @@
+.container {
+    background-color: darkgrey;
+    margin-top: 15px;
+    display: flex;
+    /* flext-start, flex-end, center, space-between, space-around, space-evenly */
+    justify-content: space-evenly;
+    height: 400px;
+    /* stretch, flext-start, flex-end, cente */
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+
+.item {
+    background-color: rgb(65, 65, 225);
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 100px;
+}

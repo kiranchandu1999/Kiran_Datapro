@@ -1,0 +1,15 @@
+2. Polymorphism
+Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+- many methods with same name with different functionality.
+
+Types:
+i. Compile-time polymorphism (Method overloading)
+ - overloading methods with same name within the class.
+ - we can achieve this polymorphism by following ways
+   i. by passing different no of parameters
+   ii. by passing different data type paramters
+
+ii. Runtime polymorphism (Method overriding)
+- writing the method which is present in parent class into child class with same method signature    then it is called method overriding, It's also called as Dynamic Method Dispatch, is a process in which a call to an overridden method is resolved at runtime rather than compile-time.
+
+Note: Runtime polymorphism can't be achieved by data members.
