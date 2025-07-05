@@ -1,0 +1,99 @@
+.btn1 {
+    border: none;
+    background-color: rgb(48, 48, 150);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    /* transition-timing-function: linear; */
+    /* transition-delay: 2s; */
+}
+
+.btn1:hover {
+    opacity: 0.4;
+}
+
+.div1 {
+    width: 120px;
+    text-align: center;
+    background-color: lightsteelblue;
+    padding: 40px 0px;
+    transition: transform 2s linear;
+}
+
+.div1:hover {
+    transform: translateX(150px);
+}
+
+.card {
+    width: 120px;
+    background-color: rgb(205, 163, 111);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    margin: 30px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    background-color: rgb(236, 210, 179);
+    transform: scale(1.03);
+    transform: rotate(5deg);
+    /* transform: skewY(15deg); */
+}
+
+.div_anim {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    margin: 30px 0px;
+    position: relative;
+    /* animation-name: myAnim; */
+    animation-name: moveAnim;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    /* animation-direction: alternate-reverse; */
+    animation-iteration-count: infinite;
+    /* animation-delay: 2s; */
+}
+
+@keyframes myAnim {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+        width: 120px;
+    }
+}
+
+@keyframes moveAnim {
+    0% {
+        left: 0px;
+        top: 0px;
+        background-color: red;
+    }
+    25% {
+        left: 120px;
+        top: 0px;
+        background-color: yellow;
+    }
+    50% {
+        left: 120px;
+        top: 120px;
+        background-color: green;
+    }
+    75% {
+        left: 0px;
+        top: 120px;
+        background-color: blue;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+        background-color: red;
+    }
+}
