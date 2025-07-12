@@ -1,66 +1,62 @@
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 class ExceptionPropagationExample {
-    // method throwing unchecked exception
-    int getDetailsFromDB(String strId) {
-        // prograting exception to caller method (if not handled here)
-        int id = Integer.parseInt(strId);
-
-        if(id > 0) {
-            // getting data from database
-            int[] data = {5, 8, 15, 20};
-            int sum = 0;
-
-            for(int i=0; i<data.length; i++) {
-                sum += data[i];
-            }
-            return sum;
+    void m1() throws ClassNotFoundException {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("m1() execution started..");
+        // throwing unchecked exeception
+        try {
+            int val = 100/0;
+            // throw new ArithmeticException();
+        } catch(NumberFormatException e) {
+            e.printStackTrace();
         }
-        return 0;
+        finally {
+            System.out.println("Finally statement..");
+            sc.close();
+            System.out.println("Scanner resource closed...");
+        }
+        System.out.println("m1() execution ended..");
+
+        // checked exception throwing
+        System.out.println("m1() checked exception started..");
+
+        // try {
+        //     System.out.println(Class.forName("java.lang.String"));
+        // } catch(ClassNotFoundException e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println(Class.forName("java.lang.String"));
     }
 
-    // method throwing checked exception
-    String getFile(String id) throws FileNotFoundException {
-        if(id == "") {
-            throw new FileNotFoundException();
+    void m2() {
+        System.out.println("m2() started");
+        try {
+            m1();
+        } catch(ClassNotFoundException e) {
+            e.printStackTrace();
         }
-        return "File";
+        System.out.println("m2() ended..");
     }
 
-    int authorize(String strId) {
-        if(strId != "") {
-            try {
-                return getDetailsFromDB(strId);
-            }
-            catch(Exception e) {
-                System.out.println(e);
-            }
-        }
-        return 0;
+    void m3() {
+        System.out.println("m3() started");
+        m2();
+        System.out.println("m3() ended..");
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         ExceptionPropagationExample obj = new ExceptionPropagationExample();
-        int res = obj.authorize("155");
-        System.out.println(res);
-        // exception case
-        int r2 = obj.authorize("abc");
-        System.out.println(r2);
 
-        // propagated exception can be hanled here
-        try {
-            String fileName = obj.getFile("text");
-            System.out.println(fileName);
-        }
-        catch(Exception e) {
-            System.out.println(e);
-        }
-        finally {
-            // to closing the opened resources
-            sc.close();
-        }
-        System.out.println("Program end...");
+        obj.m3();
+        // try {
+        //     obj.m3();
+        // } catch(Exception e) {
+        //     e.printStackTrace();
+        // }
+
+        System.out.println("Remaining program..");
+
+        System.out.println("Program ending...");
     }
 }
