@@ -1,0 +1,74 @@
+Exception:
+- An exception is an abnormal condition which terminates our program suddenly whenever it encounters any exception.
+- it is a class in java which is present inside java.lang package.
+- depending upon the condition JVM will throw the exception and terminates the program.
+- Exception can be thrown by developer also.
+
+Exception handling:
+- If we handle the occured exceptions then we can prevent the abnormal termination of our program.
+- these excpetion will be handled by using try and catch blocks.
+- try block should contain the statements which might throw exception.
+- catch block should contain the handling statements for that particular exception.
+
+syntax:
+try{
+      // statements which might throw excpetion
+}
+catch(Exception e){
+     // handling statements
+}
+
+note: we can't write catch block without try block
+
+
+
+single exception handling using single catch block:
+try{
+  // statements
+}
+catch(NumberFormatException ne){
+    // handling statements
+}
+
+note: 
+- this catch block is only capable to handle specified exceptions.
+- if the code present inside try block throws multiple exceptions then we can handle them using multiple catch blocks.
+- we cannot create multiple try blocks at a time.
+
+Types of exceptions:
+1. Checked exceptions (Compiletime exceptions)
+  - these exceptions will be occured at compile time only. we need to handle these exceptions at compile time itself.
+
+2. Unchecked exceptions (Runtime exceptions)
+  - these type of exceptions will be occured at runtime only. and it is not compulsory to handle these exceptions.
+
+Exception class Hierarchy:
+                                                    Object
+                                                          |
+                                                  Throwable
+                                                           |
+                         Exception                                         Error
+                                 |
+                  - FileNotFoundException
+                  - ClassNotFoundException
+                  - IOException
+                  - RuntimeException
+                                  |
+                          - ArrayIndexOutOfBoundException
+                          - NumberFormatException
+                          - NullPointerException
+                          - ArithmeticException
+
+Multiple catch block order:
+- if we are handling multiple catch blocks, first catch block should handle grand subchild exception then next catch block should handle sub child exception and then nect block should handle parent exception and so on.
+
+example:
+catch(NumberFormatException ne){
+            System.out.println(ne);
+ }
+catch(ArithmeticException ae){
+
+}
+catch(RuntimeException re){
+            
+}
