@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Event handling</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            margin-top: 15px;
+        }
+
+        #form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="console.log('clicked on button')">click</button>
+    <button id="btn2">Click Me</button>
+    <div id="box">Mouse events div</div>
+
+    <form id="form">
+        <input type="text" id="id-input" placeholder="Enter username"><br>
+        <input type="email" id="email-input" placeholder="Enter EmailId"><br>
+        <button>Submit</button>
+    </form>
+    <script src="/eventHandling.js"></script>
+</body>
+</html>
