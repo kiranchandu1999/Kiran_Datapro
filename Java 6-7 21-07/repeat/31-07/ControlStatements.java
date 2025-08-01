@@ -54,14 +54,15 @@ class ControlStatements {
             case 2:
                 System.out.println("Second week of the month");
                 break;
+            default:
+                System.out.println("Not valid week");
+                break;
             case 3:
                 System.out.println("Third week of the month");
                 break;
             case 4:
                 System.out.println("Forth week of the month");
                 break;
-            default:
-                System.out.println("Not valid week");
         }
     }
 }
