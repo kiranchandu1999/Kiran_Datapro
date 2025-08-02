@@ -8,5 +8,10 @@ public class ForLoopExample {
 
         // print 3 multiples from 1 to 25
         // to be written
+        for(int i=1; i<=25; i++) {
+            if(i%3 == 0) {
+                System.out.println(i);
+            }
+        }
     }
 }
