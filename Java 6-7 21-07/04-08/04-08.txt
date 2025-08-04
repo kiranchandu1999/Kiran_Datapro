@@ -1,0 +1,24 @@
+OOP stands for Object-Oriented Programming. As you can guess from it's name it breaks the program on the basis of the objects in it. It mainly works on Class, Object, Polymorphism, Abstraction, Encapsulation and Inheritance.
+Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+
+Class:
+A Class is a user-defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
+syntax:
+class   class_name {
+    // variables and methods
+}
+
+Object:
+It is a physical entity which is created from a particluar class.
+syntax:
+object_reference_type  object_name = new class_name();
+
+
+Method:
+it is a group of statements that needs to be executed to perform a task based on given data.
+so by calling method we can get output as per our requirement
+
+method_return_type  method_name(paramters) {
+      // body
+}
+
