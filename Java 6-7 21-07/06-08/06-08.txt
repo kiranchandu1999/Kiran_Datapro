@@ -10,3 +10,4 @@ ex: static { // statements }
 Instance block:
 The initializer block contains the code that is always executed whenever an instance(object) is created.
 ex: { // statements }
+

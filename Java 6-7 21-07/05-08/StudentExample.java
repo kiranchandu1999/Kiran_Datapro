@@ -16,11 +16,11 @@ class Student {
     }
 
     // constructor
-    Student(int i, String n, int a) {
+    Student(int id, String name, int age) {
         // constructor body
-        this.id = i;
-        this.name = n;
-        this.age = a;
+        this.id = id;
+        this.name = name;
+        this.age = age;
     }
 
     // methods
@@ -35,7 +35,7 @@ class Student {
 
 public class StudentExample {
     public static void main(String[] args) {
-        Student s1 = new Student(101);
+        Student s1 = new Student();
         // assigning values
         // s1.id = 101;
         // s1.name = "John";
