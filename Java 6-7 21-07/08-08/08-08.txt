@@ -3,8 +3,9 @@ A relationship where one class references another. It is defining the relationsh
 
 Aggregation (Weak association):
 Aggregation is a type of association that represents a relationship where one class is a collection or container of another class. It depicts a "has-a" relationship, where the container object can exist independently of its contents, and the contained objects can exist independently of the container.
-Ex: Car and Engine (Engine can be exist without Car)
+Ex: Person and Mobile (Mobile can be exist without Person)
 
 Composition (Strong association):
 Composition is a core concept in object-oriented programming that refers to the relationship "part-of" between classes. It is a stronger form of association in which the contained objects' lifecycle is strongly associated with the container object's lifecycle.
 Ex: Person and Heart (Heart can't be exist without Person)
+
