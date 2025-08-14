@@ -5,13 +5,13 @@ public class Bank {
     private double balance; // private
     String bankName; // default access modifier
 
-    Bank(String accNo, double balance, String bankName) {
+    public Bank(String accNo, double balance, String bankName) {
         this.accNo = accNo;
         this.balance = balance;
         this.bankName = bankName;
     }
 
-    public void deposit(double amount) {
+    protected void deposit(double amount) {
         if(amount > 0) {
             this.balance += amount;
             System.out.println("Deposited amount: " + amount + ", Available balance: " + this.balance);
@@ -21,7 +21,7 @@ public class Bank {
         }
     }
 
-    double getBalance() {
+    public double getBalance() {
         return this.balance;
     }
 }
