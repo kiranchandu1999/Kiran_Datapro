@@ -1,0 +1,33 @@
+Loops:
+Looping in programming languages is a feature that facilitates the execution of a set of instructions/functions repeatedly while some condition evaluates to true. Java provides three ways for executing the loops.
+
+- for loop
+The for loop is used when we know the number of iterations (we know how many times we want to repeat a task). The for statement consumes the initialization, condition, and increment/decrement.
+
+syntax:
+for(initialization; condition; increment/decrement) {
+	// code to be executed
+}
+
+
+- while loop
+while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition.
+it is used when we doesn't know the no of iterations
+
+syntax:
+initialization
+while(condition) {
+      // code to be executed
+      // updation
+}
+
+
+- do while loop
+do while loop is similar to while loop with only difference that it checks for condition after executing the statements.
+
+syntax:
+initialization
+do {
+     // code
+     // updation
+} while(condition);

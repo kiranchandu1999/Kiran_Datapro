@@ -1,0 +1,61 @@
+h4 {
+    color: brown;
+}
+
+/* simple selectors (element selector, class selector, id selector) */
+.para1 {
+    color: darkmagenta;
+}
+
+#pid1 {
+    color: lightcoral;
+}
+
+/* grouping selectors */
+h5,h6 {
+    color: crimson;
+}
+
+/* Combinator selectors */
+/* Descendant selector - space*/
+#div3 p {
+    color: blue;
+}
+
+/* child selector - '>' */
+#div3>p {
+    color: darkolivegreen;
+}
+
+/* general sibling selector - '~' */
+#div3~a {
+    color: yellowgreen;
+}
+
+/* next direct sibling selector - '+' */
+#div3+a {
+    color: red;
+}
+
+
+/* Pseudo class selectors - ':' (based on element state change) */
+#btn:hover {
+    background-color: yellow;
+}
+
+input:focus {
+    outline: 1px solid blue;
+}
+
+/* Pseudo element selectors - '::' */
+#pseudo_para::first-line {
+    color: red;
+}
+
+#pseudo_para::first-letter {
+    font-size: 30px;
+}
+
+/* #pseudo_para::before {
+    content: url();
+} */

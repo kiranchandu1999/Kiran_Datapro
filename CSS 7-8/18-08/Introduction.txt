@@ -1,0 +1,33 @@
+FULLSTACK -->  FRONTEND + BACKEND + DATABASE
+
+FRONTEND ---> HTML + CSS + JAVASCRIPT (ReactJs is Framework)
+
+BACKEND  --->  CORE JAVA + ADVANCED JAVA (SpringBoot is Framework)
+
+DATABASE  --->  SQL 
+
+---------------------------------------- x --------------------------------------
+
+HTML ---->  Hyper Text Markup Language
+
+Document  ---> Group of html elements is called html document.
+
+Element  ---> It is an object on a web page. It is formed with opentag and close tag surrounding some content.
+syntax:  opentag + content + closetag
+Example: <html>content</html>
+<head>content</head>
+<body>content</body>
+
+
+HTML document structure:
+<html>
+     <head>
+	meta data (ex: title, logo)	
+     </head>
+     <body>
+	visible content on web page
+     </body>
+</html>
+
+
+

@@ -1,0 +1,43 @@
+#p1 {
+    /* Name coloring */
+    color: red;
+}
+
+#p2 {
+    /* rbg(red, green, blue) --> each color 0-255 */
+    color: rgb(255, 0, 150);
+}
+
+#p3 {
+    /* Hex code -> #redgreenblue --> 00 - ff */
+    color: #0000ff;
+}
+
+#p4 {
+    /* hsl (hue, saturation, lightness) */
+    color: hsl(0, 100%, 50%);
+}
+
+#div1 {
+    width: 600px;
+    height: 1000px;
+    /* background-color: yellow; */
+    background-image: url('https://i.pinimg.com/736x/79/fd/d1/79fdd17253b569a417e980a99aecd978.jpg');
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    /* background-size: 300px 300px; */
+    /* background-position: center; */
+    background-attachment: scroll;
+    /* border-width: 2px;
+    border-color: red;
+    border-style: solid; */
+    border: 2px solid red;
+    border-radius: 12px;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
+    border-radius: 50px;
+}
