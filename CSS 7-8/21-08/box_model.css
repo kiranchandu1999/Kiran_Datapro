@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background-color: yellowgreen;
+    padding: 20px;
+    /* padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    padding-right: 20px; */
+    /* padding: 10px 20px; top+bottom left+right */
+}
+
+.box {
+    background-color: rgb(208, 89, 45);
+    color: white;
+    width: 600px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 30px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    outline-style: dashed;
+    outline-color: red;
+    outline-offset: 10px;
+    outline-width: 1px;
+}
+
+.card {
+    background-color: cadetblue;
+    margin: 20px auto;
+    width: 200px;
+    padding: 12px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 3px 3px 5px cadetblue;
+}
+
+.card button {
+    background-color: rgb(209, 209, 17);
+    border: none;
+    padding: 5px;
+    border-radius: 12px;
+    margin-top: 8px;
+}

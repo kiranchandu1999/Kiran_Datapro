@@ -3,44 +3,26 @@ public class WrapperClassExample {
         // 8 wrapper classes for 8 primitive data types
         // boxing: converting primitive to wrapper class object
         int a = 10;
-        Integer obj1 = Integer.valueOf(a);
+        Integer aObj = Integer.valueOf(a);
+        // System.out.println(aObj);
+        // unboxing: from object to primitive
+        int b = aObj.intValue();
 
-        System.out.println("primitive: " + a);
-        System.out.println("wrapper object: " + obj1);
+        double x = 15.69;
+        Double xObj = Double.valueOf(x);
+        double y = xObj.doubleValue();
 
-        // un-boxing: converting wrapper class object to primitive
-        int b = obj1.intValue();
-        System.out.println(b);
+        // auto boxing and unboxing
+        Integer a1 = a;
+        int b1 = a1;
 
-        // auto boxing and auto unboxing
-        int x = 50;
-        Integer obj2 = x; // jvm internally calls Integer.valueOf(x);
+        int[] arr = {-5, -8, -2, -6, -9};
+        int hi = Integer.MIN_VALUE;
+        int lo = Integer.MAX_VALUE;
 
-        int y = obj2; // jvm internally calls obj2.intValue();
-
-        System.out.println("primitive: " + x);
-        System.out.println("wrapper: " + obj2);
-        System.out.println("converted to primitive: " + y);
-
-
-        // Double
-        double dNum1 = 16.85;
-        Double dObj1 = Double.valueOf(dNum1);
-
-        double dNum2 = dObj1.doubleValue();
-
-        // Character
-        char ch1 = '5';
-        char ch2 = 'a';
-        Character chObj1 = ch1;
-        Character chObj2 = ch2;
-
-        System.out.println(Character.isDigit(ch1));
-        System.out.println(Character.isDigit(ch2));
-        System.out.println(Character.isLetter(ch1));
-        System.out.println(Character.isLetter(ch2));
-
-        System.out.println(Integer.MAX_VALUE);
-        System.out.println(Integer.MIN_VALUE);
+        char ch = 'Y';
+        Character chObj = ch;
+        System.out.println(Character.isLetter(chObj)); // true
+        System.out.println(Character.isDigit(chObj)); // false
     }
 }
