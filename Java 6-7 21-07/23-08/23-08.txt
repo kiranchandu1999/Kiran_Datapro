@@ -1,0 +1,34 @@
+Updates in interface from java 8:
+interfaces supports method implemention by 2 ways
+- using default keyword
+	and 
+- using static keyword
+
+interface  Parent {
+     // abtsract method
+     void showPassword();
+
+     // default methods
+     default  void print(){
+            // method body
+      }
+
+     // static method
+     static  void  display(){
+            // method body
+     }
+}
+
+
+Functional interface:
+If any interface having only one abstract method then it is called functional interface. it may have any number of default and static methods.
+
+@Functional Interface
+interface interface_name{
+     // only one abstract method
+     void run();
+
+     // it can have default and static methods
+     default void display(){
+     }
+}
