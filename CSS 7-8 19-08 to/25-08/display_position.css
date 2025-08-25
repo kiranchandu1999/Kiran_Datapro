@@ -1,69 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-#para1 {
-    font-family: "Poppins", sans-serif;
-    margin-top: 50px;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-.block-box {
-    /* display: block; */
-    /* display: none; */
-    visibility: hidden;
-    width: 100px;
+a {
+    background-color: aquamarine;
+    padding: 2px;
+    margin: 2px;
+    display: block;
+}
+
+div {
+    width: 300px;
     height: 100px;
-    background-color: lightgreen;
+    background-color: lightcoral;
+    margin: 2px;
 }
 
 .inline-box {
+    /* inline level doesn't take width and height */
     display: inline;
-    width: 100px;
-    height: 100px;
-    background-color: lightsalmon;
+    /* width: 500px; */
 }
 
 .inline-block-box {
+    /* It takes space as inline level, height and width applied as block level */
     display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: lightpink;
+    width: 150px;
 }
 
-/* position (static(default), relative, absolute, fixed and sticky) */
+/* Positioning of elements:
+    5 Types: 
+    static ---> it is default positioning
+    relative ---> it takes space and positioned according to its original postion
+    absolute ---> it doesn't take space and positioned relative to it's positioned ancestor
+    fixed ---> it is also doesn't takes space and fixed at some position
+    sticky ---> it is similar to relative and fixed when we scrol
+*/
 
 .pos-relative {
-    width: 100px;
-    height: 100px;
-    background-color: darkslategrey;
+    background-color: lightskyblue;
     position: relative;
-    /* top, bottom, left, right */
-    /* left: 50px; */
-    top: 50px;
-    /* right: 10px; */
-    z-index: 11;
+    left: 20px;
+    top: 30px;
 }
 
 .pos-absolute {
-    width: 20px;
-    height: 20px;
-    background-color: rgb(240, 240, 71);
+    background-color: darkolivegreen;
+    width: 30px;
+    height: 30px;
     position: absolute;
     bottom: 0px;
-    right: 5px;
+    right: 0px;
 }
 
 .pos-fixed {
-    height: 25px;
-    width: 95%;
-    background-color: rgb(54, 196, 244);
+    background-color: #25d366;
+    width: 40px;
+    height: 40px;
     position: fixed;
-    top: 10px;
+    bottom: 35px;
+    right: 50px;
+    border-radius: 50%;
 }
 
 .pos-sticky {
-    background-color: burlywood;
-    width: 150px;
-    height: 200px;
+    background-color: lightsalmon;
+    width: 80%;
+    margin: auto;
     position: sticky;
-    top: 120px;
-    z-index: 10;
+    top: 20px;
 }
 
+.long-content {
+    height: 800px;
+}

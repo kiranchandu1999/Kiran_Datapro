@@ -1,0 +1,29 @@
+1. Inheritance
+Inheritance in Java enables a class to inherit properties and actions from another class, called a superclass or parent class. A class derived from a superclass is called a subclass or child class.
+we need to use extends keyword with child class to acquire properties from parent class.
+Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+
+types:
+i. Single level inheritance
+  -- from one parent to one child
+
+ii. Multi level
+  -- from grand parent to parent and then parent to child and so on.
+
+iii. Hierarchical inheritance
+   -- from one parent class to multiple child classes
+
+iv. Multiple inheritance (not possible by classes in java)
+   -- from multiple parents to single child
+
+v. Hybrid inheritance
+  -- hybrid inheritance is the composition of two or more types of inheritance.
+
+
+Super keyword:
+The super keyword in Java is a reference variable that is used to refer to immediate parent class objects.
+Whenever you create the instance of a subclass, an instance of the parent class is created implicitly, which is referred to by the super reference variable.
+
+- super can be used to refer to the immediate parent class instance variable and method.
+- super() can be used to invoke the immediate parent class constructor.
+
