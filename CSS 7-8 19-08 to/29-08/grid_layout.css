@@ -1,0 +1,42 @@
+.grid-container {
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 30px;
+    display: grid;
+    /* we can define column width as fixed by giving px values */
+    /* grid-template-columns: 100px 1fr 150px 2fr; */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* row-gap: 5px;
+    column-gap: 10px; */
+    gap: 10px;
+    /* grid-template-rows makes row height with given values */
+    /* grid-template-rows: 75px 150px; */
+    /* justify-content: space-around; */
+}
+
+.item {
+    background-color: rgb(19, 70, 142);
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 24px;
+    line-height: 75px;
+}
+
+.item1 {
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column: 1/3;
+}
+
+.grid-layout {
+    background-color: lightsalmon;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    'header header header header header'
+    'menu main main main sidebar'
+    'menu footer footer footer footer';
+    grid-template-rows: 80px 200px 70px;
+}
