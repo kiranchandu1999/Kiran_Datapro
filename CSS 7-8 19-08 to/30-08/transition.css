@@ -1,0 +1,129 @@
+.transition-div {
+    background-color: rgb(225, 166, 56);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    /* transition-property: all;
+    transition-duration: 1s; */
+    /* ease, ease-in, ease-out, linear */
+    /* transition-timing-function: ease-in-out;
+    transition-delay: 2s; */
+    transition: all 1s ease-out 2s;
+}
+
+.transition-div:hover {
+    background-color: rgb(244, 85, 5);
+    width: 200px;
+}
+
+.transform-div {
+    background-color: lightskyblue;
+    display: inline-block;
+    padding: 20px;
+    transition: transform 1s ease;
+}
+
+.transform-div:hover {
+    /* transform: scaleX(1.5); */
+    /* transform: rotate(90deg); */
+    /* transform: translateX(100px); */
+    transform: skewY(20deg);
+}
+
+.anim-div {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: moveAnim;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes myAnim {
+    from {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    to {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+}
+
+@keyframes moveAnim {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: orangered;
+        left: 200px;
+        top: 100px;
+    }
+    75% {
+        background-color: blue;
+        left: 0px;
+        top: 100px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+/* media queries */
+.container {
+    margin: 100px 0px;
+    background-color: lightslategray;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.item {
+    background-color: dimgray;
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media(max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .item {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 400px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        font-size: 16px;
+    }
+}

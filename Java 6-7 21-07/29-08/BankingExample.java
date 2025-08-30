@@ -4,6 +4,8 @@ class Bank {
     String accNo;
     int balance;
 
+    Bank() {}
+
     Bank(String accNo, int balance) {
         this.accNo = accNo;
         this.balance = balance;
@@ -19,7 +21,7 @@ class Bank {
 }
 
 public class BankingExample {
-    static void processTransaction(String toAccNo, Bank toBank, Bank fromBank, int amount) {
+    static void processTransaction(String toAccNo, Bank toBank, Bank fromBank, int amount) throws NotValidBankAccountException {
         if(toAccNo.equals(toBank.accNo)) {
             if(fromBank.balance >= amount) {
                 fromBank.withdraw(amount);
@@ -31,7 +33,7 @@ public class BankingExample {
             }
         }
         else {
-            System.out.println("Not a valid bank account...");
+            throw new NotValidBankAccountException("It is not valid account number, please check..");
         }
     }
 
@@ -44,8 +46,8 @@ public class BankingExample {
         try {
             processTransaction(toAccNo, b2, b1, 10000);
         }
-        catch(InsufficientBalanceException e) {
-            e.printStackTrace();
+        catch(NotValidBankAccountException | InsufficientBalanceException ne) {
+            ne.printStackTrace();
         }
         finally {
             sc.close();

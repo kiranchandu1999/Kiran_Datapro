@@ -3,3 +3,9 @@ class InsufficientBalanceException extends RuntimeException {
         super(msg);
     }
 }
+
+class NotValidBankAccountException extends Exception {
+    NotValidBankAccountException(String msg) {
+        super(msg);
+    }
+}
