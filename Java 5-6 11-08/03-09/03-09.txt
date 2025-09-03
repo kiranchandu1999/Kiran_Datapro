@@ -1,0 +1,19 @@
+4. Encapsulation:
+It is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates. Another way to think about encapsulation is, that it is a protective shield that prevents the data from being accessed by the code outside this shield. encapsulation is implemented by declaring instance variables as private, restricting direct access. Public getter methods retrieve variable values, while setter methods modify them, enabling controlled access.
+
+Access modifiers:
+1. private  ----> accessible within that class
+2. default   -----> accessible within the package
+3. protected  ----> accessible in the package but only subclass in other packages
+4. public  -----> accessible everywhere
+
+
+Package:
+- package is a collection of files and we can consider like a folder
+- all the files inside the package belongs to that package and package should be defined inside java file at top
+- for using class in one package inside another package should define import statement
+
+Ex:
+package package_name;  // defining package
+
+import package_name.class_name;  // import statement
