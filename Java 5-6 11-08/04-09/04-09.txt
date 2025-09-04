@@ -1,0 +1,15 @@
+Object class:
+The Object class, found in the java.lang package, serves as the root of the class hierarchy in Java. Every class in Java implicitly or explicitly inherits from the Object class.
+Inherited methods from object class:
+- toString(): Returns a string representation of the object.
+- equals(Object obj): Indicates whether some other object is "equal to" this one.
+- hashCode(): Returns a hash code value for the object.
+- getClass(): Returns the runtime class of this Object.
+- clone(): Creates and returns a copy of this object.
+
+
+Object cloning:
+Object cloning is the process of creating an exact copy of an existing object. In Java, this is achieved using the clone() method, which is part of the Object class.
+To enable object closing class should implement "Cloneable" interface and must override "clone()" method.
+Shallow copy: It copies only primitive fields.
+Deep copy: It copies all primitive and non primitive fields
