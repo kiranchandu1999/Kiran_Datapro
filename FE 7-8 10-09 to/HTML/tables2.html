@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables 2</title>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            height: 20px;
+            width: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tables session 2</h1>
+    <table>
+        <caption>Students data:</caption>
+        <tr>
+            <th colspan="2">Full Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <!-- rowspan and colspan table -->
+    <table>
+        <tr>
+            <td colspan="3">2025</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">FIESTA</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <!-- Quotation tags -->
+    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, iste.</h4>
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident repudiandae velit ipsa, quidem quod veritatis quae eius laborum, minima neque quaerat reprehenderit ipsam culpa aliquam maiores quibusdam voluptatibus quia autem.</blockquote>
+
+    <p>A man said <b><q>Save the trees!</q></b></p>
+
+    <abbr>I'm studying in <abbr title="Andhra University">AU</abbr></abbr>
+
+    <address>
+        The Principal,<br>
+        Andhra University,<br>
+        Visakhapatnam.
+    </address>
+</body>
+</html>
