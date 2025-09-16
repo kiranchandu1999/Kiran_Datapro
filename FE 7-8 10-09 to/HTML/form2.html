@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form 2</title>
+</head>
+<body>
+    <h2>Admission Form:</h2>
+
+    <form>
+        <fieldset>
+            <legend>Admission form:</legend>
+            <div>
+                <label for="">Disabled field:</label><br>
+                <input type="text" value="Do not change" disabled>
+            </div>
+            <div>
+                <label for="">Readonly field:</label><br>
+                <input type="text" value="Welcome to ASGP" readonly>
+            </div>
+            <div>
+                <label for="name">*Full Name:</label><br>
+                <input type="text" id="name" name="fName" required>
+            </div>
+            <div>
+                <label for="dob">Enter DOB(from Jan, 2003):</label><br>
+                <input type="date" min="2003-01-31" max="2008-09-15" id="dob">
+            </div>
+            <div>
+                <label for="ctry">Select Country:</label><br>
+                <select name="country" id="ctry">
+                    <option value="">select...</option>
+                    <option value="IND">India</option>
+                    <option value="AUS">Australia</option>
+                    <option value="ENG">England</option>
+                    <option value="USA">U.S.A</option>
+                </select>
+            </div>
+            <div>
+                <label for="pin">PIN:</label><br>
+                <input type="text" id="pin" name="pin" size="4">
+            </div>
+            <div>
+                <label>Enter your address:</label><br>
+                <textarea name="address" rows="4" cols="25"></textarea>
+            </div>
+            <div>
+                <label>Attach your CV:</label><br>
+                <input type="file" accept=".pdf">
+            </div>
+            <div>
+                <label>Enter your favorite game withing given list:</label><br>
+                <input type="text" list="fav-games">
+                <datalist id="fav-games">
+                    <option value="I love playing Cricket..">
+                    <option value="I love playing Volley ball..">
+                    <option value="I love playing Football..">
+                </datalist>
+            </div>
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
