@@ -1,0 +1,66 @@
+/* syntax:
+    selector {
+        property: value;
+    }
+*/
+
+
+/* Types of selectors */
+/* 1. Simple selectors */
+/* a. tag name selector ==> it will select all elements of selected tag */
+h3 {
+    color: brown;
+}
+
+/* b. class name selector ==> it will select all elements which are having selected class name*/
+.clr-green {
+    color: green;
+}
+
+/* c. Id name selector ==> it will select one element which is having selected it name */
+#btn-blue {
+    background-color: blue;
+    color: white;
+}
+
+/* d. grouping selectors ===> it will select all elements of selected tag/id/class names */
+h3,.clr-green {
+    background-color: black;
+}
+
+
+/* 2. Combinator selectors */
+/* a. descedant selector(space) ==> it will select all descedant elements */
+#div1 p {
+    color: orange;
+}
+
+/* b. Child selector(>) ==> it will select only direct child elements */
+#div1>p {
+    background-color: darkslategray;
+}
+
+/* c. Next sibling selector(+) ==> it will select next sibling element */
+#div1+h4 {
+    color: lawngreen;
+}
+
+/* d. General sibling selector(~) */
+#div1~p {
+    background-color: darkgray;
+}
+
+
+/* 3. Pseudo class selectors ==> styles the elements based on state of those elements */
+#btn-blue:hover {
+    background-color: chocolate;
+}
+
+a:active {
+    color: green;
+}
+
+/* 4. Pseudo element selector */
+#para1::first-line {
+    color: red;
+}

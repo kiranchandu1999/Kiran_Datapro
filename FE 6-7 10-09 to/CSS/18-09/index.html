@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/selectors.css">
+    <title>CSS session 1</title>
+    <style>
+        /* syntax
+        selector {
+            property1: value1;
+            property2: value2;
+            ....
+        }
+        */
+        p {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- styling is applied to an element by defining " property: value; " -->
+    <!-- we can apply css in 3 ways: -->
+    <!-- 1. Inline CSS ===> it will be applied on a particular element itself using style attribute. -->
+    <h2 style="color: red;">CSS - Cascading Style Sheet</h2>
+
+    <!-- 2. Internal CSS ==> it will be applied using style tag inside head element -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, ut!</p>
+
+    <!-- 3. External CSS ==> it will be applied using external css file (.css) -->
+    <h3>This is external CSS styled element</h3>
+
+    <h3 class="clr-green">This is second h3 styled by external css</h3>
+
+    <p class="clr-green">This is green colored para..</p>
+
+    <button id="btn-blue">Blue button</button>
+
+    <a href="#">click1</a>
+
+    <div id="div1">
+        <p>Direct para1 inside div1</p>
+        <p>Direct para2 inside div1</p>
+        <div>
+            <p>Indirect para1 inside div1</p>
+        </div>
+    </div>
+    
+    <h4>This is next sibling of div with "div1" id</h4>
+    <p>This is general sibling of div1</p>
+
+    <p id="para1">Pseudo element selector making first line red. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt corporis voluptatum fugiat eaque adipisci earum quod sed aliquam, necessitatibus harum.</p>
+</body>
+</html>
