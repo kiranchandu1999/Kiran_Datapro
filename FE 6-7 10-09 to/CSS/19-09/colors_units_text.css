@@ -1,0 +1,59 @@
+#div1 {
+    color: blue;
+}
+
+#div2 {
+    /* each color should be in range 0 - 255 */
+    color: rgb(200, 0, 100);
+}
+
+#div3 {
+    /* every 2 digits represents one color as rgb (ranging from 00 - ff) */
+    color: #ff00dc;
+}
+
+#div4 {
+    /* hue(color) in deg , saturation(purity) in % , lightness(shade) in % */
+    color: hsl(120, 100%, 80%);
+}
+
+#para1 {
+    /* size defined in pixel will be fixed */
+    font-size: 13px;
+}
+
+#div5 {
+    width: 50%;
+    background-color: red;
+}
+
+#em-div1 {
+    /* em follows parent element font-size */
+    font-size: 2em;
+}
+
+#rem-div1 {
+    /* rem follows root element font-size */
+    font-size: 1rem;
+}
+
+#div6 {
+    /* vw / vh ranges from 1 - 100 */
+    width: 50vw;
+    background-color: lightgreen;
+    /* height: 100vh; */
+}
+
+#div7 {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    line-height: 24px;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
