@@ -1,0 +1,42 @@
+#flex-container {
+    display: flex;
+    background-color: darkslategray;
+    min-height: 400px;
+    /* flex-direction: column; */
+    /* main-axis ==> flex-start, end, center, space-between, evenly, around */
+    /* justify-content: space-around; */
+    /* cross-axis ==> flex-start, end, center */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* align-content: space-between; */
+}
+
+.flex-item {
+    background-color: rgb(242, 184, 160);
+    padding: 8px;
+    margin: 5px;
+    /* width: 200px; */
+    flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    min-height: 220px;
+}
+
+.flex-item button {
+    border: none;
+    background-color: darkolivegreen;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+    align-self: flex-end;
+}
+
+.card-3 {
+    flex-shrink: 0;
+}
+
+.card-2 {
+    flex-grow: 2;
+}
