@@ -1,0 +1,10 @@
+Networking:
+Java networking refers to the concept of connecting two or more computing devices using the Java programming language to facilitate resource sharing and communication. The java.net package in Java provides a comprehensive set of classes and interfaces that enable developers to implement network-aware applications.
+
+Socket Programming:
+Socket class: Used by client applications to establish and maintain connections with servers.
+ServerSocket class: Used by server applications to listen for incoming client connections and create Socket instances for communication.
+Usage: Used in chatting apps for communication among different devices.
+
+URL class: Represents a Uniform Resource Locator, providing a way to locate resources on the internet. It fetches the data of given url like protocol, host, query etc. 
+Usage: used in File downloaders and temporary clients for REST APIs
