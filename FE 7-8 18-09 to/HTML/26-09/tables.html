@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML Tables</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Alice</td>
+            <td>800</td>
+        </tr>
+    </table>
+
+    <!-- colspan and rowspan tables -->
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Alice</td>
+                <td>800</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><b>Total Salary</b></td>
+                <td><b>1800</b></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br><br>
+    <table>
+        <caption>Marks data:</caption>
+        <colgroup>
+            <col span="2">
+            <col style="background-color: red;">
+        </colgroup>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1</td>
+            <td rowspan="2">David</td>
+            <td>Maths</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2</td>
+            <td rowspan="2">Alex</td>
+            <td>Maths</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+        </tr>
+    </table>
+</body>
+</html>
