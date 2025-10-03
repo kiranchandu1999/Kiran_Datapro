@@ -1,0 +1,88 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url('https://www.shutterstock.com/image-photo/beautiful-lake-landscape-night-sky-260nw-2499398351.jpg');
+    color: white;
+    background-size: cover;
+}
+
+#nav-bar {
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#nav-links {
+    display: flex;
+    /* background-color: bisque; */
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+li {
+    list-style-type: none;
+}
+
+#page-body {
+    display: flex;
+    padding: 20px;
+}
+
+#page-desc {
+    width: 50%;
+    /* background-color: chocolate; */
+    padding: 15px;
+}
+
+#page-login {
+    width: 50%;
+    /* background-color: darkcyan; */
+    padding: 15px;
+    text-align: center;
+}
+
+#login-form {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+#login-form input,label,button {
+    margin-top: 20px;
+}
+
+#login-form input {
+    border-bottom: 1px solid red;
+    color: white;
+    padding: 4px;
+}
+
+input {
+    border: 1px solid white;
+    background: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+button {
+    background-color: rgb(226, 74, 19);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 4px;
+}
