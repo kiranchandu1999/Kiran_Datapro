@@ -2,7 +2,10 @@ import java.util.PriorityQueue;
 
 public class PriorityExample {
     public static void main(String[] args) {
-        PriorityQueue<String> pq = new PriorityQueue<>((a, b) -> {
+        // lambda expression
+        // negetive --> same order
+        // positive ---> order reverse
+        PriorityQueue<String> pq = new PriorityQueue<>((a, b)->{
             return b.compareTo(a);
         });
         // adding
