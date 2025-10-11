@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLES</title>
+    <style>
+        table,th,td {
+           border: 1px solid black;
+           border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML Tables</h2>
+
+    <!-- create a table to store employee data -->
+    <table>
+        <tr>
+            <th>Emp ID</th>
+            <th>Full Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>John Doe</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Alice gram</td>
+            <td>1200</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <!-- colspan and rowspan -->
+    <table>
+        <tr>
+            <th>Emp ID</th>
+            <th>Full Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>John Doe</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Alice gram</td>
+            <td>1200</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Total Salary</b></td>
+            <td>2200</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Subjects</th>
+        </tr>
+        <tr>
+            <td rowspan="2">101</td>
+            <td rowspan="2">Dinesh</td>
+            <td>Maths</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+        </tr>
+        <tr>
+            <td rowspan="2">102</td>
+            <td rowspan="2">Kiran</td>
+            <td>Maths</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+        </tr>
+    </table>
+</body>
+</html>
