@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms 2</title>
+</head>
+<body>
+    <form action="" method="get">
+        <!-- First name -->
+        <div>
+            <label for="fname-lable">First Name:</label><br>
+            <input id="fname-lable" type="text" name="fName" placeholder="Enter you name...">
+        </div>
+        <!-- Last name -->
+        <div>
+            <label for="lname-label">Last Name:</label><br>
+            <input id="lname-label" type="text" name="lName">
+        </div>
+        <!-- Email -->
+        <div>
+            <label for="">Email:</label>
+            <input type="email" required>
+        </div>
+        <!-- Colleg name -->
+        <div>
+            <label for="">College:</label><br>
+            <input type="text" value="AGEC" readonly>
+        </div>
+        <!-- Skills -->
+        <div>
+            <label>Skills:</label><br>
+            <input type="checkbox">
+            <label>HTML</label>
+            <input type="checkbox">
+            <label>CSS</label>
+            <input type="checkbox">
+            <label>JS</label>
+        </div>
+        <!-- Skills percentage -->
+        <div>
+            <input type="range" min="1" max="5">
+        </div>
+        <!-- DOB -->
+        <div>
+            <input type="date" min="2022-01-16">
+        </div>
+        <!-- Attach resume -->
+        <div>
+            <label for="">Attach CV here:</label><br>
+            <input type="file" accept="image/*">
+        </div>
+        <!-- Address -->
+        <div>
+            <label for="">Address:</label><br>
+            <textarea cols="40" rows="8"></textarea>
+        </div>
+        <div>
+            <label for="">PINCODE:</label>
+            <input type="text" size="4" maxlength="6">
+        </div>
+        <div>
+            <input type="reset">
+            <input type="submit">
+        </div>
+    </form>
+</body>
+</html>

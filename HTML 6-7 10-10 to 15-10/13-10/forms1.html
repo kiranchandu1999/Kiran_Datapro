@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms 1</title>
+</head>
+<body>
+    <h2>Registration form</h2>
+
+    <form>
+        <!-- First name -->
+        <div>
+            <label for="fname-lable">First Name:</label><br>
+            <input id="fname-lable" type="text" name="fName">
+        </div>
+        <!-- Last name -->
+        <div>
+            <label for="lname-label">Last Name:</label><br>
+            <input id="lname-label" type="text" name="lName">
+        </div>
+        <!-- Email Id -->
+        <div>
+            <label for="email-label">Email ID:</label><br>
+            <input id="email-label" type="email" name="email">
+        </div>
+        <!-- Password -->
+        <div>
+            <label for="pass-label">Password:</label><br>
+            <input id="pass-label" type="password" name="pass">
+        </div>
+        <!-- Gender -->
+        <div>
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="male" id="male-label">
+            <label for="male-label">Male</label>
+
+            <input type="radio" name="gender" value="female" id="female-label">
+            <label for="female-label">Female</label>
+        </div>
+        <!-- Date of Birth -->
+        <div>
+            <label for="dob-label">Date Of Birth:</label><br>
+            <input type="date" id="dob-label">
+        </div>
+        <!-- Country -->
+        <div>
+            <label for="cntry-label">Country:</label>
+            <select name="country" id="cntry-label">
+                <option>select...</option>
+                <option value="India">IND</option>
+                <option value="England">ENG</option>
+                <option value="Australia">AUS</option>
+                <option value="China">CHN</option>
+            </select>
+        </div>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
