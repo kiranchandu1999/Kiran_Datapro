@@ -1,0 +1,71 @@
+/* External CSS */
+/* 1. Simple selectors */
+/* Using tag name */
+h1 {
+    color: yellow;
+}
+/* using class name */
+.clr-grn {
+    color: green;
+}
+/* using Id value */
+#clr-orange {
+    color: orange;
+}
+/* group selectors */
+h3,.grp-p {
+    color: brown;
+}
+
+/* 2. Combinator selectors */
+/* Descendant elements - (space) */
+#out-div1 p {
+    color: purple;
+}
+
+/* Child elements - (>) */
+#out-div1>p {
+    background-color: yellow;
+}
+
+/* Next sibling element - (+) */
+#out-div1+h5 {
+    background-color: red;
+}
+
+/* General siblings - (~) */
+#out-div1~p {
+    background-color: lightgreen;
+}
+
+/* 3. Pseudo class selectors (:) */
+#btn1:hover {
+    background-color: yellow;
+}
+
+a:active {
+    color: green;
+}
+
+a:visited {
+    color:darkgoldenrod;
+}
+
+a {
+    color: black;
+}
+
+/* 4. Pseudo element selctors (::) */
+.pseudo-para::first-line {
+    color: brown;
+}
+
+
+/* 5. Attribute selectors */
+button[id] {
+    background-color: green;
+}
+
+button[id*="btn1"] {
+    color: red;
+}
