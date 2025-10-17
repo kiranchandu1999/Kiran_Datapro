@@ -1,0 +1,70 @@
+#div1 {
+    color: red;
+}
+
+#div2 {
+    /* each color value ranges from 0-255 */
+    /* color: rgb(150, 185, 0); */
+    /* rgb with alpha */
+    color: rgba(255, 0, 0, 0.5);
+}
+
+#div3 {
+    /* Hex: #RRGGBB (each digit ranges from 0-f)*/
+    background-color: #005eff;
+}
+
+#div4 {
+    /* Hue in deg, Saturation in %, Lightness in % */
+    color: hsl(180, 100%, 50%);
+}
+
+#div5 {
+    background-color: yellowgreen;
+    width: 200px;
+}
+
+#div6 {
+    background-color: chocolate;
+    width: 60vw;
+}
+
+#div6-1 {
+    background-color: crimson;
+    width: 50%;
+}
+
+#em-para {
+    /* em - fraction of nearest parent font size */
+    font-size: 2em;
+}
+
+#rem-para {
+    /* rem - fraction of root element font size */
+    font-size: 1.5rem;
+}
+
+#txt-para {
+    /* Text alignment (left, center, right and justify) */
+    text-align: justify;
+    text-align-last: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight --> 100 to 900 */
+    font-weight: 700;
+    /* underline, overline and line-through */
+    text-decoration-line: line-through;
+    text-decoration-style: solid;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#div8 {
+    text-transform: capitalize;
+    /* letter-spacing: 5px; */
+    word-spacing: 15px;
+    line-height: 24px;
+}
+
