@@ -1,0 +1,51 @@
+* {
+   padding: 0px;
+   margin: 0px;
+}
+
+body {
+    /* background-color: aqua; */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNaIypzjNSVkRJwBnOZQotq-zRLdMbgsrpbA&s");
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background-size: contain; */
+    /* cover --> covers entire part of the body with enlarged image */
+    /* contain --> whole image will be contained inside the body */
+    /* background-attachment: fixed; */
+}
+
+#box1 {
+    width: 100px;
+    background-color: yellow;
+    /* height: 80px; */
+    /* Border properties */
+    /* border-style: solid / dashed / dotted / double */
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: red; */
+    border: 1px solid blue;
+    /* border-top-style: dashed;
+    border-left-style: double; */
+
+    /* Padding properties */
+    /* padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 40px; */
+    padding: 5px 8px 12px 15px;
+
+    /* using box-sizing property to restrict width including padding,border and margin */
+    box-sizing: border-box;
+
+    margin-bottom: 10px;
+    margin: 20px 15px;
+}
+
+#input {
+    /* first one for (top-bottom) second one for (left-right) */
+    padding: 2px 4px;
+    margin: 10px 0px;
+}
+
+h3 {
+    text-shadow: 2px 2px 2px red;
+}

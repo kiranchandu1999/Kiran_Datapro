@@ -1,0 +1,63 @@
+.card {
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: antiquewhite;
+    margin: 10px;
+    display: inline-block;
+}
+
+.c2 {
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+    border: 1px solid red;
+    /* position: relative moves the element from it's original position */
+    position: relative;
+    /* top: 30px; */
+    left: 50px;
+}
+
+#chat-box {
+    /* width: 80px;
+    height: 80px; */
+    background-color: rgb(39, 106, 39);
+    color: white;
+    padding: 5px 8px;
+    /* absolute positioned element moves relative to the nearest positioned ancestor */
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 50%;
+}
+
+#nav-bar {
+    background-color: navy;
+    height: 30px;
+    width: 95vw;
+    margin: auto;
+    color: white;
+    text-align: right;
+    position: fixed;
+    top: 2px;
+    z-index: 2;
+}
+
+#nav-bar li {
+    list-style-type: none;
+    display: inline;
+    margin: 3px 10px;
+}
+
+#sticky-box {
+    height: 20px;
+    background-color: darkolivegreen;
+    color: white;
+    /* sticky element initially acts as relative and when it will trigger to positioned values it acts as fixed */
+    position: sticky;
+    top: 120px;
+}
