@@ -1,0 +1,33 @@
+.box {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin: 10px 0px;
+}
+
+#box1 {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    /* transition-delay: 2s; */
+}
+
+#box1:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#box2 {
+    background-color: yellow;
+    /* transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-out; */
+    transition: transform 1s ease-out;
+}
+
+#box2:hover {
+    /* transform: translateX(90px); */
+    /* transform: rotate(30deg); */
+    /* transform: scale(1.2); */
+    transform: skewY(30deg);
+}
