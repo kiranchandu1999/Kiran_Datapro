@@ -1,0 +1,63 @@
+.container {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+}
+
+#ball {
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    /* animation-name: bouncing; */
+    animation-name: bouncing-wave;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bouncing {
+    0%,100% {
+        bottom: 0px;
+        animation-timing-function: ease-out;
+    }
+    50% {
+        bottom: 200px;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes bouncing-wave {
+    0% {
+        bottom: 0px;
+        left: 0px;
+        animation-timing-function: ease-out;
+    }
+    25% {
+        bottom: 150px;
+        left: 100px;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        bottom: 0px;
+        left: 200px;
+        animation-timing-function: ease-out;
+    }
+    75% {
+        bottom: 150px;
+        left: 300px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        bottom: 0px;
+        left: 350px;
+        animation-timing-function: ease-out;
+    }
+}
