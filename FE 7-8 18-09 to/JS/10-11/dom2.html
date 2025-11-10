@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-ylw {
+            background-color: yellow;
+        }
+        #title {
+            font-size: 34px;
+        }
+        .clr-red {
+            color: red;
+        }
+
+        /* different styling for different roles */
+        .dev {
+            color: red;
+            font-size: 20px;
+        }
+        .anl {
+            color:green;
+            font-size: 20px;
+        }
+        .dgn {
+            color: yellow;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="title">Attribute manipulation, create, change and adding elements to html doc</h2>
+
+    <div id="employee-list">
+        <div class="employee" role="developer">John</div>
+        <div class="employee" role="analyst">Rahul</div>
+        <div class="employee" role="designer">Ramesh</div>
+    </div>
+
+    <script src="/dom2.js"></script>
+</body>
+</html>
