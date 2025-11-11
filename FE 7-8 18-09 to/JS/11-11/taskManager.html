@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .task {
+            display: flex;
+            align-items: center;
+            margin: 6px 0px;
+        }
+        .task button {
+            margin-left: 10px;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">My Task list Manager</h1>
+
+    <input id="task-input" type="text" placeholder="Enter your task">
+    <button id="add-btn">Add Task</button>
+
+    <div id="task-list"></div>
+
+    <script src="/taskManager.js"></script>
+</body>
+</html>
