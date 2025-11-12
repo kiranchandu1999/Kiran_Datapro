@@ -1,8 +1,0 @@
-pm="Narendra_modi"#global variable
-def ap():
-    print(pm)
-def Telangana():
-    print(pm)
-ap()
-Telangana()
-print(pm)
