@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images and Tables</title>
+    <style>
+        table,td,th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML Image tag</h2>
+    <!-- html images -->
+    <!-- absolute url -->
+    <img src="https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80" width="200" alt="Parrot Image">
+
+    <!-- relative url -->
+    <img src="/beautiful_nature.jpg" alt="Nature image" height="300">
+
+    <!-- Tables -->
+    <h2>HTML Tables</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>John</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Alice</td>
+            <td>22</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <!-- Table with rowspan and colspan -->
+    <table>
+        <caption>Students Marks:</caption>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1.</td>
+            <td rowspan="2">John</td>
+            <td>Maths</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2.</td>
+            <td rowspan="2">Alice</td>
+            <td>Maths</td>
+            <td>81</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>92</td>
+        </tr>
+    </table>
+</body>
+</html>
