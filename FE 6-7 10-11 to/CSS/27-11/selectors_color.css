@@ -1,0 +1,65 @@
+/* Combinator selectors */
+/* Descendant selector using space */
+#div1 p {
+    color: red;
+}
+
+/* Child selector using (>) */
+#div1>p {
+    background-color: yellow;
+}
+
+/* Adjacent sibling selector (+) */
+#div1+p {
+    color: blue;
+}
+
+/* General sibling selector (~) */
+#div1~p {
+    background-color: green;
+}
+
+
+/* Psuedo class selectors --> It selects element based on their state*/
+#link1:hover {
+    color: red;
+}
+
+#link1:active {
+    color: green;
+}
+
+#div1>p:hover {
+    color: black;
+}
+
+
+/* Psuedo element selector --> it selects some part of an element */
+#psuedo-para::first-letter {
+    color: red;
+    font-size: 40px; /* pixels */
+}
+
+#psuedo-para::first-line {
+    background-color: yellow;
+}
+
+
+#div2>.p1 {
+    color: orangered;
+}
+
+#div2>.p2 {
+    /* Each color ranges from 0 - 255 */
+    color: rgb(150, 0, 60);
+}
+
+#div2>.p3 {
+    /* HEX --> #rrggbb (each digit ranages from 0-f) */
+    color: #08a0be;
+}
+
+#div2>.p4 {
+    /* HSL --> hue(0-360deg), saturation(0-100%), lightness(0-100%) */
+    color: hsl(60, 100%, 50%);
+}

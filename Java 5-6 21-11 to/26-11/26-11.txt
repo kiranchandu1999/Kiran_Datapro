@@ -1,0 +1,87 @@
+Operators:
+operand  operator  operand
+Arithmetic operators: (value)
++, -, *, /, %
+
+Ex:
+int a = 5;
+int b = 10;
+
+a + b ===> 15
+
+11 / 3 ===> 3
+11 % 3 ===> 2
+
+
+Relational operators (or) Comparison operators: (boolean)
+<, >, <=, >=, ==, !=
+
+Ex:
+a < b ===> true
+a > b ===> false
+a == b ===> false
+
+
+Logical operators: (boolean)
+logical operation should be done on conditions not on values. condition is nothing but an expression which gives boolean result
+&&, ||
+
+Ex:
+(a < b) && (a != b) ===> true
+
+(a > b) || (a != b) ===> true
+
+
+Assignment operators:
+=, +=, -=, *=, /=, %=
+
+Ex:
+a = b ===> 'b' value assigned to 'a' (now a is 10)
+
+a = a * 2;  (or)  a *= 2;
+
+
+Bitwise operators:
+&, |, ^
+110  ---> 2^0 * 0 + 2^1 * 1 + 2^2 * 1  ==> 6
+5 & 3 ----> 101 & 011  ----> 001 --> 1
+5 | 3 ----> 101 | 011  ----> 111 --> 7
+5 ^ 3 ----> 101 ^ 011  ----> 110 --> 6
+
+Shift operators:
+left shift ( << )
+right shift ( >> )
+
+5 << 1 ----> 101 << 1 ---> 1010 --> 10
+
+12 >> 2 ---> 1100 >> 2 ---> 11 --> 3
+
+Unary operators:
+oparand unary_op
+int a = 6;
+increment (++)
+- pre-increment ----> ++a
+- post-increment  ----> a++
+
+Ex:
+int b = a++;
+System.out.println(b);
+System.out.println(++a);
+
+o/p:
+6
+8
+
+decrement (--)
+- pre-decrement ----> --a
+- post-decrement  -----> a--
+
+Ex:
+a = 10;
+System.out.println(a--);
+System.out.println(--a);
+
+o/p:
+10
+8
+
