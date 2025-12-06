@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML FORMs -->
+    <h2>HTML Forms</h2>
+
+    <form>
+        <!-- First name and last name -->
+        <div>
+            <label>Fullname:</label><br>
+            <input type="text" placeholder="First Name" name="fname">
+            <input type="text" placeholder="Last Name" name="lname">
+        </div>
+        <!-- Username input -->
+        <div>
+            <label>Username:</label><br>
+            <input type="text" name="uname">
+        </div>
+        <!-- Password input -->
+        <div>
+            <label>Password:</label><br>
+            <input type="password" name="password">
+        </div>
+        <!-- Gender -->
+        <div>
+            <label>Gender:</label><br>
+
+            <input id="male-id" type="radio" name="gender">
+            <label for="male-id">Male</label>
+
+            <input id="female-id" type="radio" name="gender">
+            <label for="female-id">Female</label>
+        </div>
+        <!-- Date of Birth -->
+        <div>
+            <label>Date Of Birth:</label><br>
+            <input type="date" name="dob" min="2001-12-01" max="2007-06-30">
+        </div>
+        <div>
+            <input type="submit">
+            <input type="reset">
+        </div>
+    </form>
+</body>
+</html>

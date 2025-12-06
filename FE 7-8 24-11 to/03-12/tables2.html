@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!-- table with colspan and rowspan -->
+    <table>
+        <tr>
+            <td colspan="2" rowspan="2">col1</td>
+            <td>col2</td>
+            <td>col3</td>
+        </tr>
+        <tr>
+            <td>col5</td>
+            <td>col6</td>
+            <!-- <td>col7</td> -->
+        </tr>
+       <tr>
+            <td rowspan="2">col4</td>
+            <td colspan="3">col8</td>
+       </tr> 
+       <tr>
+            <td>col9</td>
+            <td colspan="2">col10</td>
+       </tr>
+    </table>
+    <br>
+    <br>
+
+    <table>
+        <caption>Food time table:</caption>
+        <colgroup>
+            <col span="3">
+            <col span="2" style="background-color: yellow;">
+        </colgroup>
+        <tr>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+        <tr>
+            <td>Chicken</td>
+            <td>Dal</td>
+            <td>Egg</td>
+            <td>Fish</td>
+            <td>Sambar</td>
+            <td>Tomato rasam</td>
+            <td>Fasting</td>
+        </tr>
+    </table>
+</body>
+</html>

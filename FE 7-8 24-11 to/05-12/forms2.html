@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HTML Form</h2>
+
+    <form>
+        <fieldset>
+        <legend>Registration form:</legend>
+        <!-- Mr., Mrs., Dr., Prof. -->
+        <div>
+            <label>Title:</label><br>
+            <input type="text" size="1" list="title-list" name="title">
+            <!-- values suggestion for an input -->
+            <datalist id="title-list">
+                <option value="Mr.">
+                <option value="Mrs.">
+                <option value="Dr.">
+                <option value="Prof.">
+            </datalist>
+        </div>
+        <div>
+            <label for="fn-id">Fullname:</label><br>
+            <input type="text" id="fn-id" name="fname">
+        </div>
+        <div>
+            <label>Select geneder:</label><br>
+            <input id="m-id" type="radio" name="gender" value="male">
+            <label for="m-id">Male</label>
+            <input id="f-id" type="radio" name="gender" value="female">
+            <label for="f-id">Female</label>
+        </div>
+        <div>
+            <label>Enter your contact:</label><br>
+            <input type="text" pattern="^[0-9]{10}$">
+        </div>
+        <div>
+            <label>Select skills:</label><br>
+            <div>
+                <input id="s1" type="checkbox" name="skills" value="html">
+                <label id="s1" for="">HTML</label>
+                <input type="range" min="1" max="5" name="rating">
+            </div>
+            <div>
+                <input id="s1" type="checkbox" name="skills" value="css">
+                <label id="s1" for="">CSS</label>
+                <input type="range" min="1" max="5" name="rating">
+            </div>
+            <div>
+                <input id="s1" type="checkbox" name="skills" value="js">
+                <label id="s1" for="">Javascript</label>
+                <input type="range" min="1" max="5" name="rating">
+            </div>
+        </div>
+        <div>
+            <label>Select your state:</label><br>
+            <!-- dropdown using select element-->
+            <select name="state">
+                <option value="">Select...</option>
+                <option value="Andhra Pradesh">AP</option>
+                <option value="Telangana">TG</option>
+                <option value="Tamilnadu">TN</option>
+            </select>
+        </div>
+        <!-- type=file to upload files -->
+        <div>
+            <label>Attach Graduation PC:</label><br>
+            <input type="file" name="my-pc">
+        </div>
+        <!-- upload image -->
+        <div>
+            <label>Upload passphoto:</label><br>
+            <input type="file" name="photo" accept=".jpeg, .jpg, .png">
+        </div>
+        <div>
+            <label>Select your favorite color:</label><br>
+            <input type="color" name="fav-clr">
+        </div>
+        <div>
+            <label>Address:</label><br>
+            <textarea name="address" rows="4" cols="20"></textarea>
+        </div>
+        <div>
+            <br>
+            <input type="reset">
+            <input type="submit">
+        </div>
+        </fieldset>
+    </form>
+</body>
+</html>

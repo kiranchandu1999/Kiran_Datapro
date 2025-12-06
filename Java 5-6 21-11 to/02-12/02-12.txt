@@ -1,0 +1,20 @@
+Constructor:
+A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes
+Note:
+It is similar to method with no return type.
+Name of the constructor should be same as class name
+It will be called while creating objects of this class
+By default JVM will create no paramters constructor for every class
+If we create any constructor explicitly, JVM won't create default constructor
+
+
+this keyword:
+- it refers to the current object itself
+- it is used to call current object variables and methods as well.
+- this() is used to call the constructor of current object.
+
+
+static keyword:
+- using static keyword we can make variables and methods as static.
+- if any variable or method is static it is related to class not object related.
+- to call static variable or method use class name instead of object name.
