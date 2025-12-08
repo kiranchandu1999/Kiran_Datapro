@@ -1,0 +1,55 @@
+html---hyper text markup language 
+
+what is markup?
+
+to highlighting color
+
+To create the web pages
+
+number of webpages in a website
+
+website -- to add information (contents,text,images,tables,forms etc) with link also 
+is called html
+
+html is used to tags <>open tag,</> closed tag
+
+contents of html:
+head tag -- header of the page 
+title tag is used to name of the  web page
+body -- contents  (contents,text,images,tables,forms etc) 
+script:
+----------------------------------------
+structure of the html:
+<html>
+<head>
+<title>web page</title>
+</head>
+<body>
+<h1>heading</h1>
+<p>Paragraph is a sentence</p>
+</body>
+</html>
+
+outputs:
+----------------
+chrome----file save in a format (basic.html)
+internet browser
+firefox
+
+types of heading: 
+
+6 types of headings
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+
+to save the file (ctrl+s)
+to press alt+tab (multi tasking files)
+to refresh the file (f5) 
+
+
+
+ 

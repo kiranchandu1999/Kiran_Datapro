@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input and form attributes -->
+    <form action="" method="get" autocomplete="off">
+        <!-- required attribute fields should be filled before submitting form -->
+        <div>
+            <label for="">Firstname:</label>
+            <input type="text" name="fname" required autofocus>
+        </div>
+        <div>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male">
+            <label for="">Male</label>
+            <input type="radio" name="gender" value="female">
+            <label for="">Female</label>
+        </div>
+        <!-- disabled field value won't pass to backend while submit -->
+        <div>
+            <label for="">College Old Name:</label>
+            <input type="text" value="XYZ" name="college-old" disabled>
+        </div>
+        <!-- readonly attribute doesn't allow to modify -->
+        <div>
+            <label for="">College:</label>
+            <input type="text" value="ABCD" name="college" readonly>
+        </div>
+        <div>
+            <label for="">Zipcode:</label>
+            <input type="text" size="4" maxlength="6">
+        </div>
+        <div>
+            <label for="">Attach your CV:</label>
+            <input type="file" multiple>
+        </div>
+        <input type="submit">
+    </form>
+
+
+    <!-- Media tags ==> video and audio -->
+    <video width="300" controls muted autoplay>
+        <source src="/my_video.mp4" type="video/mp4">
+        <source src="">
+    </video>
+
+    <audio autoplay controls muted>
+        <source src="/my_video.mp3" type="audio/mp3">
+    </audio>
+</body>
+</html>
