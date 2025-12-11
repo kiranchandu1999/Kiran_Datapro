@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms session 2</title>
+</head>
+<body>
+    <!-- Form elements, input types and input attributes -->
+    <form>
+        <fieldset>
+        <legend>Registration form:</legend>
+        <div>
+            <label for="">Title:</label><br>
+            <input type="text" name="title" list="title-list" size="3">
+            <datalist id="title-list">
+                <option value="Mr.">
+                <option value="Mrs.">
+                <option value="Dr.">
+                <option value="prof.">
+            </datalist>
+        </div>
+        <div>
+            <label for="fname-id">Full Name:</label><br>
+            <input id="fname-id" type="text" name="fname" placeholder="Enter your name">
+        </div>
+        <div>
+            <label for="">Email:</label><br>
+            <input type="email" name="email" required>
+        </div>
+        <div>
+            <label>Skills:</label><br>
+
+            <input id="skill-1" type="checkbox" name="skills" value="HTML">
+            <label for="skill-1">HTML</label>
+
+            <input id="skill-2" type="checkbox" name="skills" value="CSS">
+            <label for="skill-2">CSS</label>
+
+            <input id="skill-3" type="checkbox" name="skills" value="JS">
+            <label for="skill-3">Javascript</label>
+        </div>
+        <div>
+            <label for="">Select District:</label><br>
+            <select name="district">
+                <option value="">select...</option>
+                <option value="Visakhapatnam">VSKP</option>
+                <option value="Vizianagaram">VZM</option>
+                <option value="Kakinada">KKD</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Date Of Birth:</label><br>
+            <input type="date" name="dob" min="2003-12-10" max="2010-11-30">
+        </div>
+        <div>
+            <label for="">Attach profile photo:</label><br>
+            <input type="file" accept=".png, .jpg, .jpeg" name="photo">
+        </div>
+        <div>
+            <label for="">Contact number:</label><br>
+            <input type="text" name="phone" placeholder="1234-567890" pattern="[0-9]{4}-[0-9]{6}">
+        </div>
+        <div>
+            <label for="">Address:</label><br>
+            <textarea name="address"></textarea>
+        </div>
+        <div>
+            <label for="">Pincode:</label><br>
+            <input type="text" pattern="[0-9]{6}" size="6" maxlength="6">
+        </div>
+        <div>
+            <input type="reset">
+            <input type="submit">
+        </div>
+        </fieldset>
+    </form>
+    <br><br>
+    <!-- Media tags ==> video and audio -->
+    <video width="300" controls muted autoplay>
+        <source src="/video1.mp4">
+    </video>
+
+    <audio controls autoplay muted>
+        <source src="/audio.mp3">
+    </audio>
+</body>
+</html>

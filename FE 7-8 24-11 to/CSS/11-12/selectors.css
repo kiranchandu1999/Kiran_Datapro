@@ -1,0 +1,22 @@
+/* External CSS */
+
+/* 1. Simple selectors */
+/* using tag name */
+h4 {
+    color: blue;
+}
+
+/* using id value */
+#para-2 {
+    color: brown;
+}
+
+/* using class value */
+.cls-1 {
+    color: purple;
+}
+
+/* grouping selectors with comma seperated */
+h4, #para-2, .cls-1 {
+    background-color: yellow;
+}
