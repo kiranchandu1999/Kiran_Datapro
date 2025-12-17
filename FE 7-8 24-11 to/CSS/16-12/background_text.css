@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+#div1 {
+    background-color: yellow;
+    height: 10vh;
+}
+
+body {
+    /* background-color: lightpink; */
+    /* background-image: url('https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFuZHNjYXBlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: 100vw 100vh;
+    background-attachment: fixed; */
+}
+
+#div2 {
+    border: 1px solid black;
+    width: 600px;
+    height: 400px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcZ48GU9VAHDc1vw_HpRhc_M31JR6imEUJTg&s");
+    background-repeat: no-repeat; /* default repeat*/
+    /* background-position: top right; */
+    /* background-size: 600px 450px; */
+    /* background-size: cover; */
+    background-size: contain;
+    /* background-attachment: fixed; */
+}
+
+/* Text properties */
+/* text-decoration */
+a {
+    /* overline, underline, line-through and none */
+    text-decoration-line: none;
+    color: black;
+}
+
+#para1 {
+    color: blue;
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    /* solid, dotted, dashed, wavy and double */
+    text-decoration-style: solid;
+    /* text-decoration-thickness: 5px; */
+    cursor: pointer;
+}
+
+/* text-align */
+#para2 {
+    /* left, center, right and justify */
+    text-align: justify;
+    text-align-last: center;
+}
+/* vertical-align */
+#para2-span {
+    font-size: 6px;
+    vertical-align: bottom;
+}
+/* text-transform */
+#para2-span {
+    text-transform: capitalize;
+}
+/* text-spacing */
+#para3 {
+    color: red;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    line-height: 0.8;
+}
+/* text-shadow */
+#shadow1 {
+    /* text-shadow: 20px 10px; */
+    text-shadow: 0px 0px 5px red, 0px 0px 10px blue;
+}
+
+/* Font properties */
+#font-para {
+    font-size: 20px;
+    /* ranges between 100 to 900 */
+    font-weight: 400;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: roboto;
+}

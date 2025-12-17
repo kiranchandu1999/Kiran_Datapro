@@ -1,0 +1,77 @@
+/* 2. Combinator selectors */
+/* Descedant selector using space */
+#div1 p {
+    color: red;
+}
+
+/* Child selector using (>) */
+#div1>p {
+    background-color: yellow;
+}
+
+/* General sibling selector (~) */
+#div1~p {
+    color: blue;
+}
+
+/* Next sibling selector (+) */
+#div1+p {
+    background-color: green;
+}
+
+
+/* 3. Pseudo class selectors (:) ==> it selects elements based on their state */
+#link1:active {
+    color: green;
+}
+
+#link1:visited {
+    color: crimson;
+}
+
+#btn1:hover {
+    background-color: lightgreen;
+}
+
+
+/* 4. Pseudo element selectors(::) ==> it selects some part of the element */
+#para-id::first-letter {
+    color: red;
+}
+
+#para-id::first-line {
+    color: red;
+}
+
+
+/* 5. Attribute selector ==> it selects elements based on attribute names/values */
+/* p[id*="par"] {
+    background-color: lightsalmon;
+} */
+
+
+
+/* Color property */
+/* Named color */
+#div2-para1 {
+    color: red;
+}
+
+#div2-para2 {
+    /* each color value ranges from 0 - 255 */
+    /* alpha(opacity) ranges between 0 and 1 */
+    color: rgba(255, 100, 0, 0.5);
+}
+
+#div2-para3 {
+    /* color: #rrggbb; */
+    /* each digit ranges between 0 and f */
+    color: #ff0ab9;
+}
+
+#div2-para4 {
+    /* hue defines color from 0 to 360 deg */
+    /* saturation defines in 0-100% */
+    /* lightness defines in 0-100% */
+    color: hsl(120, 100%, 50%);
+}

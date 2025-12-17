@@ -1,0 +1,36 @@
+#div1 {
+    background-color: lightcoral;
+    width: 300px;
+    height: 100px;
+}
+
+#div2 {
+    background-color: lightgreen;
+    width: 30vw;
+    height: 25vh;
+}
+
+#div3 {
+    background-color: darkolivegreen;
+    width: 50%;
+}
+
+#div4 {
+    font-size: 20px;
+}
+
+html {
+    font-size: 14px;
+}
+
+#para1 {
+    background-color: lightskyblue;
+    width: 10em;
+}
+
+#para2 {
+    background-color: chocolate;
+    width: 10rem;
+}
+
+/* Background properties --> color, image, repeat, position, attachment, size */

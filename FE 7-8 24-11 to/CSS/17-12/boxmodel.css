@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    /* content-box ==> width and height applies to content */
+    /* border box ==> width and height applied to whole box(content+padding+border) */
+    box-sizing: border-box;
+}
+
+#div1 {
+    background-color: lightcoral;
+    width: 200px;
+    /* margin-bottom: 20px; */
+    /* margin: 20px; */
+    /* margin: 20px 10px; */
+    /* margin: 10px 5px 20px; */
+    margin: 10px 5px 20px 5px;
+
+    /* padding-top: 3px; */
+    /* padding: 5px; */
+    /* padding: 5px 8px; */
+    padding: 5px 10px 5px;
+}
+
+#div2 {
+    background-color: lightgreen;
+    width: 200px;
+    margin-top: 10px;
+}
+
+#container {
+    /*
+    border-width: 1px; 
+    border-style: solid;
+    border-color: red; */
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.card {
+    background-color: lightslategray;
+    margin: 10px 0px;
+    /* display property changes the element's default displaying behaviour */
+    /* inline, block, inline-block and none */
+    display: inline-block;
+    /* width: 100px; */
+    padding: 40px 50px;
+    border: 2px solid blue;
+    /* border-radius ==> will provide curvy edges */
+    border-radius: 50%;
+}
+
+#cdiv2 {
+    /* only visibility will be hidden but still occupies space */
+    visibility: hidden;
+}
