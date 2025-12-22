@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <link rel="stylesheet" href="positions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <!-- Positioning types static, relative, absolute, fixed and sticky -->
+    <ul>
+        <input type="text">
+        <li>Home</li>
+        <li>Careers</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Cart <i class="fa-solid fa-cart-shopping"></i></li>
+    </ul>
+    <h1 id="pos-head">CSS Positions</h1>
+    <dl>
+        <dt>static</dt>
+        <dd>- It's default position of every element</dd>
+        <dt>relative</dt>
+        <dd>- It's positioned relative to it's original position and it occupies original space</dd>
+        <dt>absolute</dt>
+        <dd>- It's positioned relative to it's nearest positioned ancestor and it doesn't take any space</dd>
+        <dt>fixed</dt>
+        <dd>- It's positioned with respect to view port and it doesn't take space</dd>
+        <dt>sticky</dt>
+        <dd>- It's combination of relative and fixed</dd>
+    </dl>
+    <br>
+    <h2 id="stk-head">Blank divison with 100% viewport height</h2>
+    <div class="box" id="rel"></div>
+    <div class="box" id="rel-par">
+        <div id="abs-box">8</div>
+    </div>
+    <!-- <h2 id="stk-head">Blank divison with 100% viewport height</h2> -->
+    <div id="blk-div"></div>
+
+    <div id="fix-div">
+        <a href="#pos-head">Chat 24x7</a>
+    </div>
+</body>
+</html>
