@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical navbar</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: lightgreen;
+            width: 120px;
+            position: fixed;
+            height: 100%;
+        }
+
+        ul li a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 5px 15px;
+        }
+
+        ul li a:hover {
+            background-color: darkolivegreen;
+            color: white;
+        }
+
+        ul li a.selected {
+            background-color: rgb(32, 48, 5);
+            color: white;
+        }
+
+        div {
+            height: 120vh;
+            /* margin: 20px 0px; */
+            margin-left: 140px;
+            padding: 12px;
+            border: 1px solid red;
+            outline: 2px solid blue;
+            outline-offset: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+       <li><a href="" class="selected">Home</a></li>
+       <li><a href="">Careers</a></li>
+       <li><a href="">About</a></li>
+       <li><a href="">Contact</a></li>
+    </ul>
+    <div>
+        <h2>Vertical navigation bar</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, ipsum? Voluptatibus tempore numquam ipsam itaque sit quisquam exercitationem earum. Nemo minima iste harum fugit ex neque explicabo eos qui blanditiis, ut, quibusdam dolores, sequi error quidem! Veniam ipsam, quam sint laboriosam numquam voluptatibus atque provident consectetur autem, facilis a reprehenderit.</p>
+    </div>
+</body>
+</html>

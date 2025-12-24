@@ -1,0 +1,31 @@
+#container {
+    background-color: lightsteelblue;
+    padding: 10px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    /* justify-content ==> to align items along the main axis */
+    /* flex-start, center, flex-end, space-between, space-around, space-evenly */
+    /* justify-content: space-evenly; */
+    /* align-items ==> to align items along the cross axis if vertical space is available*/
+    /* stretch, flex-start, center, flex-end */
+    height: 300px;
+    align-items: flex-start;
+    /* align-content ==> to align flex item lines along cross axis when multiple rows are available */
+    /* align-content: space-around; */
+    flex-direction: row;
+}
+
+.card {
+    background-color: darkslategray;
+    border: 1px solid black;
+    padding: 8px;
+    color: white;
+    /* width: 180px; */
+    /* margin: 0px 10px; */
+    flex-grow: 1;
+}
+
+#card4 {
+    /* align-self: center; */
+}
