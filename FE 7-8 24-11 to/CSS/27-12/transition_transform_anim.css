@@ -1,0 +1,86 @@
+#box1 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    /* transition-property: background-color, width; */
+    /* transition-duration: 0.5s, 5s; */
+    /* ease (default), ease-in, ease-out, ease-in-out, linear */
+    /* transition-timing-function: linear; */
+    /* transition-delay: 3s; */
+    /* transition: property duration timing-function delay */
+    transition: width 3s linear 1s, background-color 1s ease-out;
+}
+
+#box1:hover {
+    cursor: pointer;
+    background-color: rgb(200, 86, 15);
+    width: 250px;
+}
+
+
+/* Transform property */
+#box2 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    color: white;
+    transition: transform 0.2s;
+}
+
+#box2:hover {
+    /* transform: translate(50px); */
+    transform: rotate(-180deg);
+    /* transform: scale(1.015); */
+    /* transform: skewY(30deg); */
+}
+
+
+/* Animation property */
+#box3 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    /* animation-name: sample-anim; */
+    /* animation-duration: 2s; */
+    position: relative;
+    animation-name: rotating-box;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+
+@keyframes sample-anim {
+    from {
+        background-color: red;
+        margin-left: 0px;
+    }
+    to {
+        background-color: yellow;
+        margin-left: 50px;
+    }
+}
+
+@keyframes rotating-box {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    25% {
+        top: 0px;
+        left: 100px;
+    }
+    50% {
+        top: 100px;
+        left: 100px;
+    }
+    75% {
+        top: 100px;
+        left: 0px;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+    }
+}
