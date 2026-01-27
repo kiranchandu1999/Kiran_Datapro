@@ -1,0 +1,57 @@
+Multi threading:
+- An independent sequential path of execcution within a program is called thread.
+- By default our program will be executed on the main thread which is created by JVM.
+- when a program contain two or more parts that run concurrently, it is called multi threading.
+- Main thread is a thread where our program will be started first and remaining threads will be created from main thread only.
+
+The following ways we can created threads in Java:
+1. By extending Thread class
+2. By implementing Runnable interface
+
+By extending Thread class:
+class class_name extends Thread {
+           // override run method which is present inside parent class
+           public void run(){
+           }         
+}
+
+By implementing Runnable interface:
+class class_name implements Runnable {
+           // override run method which is present inside parent
+           public void run(){
+           }         
+}
+
+
+Thread life cycle:
+A thread can exist in different states at different point of time. it passes from one state to another state whenever we called method start.
+
+States involved in thread life cycle:
+1. New :
+  -- this is a state when a new thread created and not yet started.
+
+2. Runnable (ready to run) :
+  -- Thread is started using start method. in this state the thread is ready to      run but control is not given.
+
+3. Running :
+  -- Now thread is running in this state.
+
+4. Sleep :
+  -- Method sleep() is invoked and thread is sleeping for the given number of      milliseconds.
+
+5. Blocked :
+  -- Blocked by other threads for shared resources. it will wait until another     thread invokes notify() or notifyAll().
+
+6. Dead :
+   -- Thread got terminated.
+
+Method inside Thread class:
+1. currentThread()  --> returns reference to the currently working thread.
+2. getName()  --> returns the thread's name
+3. getPriority()  --> returns the thread's priority
+4. isAlive()  --> tests if the thread is alive
+5. run()  --> specifies the code to be executed
+6. setName(string) --> changes the name of this thread
+7. setPriority(int)  --> changes the priority
+8. sleep(milli seconds)  ---> moves the current thread state to sleep and     stops execution till time gets over.
+9. start()  --> creates a new thread and calls the run method of the thread.
