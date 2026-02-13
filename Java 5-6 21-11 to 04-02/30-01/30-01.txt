@@ -1,0 +1,55 @@
+Collection framework:
+A framework is a set of classes and interfaces which provide a ready-made architecture
+It provides different data structures along with logic and it provides algorithms (such as sorting).
+These data structures can store only objects, so we need wrapper classes to store primitive data
+Collection framework interfaces and classes availabe in java.util package
+
+Collection (interface)
+       - List (interface)
+               - ArrayList
+               - LinkedList
+               - Stack  ---> Last In First Out
+       - Queue (interface) ---> First In First Out
+               - LinkedList
+	- ArrayDeque
+               - PriorityQueue
+       - Set  (interface) -----> doesn't follows elements orders
+             - SortedSet  (interface)
+                      - TreeSet   ----> sorting order
+             - HashSet ---->  no order
+             - LinkedHashSet  ---> insertion order
+
+Methods in Collection interface:
+add(object) -----> to add one element
+addAll(collection)  ----> to add list of elements
+clear()   ----> removes all values 
+isEmpty() ----> returns true if no data is present
+remove(object)  ----> it removes the existing element
+contains(Object) -> it checks whether given element presents or not
+iterator() -> This method returns an iterator over the elements in this collection.
+size() -> This method is used to return the number of elements in the collection.
+toArray() -> This method is used to return an array containing all of the elements in this collection.
+
+ArrayList:
+ArrayList is a kind of an array, array follows static structure whereas arraylist follows dynamic structure
+It's coming from java.util package, By default arraylist get created with 10 capacity, and whenever data gets filled
+it increases it's size automatically
+
+syntax:
+ArrayList<Generic> al = new ArrayList<Generic>();
+
+
+LinkedList:
+Linked List is a part of the Collection framework present in java.util package. This class is an implementation of the LinkedList data structure which is a linear data structure where the elements are not stored in contiguous locations and every element is a separate object with a data part and address part. The elements are linked using pointers and addresses and each element is known as a node. 
+
+syntax:
+LinkedList<Generic> ll = new LinkedList<Generic>();
+
+
+Stack:
+Stack class that models and implements a Stack data structure. The class is based on the basic principle of LIFO(last-in-first-out). In addition to the basic push and pop operations, the class provides three more functions of empty, search, and peek.
+
+The Stack class extends Vector and provides additional functionality specifically for stack operations, such as push, pop, peek, empty, and search.
+
+syntax:
+Stack<Integer> st = new Stack<>();

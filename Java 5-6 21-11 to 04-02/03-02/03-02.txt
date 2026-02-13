@@ -1,0 +1,49 @@
+Set Interface:
+It is an unordered collection of objects in which duplicate values cannot be stored.
+This is an interface and there are some concrete classes which implements this interface.
+
+HashSet:
+HashSet in Java implements the Set interface of Collections Framework. It is used to store the unique elements and it doesn’t maintain any specific order of elements.
+
+syntax:
+Set<Generic> set = new HashSet<>();
+
+
+LinkedHashSet:
+It combines the functionality of a HashSet with a LinkedList to maintain the insertion order of elements.
+
+syntax:
+Set<Generic> set = new LinkedHashSet<>();
+
+
+TreeSet:
+TreeSet is one of the most important implementations of the SortedSet interface in Java that uses a Tree(red – black tree) for storage. The ordering of the elements is maintained by a set using their natural ordering whether or not an explicit comparator is provided.
+
+syntax:
+Set<Generic> set = new TreeSet<>();
+
+with comparator:
+Set<Generic> set = new TreeSet<>(Comparator c);
+
+
+
+HashMap:
+It provides the basic implementation of the Map interface of Java.
+It stores the data in (Key, Value) pairs. To access a value one must know its key. This class uses a technique called Hashing.
+
+syntax:
+Map<Generic(key), Generic(value)> map = new HashMap<>();
+
+LinkedHashMap:
+LinkedHashMap is just like HashMap with the additional feature of maintaining an order of elements inserted into it. HashMap provided the advantage of quick insertion, search, and deletion but it never maintained the track and order of insertion which the LinkedHashMap provides where the elements can be accessed in their insertion order.
+
+syntax:
+Map<Generic(key), Generic(value)> map = new LinkedHashMap<>();
+
+
+TreeMap:
+The map is sorted according to the natural ordering of its keys, or by a Comparator provided at map creation time, depending on which constructor is used. This proves to be an efficient way of sorting and storing the key-value pairs.
+
+syntax:
+Map<Generic, Generic> map = new TreeMap<>();
+

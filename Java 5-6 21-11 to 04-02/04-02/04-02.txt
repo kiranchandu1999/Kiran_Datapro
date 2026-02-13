@@ -1,0 +1,50 @@
+Stream API:
+Stream API is used to process collections of objects. A stream in Java is a sequence of objects that supports various methods that can be pipelined to produce the desired result.
+We can create streams from various collection of data resources, as follows
+- list.stream()
+- Arrays.stream(array)
+- Stream.of()
+
+Types of Operations:
+1. Intermediate Operations
+Methods are chained together, It enables the concept of filtering where one method filters data and passes it to another method after processing.
+Intermediate operations transform a stream into another stream.
+
+- map():
+The map method is used to return a stream consisting of the results of applying the given function to the elements of this stream.
+
+-filter():
+The filter method is used to select elements as per the Predicate passed as an argument.
+It filters data and passes to the next stage according to given condition.
+
+-flatMap():
+The flatMap operation in Java Streams is used to flatten a stream of collections into a single stream of elements.
+
+-sorted():
+The sorted method is used to sort the stream.
+
+-distinct():
+Removes duplicate elements. It returns a stream consisting of the distinct elements.
+
+
+2. Terminal Operations
+Terminal Operations are the type of Operations that return the result. These Operations are not processed further just return a final result value.
+
+-forEach():
+The forEach method is used to iterate through every element of the stream.
+
+-collect():
+The collect method is used to return the result of the intermediate operations performed on the stream.
+
+-reduce():
+The reduce method is used to reduce the elements of a stream to a single value.
+
+-count():
+Returns the count of elements in the stream.
+
+-anyMatch():
+Checks if any element of the stream matches a given predicate.
+
+-allMatch():
+Checks if all elements of the stream match a given predicate.
+

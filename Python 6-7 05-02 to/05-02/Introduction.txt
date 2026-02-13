@@ -1,0 +1,39 @@
+What is Programming language:
+It's a communicating medium with the machine through set of instructions.
+
+Example: Python, Java, C, C++...
+
+
+Why Python:
+- It's is easy to learn
+- It uses english like syntax
+- It has large community
+
+Use case:
+- Web development
+- Game development
+- Data science
+- AI and Machine learning
+- Cyber security
+
+Steps to run python program:
+- Install python software from official website (python.org)
+- create file_name.py file (.py is the extension for python files)
+- run the following command in terminal -> " python file_name "
+
+Python program internal working flow:
+Python interpreter will convert high level language (source code) into low level language (byte code)
+PVM (python virtual machine) will convert byte code into machine code and executes the program to give output.
+
+Python is a high level language (human readable)
+
+low level language (not machine readable)
+
+Machine language or binary language (machine readable)
+
+
+
+
+
+
+

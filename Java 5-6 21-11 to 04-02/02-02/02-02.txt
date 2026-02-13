@@ -1,0 +1,24 @@
+Queue:
+It stores and processes the data in FIFO(First In First Out) order. It is an ordered list of objects limited to inserting elements at the end of the list and deleting elements from the start of the list. since Queue is an interface, objects cannot be created of the type queue. We always need a class which extends this list in order to create an object. so we can use ArrayDeque, LinkedList and PriorityQueue classes for that.
+
+syntax:
+Queue<Generic> q = new LinkedList<>();
+
+or
+
+Queue<Generic> q = new ArrayDeque<>();
+
+
+PriorityQueue:
+A priority queue is a type of queue that arranges elements based on their priority values
+Each element has a priority associated. When we add an item, it is inserted in a position based on its priority.
+Elements with higher priority are typically retrieved or removed before elements with lower priority.
+
+syntax:
+PriorityQueue<Generic> pq = new PriorityQueue<>(Comparator c);
+
+Deque:
+The Deque interface, which stands for double-ended queue. It allows elements to be added or removed from both ends efficiently. It can be used as a stack (LIFO) or a queue (FIFO).
+
+syntax:
+Deque<Generic> dq = new ArrayDeque<>();

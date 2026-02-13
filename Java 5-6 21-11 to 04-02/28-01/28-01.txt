@@ -1,0 +1,21 @@
+In Java, ByteArrayInputStream and ByteArrayOutputStream are in-memory implementations of the InputStream and OutputStream abstract classes, respectively. They are used for handling byte data within the application's memory rather than interacting with external resources like files or network connections.
+ByteArrayOutputStream:
+This class allows writing data into an internal, dynamically growing byte array. The toByteArray() method can be used to retrieve the accumulated data as a new byte[] array.
+
+Serialization:
+The process of converting java objects into byte stream to transfer data over the network. ObjectOutputStream is used to serialize Java objects into a stream of bytes and write them to an underlying OutputStream.
+
+Deserialization:
+The process of reconstructing a Java object from its serialized byte sequence. ObjectInputStream is used to deserialize a stream of bytes back into Java objects from an underlying InputStream.
+
+Note: For serialization the class must be implemented with Serializable interface.
+
+Serialization with
+IS-A relation:
+If child class object is getting serialized then parent also should be serializable otherwise will get default values for parent class fileds.
+
+HAS-A relation:
+If any class object is to be serializable then it's containing object class also should be serializable otherwise it will throw NotSerializableException.
+
+transient keyword:
+The transient keyword in Java is a non-access modifier used with variables within a class. Its primary purpose is to indicate that a specific field should not be serialized when an object of that class is written to a persistent storage or transmitted over a network.
